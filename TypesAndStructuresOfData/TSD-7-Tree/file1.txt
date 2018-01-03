@@ -1,0 +1,10 @@
+The sixth generation of microprocessors, beginning with the PPro, provided an important improvement in microarchitecture design, namely out-of-order execution. The idea is that if
+the execution of a particular instruction is delayed because the input data for the instruction are not available yet, then the microprocessor will try to find later instructions that it can do
+first, if the input data for the latter instructions are ready. Obviously, the microprocessor has
+to check if the latter instructions need the output from the former instruction. If each
+instruction depends on the result of the preceding instruction, then we have no opportunities
+for out-of-order execution. This is called a dependence chain. Manual 2: "Optimizing subroutines in assembly language" gives examples of how to avoid long dependence
+chains.
+The logic for determining input dependences and the mechanisms for doing instructions as soon as the necessary inputs are ready, gives us the further advantage that the microprocessor can do several things at the same time. If we need to do an addition and a multiplication, and neither instruction depends on the output of the other, then we can do
+both at the same time, because they are using two different execution units. But we cannot
+do two multiplications at the same time if we have only one multiplication unit.
