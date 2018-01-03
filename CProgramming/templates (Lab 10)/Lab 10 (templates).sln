@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lab 10 (templates)", "Lab 10 (templates)\Lab 10 (templates).vcproj", "{D2D5EE4D-7F64-440C-BE13-A11E71E1D38E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D2D5EE4D-7F64-440C-BE13-A11E71E1D38E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D2D5EE4D-7F64-440C-BE13-A11E71E1D38E}.Debug|Win32.Build.0 = Debug|Win32
+		{D2D5EE4D-7F64-440C-BE13-A11E71E1D38E}.Release|Win32.ActiveCfg = Release|Win32
+		{D2D5EE4D-7F64-440C-BE13-A11E71E1D38E}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

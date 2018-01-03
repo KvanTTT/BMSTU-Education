@@ -1,0 +1,302 @@
+Var. #01. Table Manager
+
+ManagerId	FirstName	LastName	Email		Password	Active
+--------------------------------------------------------------------------------------
+1		Johnny		Smithe		no@no.com	system		Y
+2		Karen		Xythe		no@no.com	system		Y
+3		Brett		Heath		no@no.com	system		Y
+4		Gabby		Banks		no@no.com	system		Y
+5		Faye		Jones		no@no.com	system		Y
+6		Joh		Boy		no@no.com	system		Y
+
+Var. #02. Table Activity
+
+LocationID	DateEntered	Sales	Margin	NewAccounts
+-----------------------------------------------------------
+1000		1/1/2001	10000	32.5	1
+1000		1/3/2001	20000	32.8	2
+1001		2/11/2001	70000	32.5	9
+1001		4/15/2001	6000	32.5	23
+1002		4/13/2001	40000	32.5	51
+1002		5/11/2001	100	32.5	9
+1002		5/22/2001	40000	32.5	5
+1001		3/9/2001	60000	32.5	6
+1001		3/14/2001	80000	32.5	7
+1000		2/15/2001	90000	32.5	8
+
+Var. #03. Table Authors
+
+au_id		au_lname	au_fname	phone		address			city		state	zip	contract
+--------------------------------------------------------------------------------------------------------------------------------
+409-56-7008	Bennet		Abraham		415 658-9932	6223 Bateman St.     	Berkeley	CA	94705	1
+213-46-8915	Green		Marjorie	415 986-7020	309 63rd St. #411    	Oakland        	CA      94618   1
+238-95-7766	Carson		Cheryl		415 548-7723	589 Darwin Ln.       	Berkeley       	CA      94705   1
+998-72-3567	Ringer		Albert		801 826-0752	67 Seventh Av.       	Salt Lake City 	UT      84152   1
+899-46-2035	Ringer		Anne		801 826-0752	67 Seventh Av.       	Salt Lake City 	UT      84152   1
+722-51-5454	DeFrance	Michel		219 547-9982	3 Balding Pl.        	Gary           	IN      46403   1
+807-91-6654	Panteley	Sylvia		301 946-8853	1956 Arlington Dr.   	Rockville      	MD      20853   1
+893-72-1158	McBadden	Heather		707 448-4982	301 Putnam           	Vacaville      	CA      95688   0
+724-08-9931	Stringer	Dirk		415 843-2991	5420 Telegraph Av.   	Oakland        	CA      94609   0
+274-80-9391	Straight	Dick		415 834-2919	5420 College Av.     	Oakland        	CA      94609   1
+
+
+Var. #04. Table Authors
+
+au_id		au_lname	au_fname	phone		address			city		state	zip	contract
+--------------------------------------------------------------------------------------------------------------------------------
+756-30-7391	Karsen		Livia		415 534-9219	5720 McAuley St.     	Oakland        	CA      94609   1
+724-80-9391 	MacFeather     	Stearns     	415 354-7128 	44 Upland Hts.       	Oakland		CA      94612   1
+427-17-2319 	Dull           	Ann         	415 836-7128 	3410 Blonde St.      	Palo Alto      	CA      94301   1
+672-71-3249 	Yokomoto       	Akiko       	415 935-4228 	3 Silver Ct.         	Walnut Creek   	CA      94595   1
+267-41-2394 	O'Leary        	Michael     	408 286-2428 	22 Cleveland Av. #14 	San Jose       	CA      95128   1
+527-72-3246 	Greene         	Morningstar 	615 297-2723 	22 Graybar House Rd. 	Nashville      	TN      37215   0
+172-32-1176 	White          	Johnson     	408 496-7223 	10932 Bigge Rd.      	Menlo Park     	CA      94025   1
+712-45-1867 	del Castillo   	Innes       	615 996-8275 	2286 Cram Pl. #86    	Ann Arbor      	MI      48105   1
+846-92-7186 	Hunter         	Sheryl      	415 836-7128 	3410 Blonde St.      	Palo Alto      	CA      94301   1
+486-29-1786 	Locksley       	Chastity    	415 585-4620 	18 Broadway Av.      	San Francisco  	CA      94130   1
+
+Var. #05. Table Titles
+
+title_id	type		pub_id	price	advance	royalty	ytd_sales	pubdate
+---------------------------------------------------------------------------------------
+BU1032      	business     	1389    19.99	5000.00	10	4095		06/12/85
+PC1035		popular_comp	1389    22.95  	7000.00	16	8780		06/30/85
+PS2091		psychology   	0736	10.95	2275.00	12      2045		06/15/85
+PS2106		psychology   	0736	7.00	6000.00	10      111		10/05/85
+TC3218		trad_cook    	0877	20.95	7000.00	10	375		10/21/85
+MC3026		UNDECIDED    	0877	NULL	NULL	NULL	NULL		07/31/86
+PC8888		popular_comp 	1389    20.00  	8000.00	10      4095		06/12/85
+PS7777		psychology   	0736    7.99  	4000.00	10      3336		06/12/85
+PS3333		psychology	0736    19.99  	2000.00	10      4072		06/12/85
+BU1111		business	1389    11.95  	5000.00	10      3876		06/09/85
+
+Var. #06. Table Titleauthor
+
+au_id		title_id	au_ord	royaltyper
+--------------------------------------------------
+409-56-7008     BU1032          1       60
+213-46-8915     BU1032          2       40
+238-95-7766     PC1035          1       100
+213-46-8915     BU2075          1       100
+998-72-3567     PS2091          1       50
+899-46-2035     PS2091          2       50
+998-72-3567     PS2106          1       100
+722-51-5454     MC3021          1       75
+899-46-2035     MC3021          2       25
+807-91-6654     TC3218          1       100
+
+Var. #07. Table Sales
+
+stor_id	ord_num		date		qty	payterms	title_id
+--------------------------------------------------------------------------
+7066	QA7442.3     	09/13/85       	75      On_invoice     	PS2091
+7067    D4482        	09/14/85       	10      Net_60         	PS2091
+7131    N914008      	09/14/85       	20      Net_30         	PS2091
+7131    N914014      	09/14/85       	25      Net_30         	MC3021
+8042    423LL922     	09/14/85       	15      On_invoice     	MC3021
+8042    423LL930     	09/14/85       	10      On_invoice     	BU1032
+6380    722a         	09/13/85        3       Net_60         	PS2091
+6380    6871         	09/14/85        5       Net_60         	BU1032
+8042    P723         	03/11/88       	25      Net_30         	BU1111
+7896    X999         	02/21/88       	35      On_invoice     	BU2075
+
+Var. #08. Table Stores
+
+stor_id	stor_name		stor_address		city		state	zip
+------------------------------------------------------------------------------------
+7066    Barnum's            	567_Pasadena_Ave.	Tustin      	CA      92789
+7067    News_&_Brews        	577_First_St.       	Los_Gatos   	CA      96745
+7131    Doc-U-Mat		24-A_Avrogado_Way   	Remulade    	WA      98014
+8042    Bookbeat            	679_Carson_St.      	Portland    	OR      89076
+6380    Eric_the_Read_Books 	788_Catamaugus_Ave. 	Seattle     	WA      98056
+7896    Fricative_Bookshop  	89_Madison_St.      	Fremont     	CA      90019
+
+Var. #09. Table Department
+
+dept_no	department		head_dept	budget	location	phone_no
+--------------------------------------------------------------------------------------
+000	Corporate_Headquarters	null		1000000	Monterey	(408)_555-1234
+100	Sales_and_Marketing	000		2000000	San_Francisco	(415)_555-1234
+600	Engineering		000		1100000	Monterey	(408)_555-1234
+900	Finance			000		400000	Monterey	(408)_555-1234
+180	Marketing		100		1500000	San_Francisco	(415)_555-1234
+620	Software_Products_Div.	600		1200000	Monterey	(408)_555-1234
+621	Software_Development	620		400000	Monterey	(408)_555-1234
+622	Quality_Assurance	620		300000	Monterey	(408)_555-1234
+623	Customer_Support	620		650000	Monterey	(408)_555-1234
+670	Consumer_Electronics_Div.	600	1150000	Burlington,_VT	(802)_555-1234
+
+Var. #10. Table Job
+
+job_code	job_grade	job_country	job_title		min_salary	max_salary
+--------------------------------------------------------------------------------------------------
+CEO		1		USA		Chief_Executive_Officer	130000		250000
+CFO		1		USA		Chief_Financial_Officer	85000		140000
+VP		2		USA		Vice_President		80000		130000
+Dir		2		USA		Director		75000		120000
+Mngr		3		USA		Manager			60000		100000
+Mngr		4		USA		Manager			30000		60000
+Admin		4		USA		Administrative_Assistant	35000	55000
+Admin		5		USA		Administrative_Assistant	20000	40000
+Admin		5		England		Administrative_Assistant	13400	26800
+PRel		4		USA		Public_Relations_Rep.	25000		65000
+
+Var. #11. Table Employee
+
+emp_no	first_name	last_name	dept_no	job_code	job_grade	job_country	hire_date	salary	phone_ext
+---------------------------------------------------------------------------------------------------------------------------------
+2	Robert		Nelson		600	VP		2		USA		12/28/88	98000	250
+4	Bruce		Young		621	Eng		2		USA		12/28/88	90000	233
+5	Kim		Lambert		130	Eng		2		USA		02/06/89	95000	22
+8	Leslie		Johnson		180	Mktg		3		USA		04/05/89	62000	410
+9	Phil		Forest		622	Mngr		3		USA		04/17/89	72000	229
+11	K._J.		Weston		130	SRep		4		USA		01/17/90	70000	34
+12	Terri		Lee		000	Admin		4		USA		05/01/90	48000	256
+14	Stewart		Hall		900	Finan		3		USA		06/04/90	62000	227
+15	Katherine	Young		623	Mngr		3		USA		06/14/90	60000	231
+20	Chris		Papadopoulos	671	Mngr		3		USA		01/01/90	80000	887
+
+
+Var. #12. Table Project
+
+proj_id	proj_name	team_leader	product
+-----------------------------------------------
+VBASE	Video_Database	45		software
+DGPII	DigiPizza	24		other
+GUIDE	AutoMap		20		hardware
+MAPDB	MapBrowser_port	4		software
+HWRII	Translator_upgrade	null	software
+MKTPR	Marketing_project_3	85	N/A
+
+Var. #13. Table ProjDeptBudget
+
+year	proj_id	dept_no	projected_budget
+----------------------------------------
+1994	GUIDE	100	200000
+1994	GUIDE	671	450000
+1993	MAPDB	621	20000
+1994	MAPDB	621	40000
+1994	MAPDB	622	60000
+1994	MAPDB	671	11000
+1994	HWRII	670	20000
+1994	HWRII	621	400000
+1994	HWRII	622	100000
+1994	MKTPR	623	80000
+
+Var. #14. Table Customer
+
+cust_no	customer	contact_first	contact_last	phone_no	
+----------------------------------------------------------------
+1001	Signature_Design	Dale_J.	Little	(619)_530-2710
+1002	Dallas_Technologies	Glen	Brown	(214)_960-2233
+1003	Buttle,_Griffith_and_Co.	James	Buttle	(617)_ 488-1864
+1004	Central_Bank	Elizabeth	Brocket	61_211_99_88
+1005	DT_Systems,_LTD.	Tai	Wu	(852)_850_43_98
+1006	DataServe_International	Tomas	Bright	(613)_229_3323
+1007	Mrs._Beauvais	null	Mrs._Beauvais	null
+1008	Anini_Vacation_Rentals	Leilani	Briggs	(808)_835-7605
+1009	Max	Max	null	22_01_23
+1010	MPM_Corporation	Miwako	Miyamoto	3_880_77_19
+
+Var. #15. Table Customer
+
+cust_no	address_line1			address_line2	city		state_province	country	postal_code	on_hold
+-----------------------------------------------------------------------------------------------------------------------
+1001	5500_Pacific_Heights_Blvd	null		San_Diego	CA		USA	92121		null
+1002	P._O._Box_47000			null		Dallas		TX		USA	75205		null
+1003	2300_Newbury_Street		Suite_101	Boston		MA		USA	02115		null
+1004	66_Lloyd_Street			null		Manchester	null		England	M2_3LA		null
+1005	400_Connaught_Road		null		Central_Hong_Kong	null	Hong_Kong	null	null
+1006	2000_Carling_Avenue		Suite_150	Ottawa		ON		Canada	K1V_9G1		null
+1007	P._O._Box_22743			null		Pebble_Beach	CA		USA	93953		null
+1008	3320_Lawai_Road			null		Lihue		HI		USA	96766		null
+1009	1_Emerald_Cove			null		Turtle_Island	null		Fiji	null		null
+1010	2-64-7_Sasazuka			null		Tokyo		null		Japan	150		null
+
+Var. #16. Table Sales
+
+po_number	cust_no	sales_rep	order_date	ship_date	date_needed
+-----------------------------------------------------------------------------------
+V91E0210	1004	11		03/04/91	03/05/91	null
+V93J3100	1010	118		08/20/93	08/20/93	null
+V93F3088	1012	134		08/27/93	09/08/93	null
+V93F2030	1012	134		12/12/93	null		null
+V93F2051	1012	134		12/18/93	null		03/01/94
+V93H0030	1005	118		12/12/93	null		01/01/94
+V94H0079	1005	61		02/13/94	null		04/20/94
+V9320630	1001	127		12/12/93	null		12/15/93
+V9420099	1001	127		01/17/94	null		06/01/94
+V93C0990	1006	72		08/09/93	09/02/93	null
+
+Var. #17. Table Sales
+
+po_number	order_status	paid	qty_ordered	total_value	discount	item_type
+-------------------------------------------------------------------------------------------------
+V91E0210	shipped      	y	10		5000		0.1		hardware
+V93J3100	shipped      	y    	16		18000.40	0.10		software
+V93F3088	shipped      	n    	10		10000		0		software
+V93F2030	open        	y    	15		450000.49	0		hardware
+V93F2051	waiting      	n    	1		999.98		0		software
+V93H0030	open         	y    	20		5980		0.20		software
+V94H0079	open         	n    	10		9000		0.05		software
+V9320630	open         	n    	3		60000		0.20		hardware
+V93F2051	open         	n    	100		3399.15		0.15		software
+V9420099	shipped      	y    	40		399960.50	0.10		hardware
+V93C0990	shipped		n	2		1500.00		0		software
+
+Var. #18. Table Sales
+
+po_number	cust_no	sales_rep	order_status	order_date	ship_date	date_needed
+---------------------------------------------------------------------------------------------------
+V92E0340	1004	11		shipped		15-OCT-1992	16-OCT-1992 	17-OCT-1992
+V92J1003        1010	61 		shipped      	26-JUL-1992  	4-AUG-1992 	15-SEP-1992
+V93J2004        1010	118 		shipped      	30-OCT-1993  	2-DEC-1993 	15-NOV-1993
+V92F3004        1012    11 		shipped      	15-OCT-1992 	16-JAN-1993 	16-JAN-1993
+V9336100        1002    11 		waiting      	27-DEC-1993  	1-JAN-1994  	1-JAN-1994
+V9345200        1003    11 		shipped      	11-NOV-1993  	2-DEC-1993  	1-DEC-1993
+V9345139        1003   	127 		shipped      	 9-SEP-1993 	20-SEP-1993  	1-OCT-1993
+V93C0120        1006    72 		shipped      	22-MAR-1993 	31-MAY-1993 	17-APR-1993
+V93S4702        1011   	121 		shipped      	27-OCT-1993 	28-OCT-1993 	15-DEC-1993
+V93H3009        1008    61 		shipped       	 1-AUG-1993  	2-DEC-1993  	1-DEC-1993
+V93B1002        1014   	134 		shipped      	20-SEP-1993 	21-SEP-1993 	25-SEP-1993
+
+Var. #19. Table Sales
+
+po_number	paid   qty_ordered total_value        discount item_type
+-----------------------------------------------------------------------------------
+V92E0340	y	         7    70000.00               0 hardware
+V92J1003        y       	15     2985.00	             0 software
+V93J2004        y                3      210.00               0 software
+V92F3004        y                3     2000.00               0 software
+V9336100        n              150    14850.00     0.050000001 software
+V9345200        y              900    27000.00      0.30000001 software
+V9345139        y               20    12582.12             0.1 software
+V93C0120        y                1       47.50               0 other   
+V93S4702        y                4   120000.00               0 hardware
+V93H3009        n                3     9000.00     0.050000001 software
+V93B1002        y                1      100.02               0 software
+
+
+Sample input for Var. #01
+
+1		Johnny		Smithe		no@no.com	system		Y
+2		Karen		Xythe		no@no.com	system		Y
+3		Brett		Heath		no@no.com	system		Y
+4		Gabby		Banks		no@no.com	system		Y
+5		Faye		Jones		no@no.com	system		Y
+6		Joh		Boy		no@no.com	system		Y
+
+Sample output for Var. #01
+
+                                                       Table Manager
+
++-----------+-----------+----------+-----------+----------+--------+
+| ManagerId | FirstName | LastName | Email     | Password | Active |
++-----------+-----------+----------+-----------+----------+--------+
+|         1 | Johnny    | Smithe   | no@no.com | system	  |   Y    |
+|         2 | Karen	| Xythe	   | no@no.com | system	  |   Y    |
+|         3 | Brett	| Heath	   | no@no.com | system	  |   Y    |
+|         4 | Gabby	| Banks	   | no@no.com | system	  |   Y    |
+|         5 | Faye	| Jones	   | no@no.com | system	  |   Y    |
+|         6 | Joh	| Boy	   | no@no.com | system	  |   Y    |
++-----------+-----------+----------+-----------+----------+--------+
