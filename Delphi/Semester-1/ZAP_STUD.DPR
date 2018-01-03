@@ -10,10 +10,10 @@ const
 
 type
   Zap = record
-    Name: string[10];   { фамилия }
-    Age:  Integer;      { возраст }
-    Height: Byte;       {  рост   }
-    Weight: Real;       {  вес    }
+    Name: string[10];   { С„Р°РјРёР»РёСЏ }
+    Age:  Integer;      { РІРѕР·СЂР°СЃС‚ }
+    Height: Byte;       {  СЂРѕСЃС‚   }
+    Weight: Real;       {  РІРµСЃ    }
   end;
   Stud = array [1..NN] of Zap;
 {-----------------------------------------------------------}
@@ -26,14 +26,14 @@ begin
     ReadLn(Name);
     ReadLn(Age, Height, Weight);
   end;
-end; // процедуры Input_zap 
+end; // РїСЂРѕС†РµРґСѓСЂС‹ Input_zap 
 {-----------------------------------------------------------}
 
 procedure Output_zap(Student:Zap);
 begin
   with Student do
     WriteLn(Name, Age:5, Height:5, Weight:7:1);
-end; // процедуры Output_zap 
+end; // РїСЂРѕС†РµРґСѓСЂС‹ Output_zap 
 {-----------------------------------------------------------}
 
 procedure Sort_zap(var Student:Stud; N:integer);
@@ -57,11 +57,11 @@ begin
     Student[I] := Student[NMin];
     Student[NMin] := R;
   end;
-end; // процедуры Sort_zap 
+end; // РїСЂРѕС†РµРґСѓСЂС‹ Sort_zap 
 {-----------------------------------------------------------}
 var
   I, N:    Integer;
-  Student: Stud;       // массив записей о студентах 
+  Student: Stud;       // РјР°СЃСЃРёРІ Р·Р°РїРёСЃРµР№ Рѕ СЃС‚СѓРґРµРЅС‚Р°С… 
 
 begin
   Write('Input number student: ');

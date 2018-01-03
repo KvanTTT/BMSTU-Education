@@ -42,7 +42,7 @@ type
       Y: Integer);
   private
     procedure DrawAllPoints;
-    procedure MakeTask№2;
+    procedure MakeTaskв„–2;
   public
     { Public declarations }
   end;
@@ -71,7 +71,7 @@ var
 begin
   if stgPoints.Cells[0, SelRow] <> '' then
   begin
-    if MessageDlg('Вы действительн хоите удалить выделенную точку?', mtConfirmation,
+    if MessageDlg('Р’С‹ РґРµР№СЃС‚РІРёС‚РµР»СЊРЅ С…РѕРёС‚Рµ СѓРґР°Р»РёС‚СЊ РІС‹РґРµР»РµРЅРЅСѓСЋ С‚РѕС‡РєСѓ?', mtConfirmation,
       [mbYes, mbNo], 0) = mrYes
     then
     begin
@@ -88,7 +88,7 @@ begin
       stgPoints.Cells[1, stgPoints.RowCount-1] := '';
       stgPoints.Cells[2, stgPoints.RowCount-1] := '';
       DrawAllPoints;
-      MakeTask№2;
+      MakeTaskв„–2;
     end;
   end;
 end;
@@ -126,7 +126,7 @@ begin
   end;
 end;
 
-procedure TForm1.MakeTask№2;
+procedure TForm1.MakeTaskв„–2;
 function TriangleSquare(X1, Y1, X2, Y2, X3, Y3: Integer): Real;
 var
   A1, A2, B1, B2: Integer;
@@ -219,7 +219,7 @@ begin
     StringGrid1.Cells[2, 2] := IntToStr(PointsAr[B].Y);
     StringGrid1.Cells[1, 3] := IntToStr(PointsAr[C].X);
     StringGrid1.Cells[2, 3] := IntToStr(PointsAr[C].Y);
-    Label8.Caption := 'Разность ' + IntToStr(MinDiff);
+    Label8.Caption := 'Р Р°Р·РЅРѕСЃС‚СЊ ' + IntToStr(MinDiff);
   end;
 
 end;
@@ -233,20 +233,20 @@ var
   L, L1: Integer;
 begin
   1:
-  if InputQuery('Добавление точки', 'Введите координату Х', S) then
+  if InputQuery('Р”РѕР±Р°РІР»РµРЅРёРµ С‚РѕС‡РєРё', 'Р’РІРµРґРёС‚Рµ РєРѕРѕСЂРґРёРЅР°С‚Сѓ РҐ', S) then
   begin
     if TryStrToInt(S, X) then
     begin
       if (X < 0) or (X > imgCanvas.ClientWidth) then
       begin
-        ShowMessage('X должен быть больше 0 и меньше ' +
+        ShowMessage('X РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ Р±РѕР»СЊС€Рµ 0 Рё РјРµРЅСЊС€Рµ ' +
           IntToStr(imgCanvas.ClientWidth));
         goto 1;
       end;
     end
     else
     begin
-      ShowMessage('Неправильный ввод');
+      ShowMessage('РќРµРїСЂР°РІРёР»СЊРЅС‹Р№ РІРІРѕРґ');
       goto 1;
     end;
   end
@@ -255,20 +255,20 @@ begin
 
   S := '';
   2:
-  if InputQuery('Добавление точки', 'Введите координату Y', S) then
+  if InputQuery('Р”РѕР±Р°РІР»РµРЅРёРµ С‚РѕС‡РєРё', 'Р’РІРµРґРёС‚Рµ РєРѕРѕСЂРґРёРЅР°С‚Сѓ Y', S) then
   begin
     if TryStrToInt(S, Y) then
     begin
       if (Y < 0) or (Y > imgCanvas.ClientHeight) then
       begin
-        ShowMessage('Y должен быть больше 0 и меньше ' +
+        ShowMessage('Y РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ Р±РѕР»СЊС€Рµ 0 Рё РјРµРЅСЊС€Рµ ' +
           IntToStr(imgCanvas.ClientHeight));
         goto 2;
       end;
     end
     else
     begin
-      ShowMessage('Неправильный ввод');
+      ShowMessage('РќРµРїСЂР°РІРёР»СЊРЅС‹Р№ РІРІРѕРґ');
       goto 2;
     end;
   end
@@ -277,7 +277,7 @@ begin
 
   if stgPoints.RowCount = 22 then
   begin
-    ShowMessage('Максимальное количество точек - 20');
+    ShowMessage('РњР°РєСЃРёРјР°Р»СЊРЅРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ С‚РѕС‡РµРє - 20');
     Exit;
   end;
   L := Length(PointsAr);
@@ -290,16 +290,16 @@ begin
   stgPoints.Cells[2, L1] := IntToStr(Y);
   stgPoints.RowCount := stgPoints.RowCount + 1;
   DrawAllPoints;
-  MakeTask№2;
+  MakeTaskв„–2;
 
 end;
 
 procedure TForm1.FormCreate(Sender: TObject);
 begin
-  stgPoints.Cells[0, 0] := '№';
+  stgPoints.Cells[0, 0] := 'в„–';
   stgPoints.Cells[1, 0] := 'X';
   stgPoints.Cells[2, 0] := 'Y';
-  StringGrid1.Cells[0, 0] := '№';
+  StringGrid1.Cells[0, 0] := 'в„–';
   StringGrid1.Cells[1, 0] := 'X';
   StringGrid1.Cells[2, 0] := 'Y';
   StringGrid1.Cells[0, 1] := '1';
@@ -326,7 +326,7 @@ begin
   begin
   if stgPoints.RowCount = 22 then
   begin
-    ShowMessage('Максимальное количество точек - 20');
+    ShowMessage('РњР°РєСЃРёРјР°Р»СЊРЅРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ С‚РѕС‡РµРє - 20');
     Exit;
   end;
   L := Length(PointsAr);
@@ -339,7 +339,7 @@ begin
   stgPoints.Cells[2, L1] := IntToStr(Y);
   stgPoints.RowCount := stgPoints.RowCount + 1;
   DrawAllPoints;
-  MakeTask№2;
+  MakeTaskв„–2;
   end
   else
   if Button = mbRight then
@@ -361,7 +361,7 @@ begin
       stgPoints.Cells[1, stgPoints.RowCount-1] := '';
       stgPoints.Cells[2, stgPoints.RowCount-1] := '';
       DrawAllPoints;
-      MakeTask№2;
+      MakeTaskв„–2;
       Break;
       end;
   end;
@@ -373,7 +373,7 @@ begin
   begin
     pnlBgCl.Color := ColorDialog1.Color;
     DrawAllPoints;
-    MakeTask№2;
+    MakeTaskв„–2;
   end;
 end;
 
@@ -383,7 +383,7 @@ begin
   begin
     pnlPntCl.Color := ColorDialog1.Color;
     DrawAllPoints;
-    MakeTask№2;
+    MakeTaskв„–2;
   end;
 end;
 

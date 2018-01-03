@@ -451,13 +451,13 @@ begin
 
   if (edtAngle.Text = '') then
   begin
-    ShowMessage('Недопустипое значение угла');
+    ShowMessage('РќРµРґРѕРїСѓСЃС‚РёРїРѕРµ Р·РЅР°С‡РµРЅРёРµ СѓРіР»Р°');
     edtAngle.Text := '0';
   end;
     SlopeAngle := StrToFloat(edtAngle.Text);
   if (SlopeAngle > 90) or (SlopeAngle < 0) then
   begin
-    ShowMessage('Недопустипое значение угла');
+    ShowMessage('РќРµРґРѕРїСѓСЃС‚РёРїРѕРµ Р·РЅР°С‡РµРЅРёРµ СѓРіР»Р°');
     edtAngle.Text := '0';
   end;
 
@@ -509,7 +509,7 @@ begin
     V.X := -CosA*Speed;
     V.Y := SinA*Speed;
     DrawSign(Sign);
-    Label9.Caption := FloatToStrF(Speed, ffFixed, 6, 4) + 'пикс/сек';   }
+    Label9.Caption := FloatToStrF(Speed, ffFixed, 6, 4) + 'РїРёРєСЃ/СЃРµРє';   }
 
 
 end;
@@ -526,14 +526,14 @@ begin
 
   if (edtSpeed.Text = '') then
   begin
-    ShowMessage('Недопустипое значение скорости');
+    ShowMessage('РќРµРґРѕРїСѓСЃС‚РёРїРѕРµ Р·РЅР°С‡РµРЅРёРµ СЃРєРѕСЂРѕСЃС‚Рё');
     edtSpeed.Text := '0';
     Exit;
   end;
     Speed :=  StrToFloat(edtSpeed.Text);
   if (Speed >= 1000) then
   begin
-    ShowMessage('Недопустипое значение скорости');
+    ShowMessage('РќРµРґРѕРїСѓСЃС‚РёРїРѕРµ Р·РЅР°С‡РµРЅРёРµ СЃРєРѕСЂРѕСЃС‚Рё');
     edtSpeed.Text := '0';
     Speed := 0;
   end;
@@ -544,7 +544,7 @@ begin
     V.Y := SinA*Speed*Timer1.Interval/1000;
     RotAngle := -Speed/(Sign.R1)*Timer1.Interval/1000;
     Label9.Caption := FloatToStrF(Speed/(PI2*Sign.R1)/Pi*180,
-    ffFixed, 6, 4) + ' градусов/сек';
+    ffFixed, 6, 4) + ' РіСЂР°РґСѓСЃРѕРІ/СЃРµРє';
     DrawSign(Sign);
   end;
 end;
@@ -655,13 +655,13 @@ begin
   if SpeedButton1.Down then
   begin
     SpeedButton1.Down := True;
-    SpeedButton1.Caption := 'Стоп';
+    SpeedButton1.Caption := 'РЎС‚РѕРї';
     Timer1.Enabled := True
   end
   else
   begin
     SpeedButton1.Down := False;
-    SpeedButton1.Caption := 'Старт';
+    SpeedButton1.Caption := 'РЎС‚Р°СЂС‚';
     Timer1.Enabled := False
   end;
   SignAngle := 0;
@@ -730,7 +730,7 @@ begin
   V.Y := SinA*StrToFloat(edtSpeed.Text)*Timer1.Interval/1000;
   RotAngle := -StrToFloat(edtSpeed.Text)/(Sign.R1)*Timer1.Interval/1000;
   Label9.Caption := FloatToStrF(StrToFloat(edtSpeed.text)/(PI2*Sign.R1)/Pi*180,
-    ffFixed, 6, 4) + ' градусов/сек';
+    ffFixed, 6, 4) + ' РіСЂР°РґСѓСЃРѕРІ/СЃРµРє';
   DrawSign(Sign);
 end;
 

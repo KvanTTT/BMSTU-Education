@@ -530,7 +530,7 @@ begin
     GenerateSpider(Spiders[I]);
   GenerateHole(Hole);
   Background := TBitmap.Create;
-  BackGround.LoadFromFile('Ôîí.bmp');
+  BackGround.LoadFromFile('â€˜Ð¾Ð½.bmp');
   LegAng := Pi/4;
   SetLength(Angles, SpidersCount);
   for I := 0 to SpidersCount - 1 do

@@ -74,7 +74,7 @@ begin
       if Value = 0 then
       begin
         Error := True;
-        Edit1.Text := 'Деление на ноль запрещено';
+        Edit1.Text := 'Р”РµР»РµРЅРёРµ РЅР° РЅРѕР»СЊ Р·Р°РїСЂРµС‰РµРЅРѕ';
         Edit1.ReadOnly := True;
         Exit;
       end;
@@ -85,7 +85,7 @@ begin
       if Value <= 0 then
       begin
         Error := True;
-        Edit1.Text := 'Недопустимый аргумент функции';
+        Edit1.Text := 'РќРµРґРѕРїСѓСЃС‚РёРјС‹Р№ Р°СЂРіСѓРјРµРЅС‚ С„СѓРЅРєС†РёРё';
         Edit1.ReadOnly := True;
         Exit;
       end;
@@ -96,7 +96,7 @@ begin
       if Value < 0 then
       begin
         Error := True;
-        Edit1.Text := 'Недопустимый аргумент функции';
+        Edit1.Text := 'РќРµРґРѕРїСѓСЃС‚РёРјС‹Р№ Р°СЂРіСѓРјРµРЅС‚ С„СѓРЅРєС†РёРё';
         Edit1.ReadOnly := True;
         Exit;
       end;

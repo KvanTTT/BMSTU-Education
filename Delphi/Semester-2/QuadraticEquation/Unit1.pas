@@ -1,6 +1,6 @@
 unit Unit1;
 
-// Программа, решающая квадратные уравнения
+// РџСЂРѕРіСЂР°РјРјР°, СЂРµС€Р°СЋС‰Р°СЏ РєРІР°РґСЂР°С‚РЅС‹Рµ СѓСЂР°РІРЅРµРЅРёСЏ
 
 interface
 
@@ -49,7 +49,7 @@ implementation
 
 {$R *.dfm}
 
-// Решение и вывод корней Х1 и Х2
+// Р РµС€РµРЅРёРµ Рё РІС‹РІРѕРґ РєРѕСЂРЅРµР№ РҐ1 Рё РҐ2
 function TForm1.Calculate(A, B, C: Real; var X1, X2: string): Boolean;
 var
   D: Real;
@@ -58,7 +58,7 @@ begin
   D := B*B - 4*A*C;
   if D < 0 then
   begin
-    X1 := 'Нет корней в множестве действительных чисел';
+    X1 := 'РќРµС‚ РєРѕСЂРЅРµР№ РІ РјРЅРѕР¶РµСЃС‚РІРµ РґРµР№СЃС‚РІРёС‚РµР»СЊРЅС‹С… С‡РёСЃРµР»';
     X2 := '';
     Equation.Visible := True;
     Label5.Visible := True;
@@ -85,14 +85,14 @@ begin
       begin
         if C = 0 then
         begin
-          X1 := 'X - любое вещественное';
+          X1 := 'X - Р»СЋР±РѕРµ РІРµС‰РµСЃС‚РІРµРЅРЅРѕРµ';
           X2 := '';
           Equation.Visible := False;
           Label5.Visible := False;
         end
         else
         begin
-          X1 := 'Нет корней';
+          X1 := 'РќРµС‚ РєРѕСЂРЅРµР№';
           X2 := '';
           Equation.Visible := False;
           Label5.Visible := False;
@@ -100,7 +100,7 @@ begin
       end
       else
       begin
-        X1 := 'X = ' + FloatToStrF(-C/B, ffFixed, 6, 4) + ' - единственный корень';
+        X1 := 'X = ' + FloatToStrF(-C/B, ffFixed, 6, 4) + ' - РµРґРёРЅСЃС‚РІРµРЅРЅС‹Р№ РєРѕСЂРµРЅСЊ';
         X2 := '';
         Equation.Visible := True;
         Label5.Visible := True;
@@ -127,13 +127,13 @@ var
   X1, X2: string;
   A, B, C: string;
 begin
-  A := InputBox('Ввод параметров', 'Введите параметр A:', '');
+  A := InputBox('Р’РІРѕРґ РїР°СЂР°РјРµС‚СЂРѕРІ', 'Р’РІРµРґРёС‚Рµ РїР°СЂР°РјРµС‚СЂ A:', '');
   if Trim(A) = '' then
     goto end1;
-  B := InputBox('Ввод параметров', 'Введите параметр B:', '');
+  B := InputBox('Р’РІРѕРґ РїР°СЂР°РјРµС‚СЂРѕРІ', 'Р’РІРµРґРёС‚Рµ РїР°СЂР°РјРµС‚СЂ B:', '');
   if Trim(B) = '' then
     goto end1;
-  C := InputBox('Ввод параметров', 'Введите параметр C:', '');
+  C := InputBox('Р’РІРѕРґ РїР°СЂР°РјРµС‚СЂРѕРІ', 'Р’РІРµРґРёС‚Рµ РїР°СЂР°РјРµС‚СЂ C:', '');
   if Trim(C) = '' then
     goto end1;
 
@@ -170,7 +170,7 @@ begin
   end;
   while I <= Length(Koefs) do
   begin
-    if InputQuery('Ввод параметров', 'Введите параметр ' + KoefsNames[I] + ':', S) then
+    if InputQuery('Р’РІРѕРґ РїР°СЂР°РјРµС‚СЂРѕРІ', 'Р’РІРµРґРёС‚Рµ РїР°СЂР°РјРµС‚СЂ ' + KoefsNames[I] + ':', S) then
     begin
     if Trim(S) = '' then
     begin
@@ -201,7 +201,7 @@ begin
     Exit;
   end;
 
-  //MessageDlg('Вы прервали процедуру ввода', mtWarning, [mbOK], 0);
+  //MessageDlg('Р’С‹ РїСЂРµСЂРІР°Р»Рё РїСЂРѕС†РµРґСѓСЂСѓ РІРІРѕРґР°', mtWarning, [mbOK], 0);
   Edit1.Text := '';
   Edit2.Text := '';
   Edit3.Text := '';

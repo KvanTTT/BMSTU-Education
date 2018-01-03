@@ -369,7 +369,7 @@ begin
       end;
     end;
     
-    Form1.Caption := 'Построение графиков';
+    Form1.Caption := 'РџРѕСЃС‚СЂРѕРµРЅРёРµ РіСЂР°С„РёРєРѕРІ';
     if Number1 = -1 then
       Exit;
 
@@ -448,7 +448,7 @@ end;
 procedure TForm1.cmbFunc2Change(Sender: TObject);
 begin
   DrawGraphic;
-  Form1.Caption := 'Построение графиков';
+  Form1.Caption := 'РџРѕСЃС‚СЂРѕРµРЅРёРµ РіСЂР°С„РёРєРѕРІ';
 end;
 
 procedure TForm1.FormActivate(Sender: TObject);
@@ -515,7 +515,7 @@ begin
     1: ckbScale.Checked := False;
   end;
   DrawGraphic;
-  Form1.Caption := 'Построение графиков';
+  Form1.Caption := 'РџРѕСЃС‚СЂРѕРµРЅРёРµ РіСЂР°С„РёРєРѕРІ';
 end;
 
 end.

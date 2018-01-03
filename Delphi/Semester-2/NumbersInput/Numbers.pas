@@ -43,7 +43,7 @@ implementation
 
 {$R *.dfm}
 
-// перевод на русский
+// РїРµСЂРµРІРѕРґ РЅР° СЂСѓСЃСЃРєРёР№
 function ConvStr (S: string): string;
   var
     I: Integer;
@@ -170,7 +170,7 @@ begin
   if FirstPos = LastPos-1 then
     if not (Str[FirstPos]  in ['0'..'9']) then
     begin
-      ShowMessage('Число: ' + S1 + ': Первый символ в числе должен быть цифрой');
+      ShowMessage('Р§РёСЃР»Рѕ: ' + S1 + ': РџРµСЂРІС‹Р№ СЃРёРјРІРѕР» РІ С‡РёСЃР»Рµ РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ С†РёС„СЂРѕР№');
       Edit1.SetFocus;
       Edit1.SelStart := FirstPos-2;
       Edit1.SelLength := LastPos-FirstPos;
@@ -196,7 +196,7 @@ begin
   {while not (Str[J] in ['0'..'9']) do
     Inc(J);
   if J-I-1 - (I+1) > 0 then
-    ShowMessage('Число: ' + S1 + ': Первый символ в числе должен быть цифрой');
+    ShowMessage('Р§РёСЃР»Рѕ: ' + S1 + ': РџРµСЂРІС‹Р№ СЃРёРјРІРѕР» РІ С‡РёСЃР»Рµ РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ С†РёС„СЂРѕР№');
   Delete(Str, I+1, J-I-1);  }
   while I <= LastPos do
   begin
@@ -213,7 +213,7 @@ begin
       begin
         if DoubleExp then
         begin
-          ShowMessage('Число: ' + S1 + 'E может быть только одно!');
+          ShowMessage('Р§РёСЃР»Рѕ: ' + S1 + 'E РјРѕР¶РµС‚ Р±С‹С‚СЊ С‚РѕР»СЊРєРѕ РѕРґРЅРѕ!');
           Edit1.SetFocus;
       Edit1.SelStart := FirstPos-2;
       Edit1.SelLength := LastPos-FirstPos;
@@ -229,7 +229,7 @@ begin
         begin
           Edit1.SelStart := FirstPos;
           Edit1.SelLength := LastPos-FirstPos+1;
-          ShowMessage('Число: ' + S1 + 'Перед Е должна быть цифра');
+          ShowMessage('Р§РёСЃР»Рѕ: ' + S1 + 'РџРµСЂРµРґ Р• РґРѕР»Р¶РЅР° Р±С‹С‚СЊ С†РёС„СЂР°');
           Edit1.SetFocus;
       Edit1.SelStart := FirstPos-2;
       Edit1.SelLength := LastPos-FirstPos;
@@ -246,7 +246,7 @@ begin
           LastPos := LastPos + 1;
           if not (Str[I+1] in ['0'..'9']) then
           begin
-            ShowMessage(ConvStr('Число: ' + S1 + 'После Е должна быть цифра'));
+            ShowMessage(ConvStr('Р§РёСЃР»Рѕ: ' + S1 + 'РџРѕСЃР»Рµ Р• РґРѕР»Р¶РЅР° Р±С‹С‚СЊ С†РёС„СЂР°'));
             Edit1.SetFocus;
       Edit1.SelStart := FirstPos-2;
       Edit1.SelLength := LastPos-FirstPos;
@@ -265,7 +265,7 @@ begin
     begin
       if Exp then
         begin
-          ShowMessage('Число: ' + S1 + ' Не может быть запятой после Е');
+          ShowMessage('Р§РёСЃР»Рѕ: ' + S1 + ' РќРµ РјРѕР¶РµС‚ Р±С‹С‚СЊ Р·Р°РїСЏС‚РѕР№ РїРѕСЃР»Рµ Р•');
           Edit1.SetFocus;
       Edit1.SelStart := FirstPos-2;
       Edit1.SelLength := LastPos-FirstPos;
@@ -277,7 +277,7 @@ begin
         end;
       if not(Str[I+1] in ['0'..'9']) or not(Str[I-1] in ['0'..'9']) then
       begin
-        ShowMessage('Число: ' + S1 + 'Перед или после "," должна быть цифра');
+        ShowMessage('Р§РёСЃР»Рѕ: ' + S1 + 'РџРµСЂРµРґ РёР»Рё РїРѕСЃР»Рµ "," РґРѕР»Р¶РЅР° Р±С‹С‚СЊ С†РёС„СЂР°');
         Edit1.SetFocus;
       Edit1.SelStart := FirstPos-2;
       Edit1.SelLength := LastPos-FirstPos;
@@ -291,7 +291,7 @@ begin
       begin
         if DoublePoint then
         begin
-          ShowMessage('Число: ' + S1 + 'В числе не может быть больше 1 запятой');
+          ShowMessage('Р§РёСЃР»Рѕ: ' + S1 + 'Р’ С‡РёСЃР»Рµ РЅРµ РјРѕР¶РµС‚ Р±С‹С‚СЊ Р±РѕР»СЊС€Рµ 1 Р·Р°РїСЏС‚РѕР№');
           Edit1.SetFocus;
       Edit1.SelStart := FirstPos-2;
       Edit1.SelLength := LastPos-FirstPos;
@@ -311,7 +311,7 @@ begin
       if not(Str[I-1] = 'E') or
         not(Str[I+1] in ['0'..'9']) then
       begin
-        ShowMessage('Число: ' + S1 + 'Знак "+" или "-" должнен быть после Е или перед числом, причем он единственный');
+        ShowMessage('Р§РёСЃР»Рѕ: ' + S1 + 'Р—РЅР°Рє "+" РёР»Рё "-" РґРѕР»Р¶РЅРµРЅ Р±С‹С‚СЊ РїРѕСЃР»Рµ Р• РёР»Рё РїРµСЂРµРґ С‡РёСЃР»РѕРј, РїСЂРёС‡РµРј РѕРЅ РµРґРёРЅСЃС‚РІРµРЅРЅС‹Р№');
         Edit1.SetFocus;
       Edit1.SelStart := FirstPos-2;
       Edit1.SelLength := LastPos-FirstPos;

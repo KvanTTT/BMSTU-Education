@@ -197,11 +197,11 @@ begin
   for I := 0 to High(Functions) do
     ComboBox1.Items.Add(Functions[I]);
   ComboBox1.ItemIndex := 0;
-  strg.Cells[0, 0] := 'Отрезок';
-  strg.Cells[1, 0] := 'Корень';
-  strg.Cells[2, 0] := 'Значение функции';
-  strg.Cells[3, 0] := 'Число итераций';
-  strg.Cells[4, 0] := 'Код ошибки';
+  strg.Cells[0, 0] := 'РћС‚СЂРµР·РѕРє';
+  strg.Cells[1, 0] := 'РљРѕСЂРµРЅСЊ';
+  strg.Cells[2, 0] := 'Р—РЅР°С‡РµРЅРёРµ С„СѓРЅРєС†РёРё';
+  strg.Cells[3, 0] := 'Р§РёСЃР»Рѕ РёС‚РµСЂР°С†РёР№';
+  strg.Cells[4, 0] := 'РљРѕРґ РѕС€РёР±РєРё';
 
 end;
 

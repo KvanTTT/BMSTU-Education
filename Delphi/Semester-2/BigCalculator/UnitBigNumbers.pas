@@ -121,7 +121,7 @@ begin
     else
       if TempS[I] = '/' then
       begin
-        Precision := InputBox('Большие числа', 'Введите точность (для деления): ', Precision);
+        Precision := InputBox('Р‘РѕР»СЊС€РёРµ С‡РёСЃР»Р°', 'Р’РІРµРґРёС‚Рµ С‚РѕС‡РЅРѕСЃС‚СЊ (РґР»СЏ РґРµР»РµРЅРёСЏ): ', Precision);
         Number := Copy(TempS, J, I-J);
         K := I+1;
         while (TempS[K] in ['0'..'9']) do
