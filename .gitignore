@@ -289,7 +289,6 @@ __pycache__/
 
 # Delphi
 *.dcu
-*.bdsproj
 *.bdsproj.local
 *.cfg
 *.identcache
