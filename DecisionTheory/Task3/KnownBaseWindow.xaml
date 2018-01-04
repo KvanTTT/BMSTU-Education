@@ -1,0 +1,51 @@
+﻿<Window x:Class="Task3.KnownBaseWindow"
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		Title="KnownBaseWindow" Height="802" Width="867" xmlns:my="clr-namespace:Task3">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="42*" />
+			<RowDefinition Height="556*" />
+			<RowDefinition Height="8*" />
+			<RowDefinition Height="45*" />
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="327*" />
+			<ColumnDefinition Width="8*" />
+			<ColumnDefinition Width="383*" />
+			<ColumnDefinition Width="8*" />
+			<ColumnDefinition Width="266*" />
+		</Grid.ColumnDefinitions>
+		<DataGrid AutoGenerateColumns="False" EnableRowVirtualization="True" Name="symptomsDiagnosesDataGrid" RowDetailsVisibilityMode="VisibleWhenSelected" Grid.Column="4" Grid.Row="1">
+			<DataGrid.Columns>
+				<DataGridTextColumn x:Name="symptomIdColumn" Binding="{Binding Path=SymptomId}" Header="Symptom Id" IsReadOnly="True" />
+				<DataGridTextColumn x:Name="DiagnoseIdColumn" Binding="{Binding Path=DiagnoseId}" Header="Diagnose Id" IsReadOnly="True" />
+				<DataGridTextColumn x:Name="probabColumn" Binding="{Binding Path=YesProbability}" Header="Yes" IsReadOnly="True" SortMemberPath="YesProbability" />
+				<DataGridTextColumn x:Name="probabInvColumn" Binding="{Binding Path=NoProbability}" Header="No" IsReadOnly="True" SortMemberPath="NoProbability" />
+			</DataGrid.Columns>
+		</DataGrid>
+		<Label Content="Diagnoses" Name="label2" Grid.Column="2" Grid.ColumnSpan="3" Margin="0,0,264,0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" />
+		<Label Content="Rools" Name="label3" Grid.Column="4" Margin="2,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" />
+		<DataGrid AutoGenerateColumns="False" EnableRowVirtualization="True" Name="diagnosesDataGrid" RowDetailsVisibilityMode="VisibleWhenSelected" Grid.Column="2" Grid.Row="1">
+			<DataGrid.Columns>
+				<DataGridTextColumn x:Name="IdColumn" Binding="{Binding Path=Id}" Header="Id" Width="SizeToHeader" IsReadOnly="True" />
+				<DataGridTextColumn x:Name="nameColumn" Binding="{Binding Path=Name}" Header="Name" IsReadOnly="True" />
+				<DataGridTextColumn Binding="{Binding Path=Probability}" Header="Probability" IsReadOnly="True" />
+				<DataGridTextColumn Binding="{Binding Path=Description}" Header="Description" MaxWidth="500" IsReadOnly="True" />
+			</DataGrid.Columns>
+		</DataGrid>
+		<my:DatabaseInterfaceControl x:Name="dbIdiagnoses" HorizontalContentAlignment="Stretch" Grid.Column="2" Grid.Row="3" VerticalContentAlignment="Stretch" />
+		<DataGrid AutoGenerateColumns="False" EnableRowVirtualization="True" Name="symptomsDataGrid" Padding="0" RowDetailsVisibilityMode="VisibleWhenSelected" Grid.Row="1">
+			<DataGrid.Columns>
+				<DataGridTextColumn x:Name="IdColumn1" Binding="{Binding Id}" Header="Id" IsReadOnly="True" Width="SizeToHeader" />
+				<DataGridTextColumn x:Name="nameColumn1" Binding="{Binding Name}" Header="Name" IsReadOnly="True" />
+				<DataGridTextColumn Binding="{Binding Question}" Header="Question" IsReadOnly="True" />
+			</DataGrid.Columns>
+		</DataGrid>
+		<Label Content="Symptoms" Name="label1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" />
+		<my:DatabaseInterfaceControl HorizontalContentAlignment="Stretch" x:Name="dbiSymptoms" Grid.Row="3" VerticalContentAlignment="Stretch" />
+		<my:DatabaseInterfaceControl HorizontalContentAlignment="Stretch" x:Name="dbiSymptomsDiagnoses" VerticalContentAlignment="Stretch" Grid.Column="4" Grid.Row="3" />
+		<GridSplitter Grid.Column="1" HorizontalAlignment="Stretch" Name="GridSplitter1" ResizeDirection="Columns" Grid.RowSpan="4" />
+		<GridSplitter Name="GridSplitter2" ResizeDirection="Columns" Grid.Column="3" Grid.RowSpan="4" HorizontalAlignment="Stretch" />
+	</Grid>
+</Window>
