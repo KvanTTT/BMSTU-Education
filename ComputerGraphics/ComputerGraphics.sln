@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Segment", "4-Segment\Segment.csproj", "{D124AB4F-A192-4F19-B4C8-CFBBF70F28ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Circle-and-Ellipse", "5-Circle-and-Ellipse\Circle-and-Ellipse.csproj", "{6CB219DB-E7EF-42F0-9C8A-F9D2D6646B3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polygon-Fill", "6-Polygon-Fill\Polygon-Fill.csproj", "{D829BC2F-7A79-4A35-AB07-50C98EBB0BB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Segment-Cut", "7-Segment-Cut\Segment-Cut.csproj", "{5A7974A4-6614-4EC2-A1A2-2156F00BE734}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Segment-Polygon-Cut", "8-9-Segment-Polygon-Сut\Segment-Polygon-Cut.csproj", "{228FD1FE-9ECC-4BDA-B6B9-502F76970D54}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clipping", "10-Clipping\Clipping.csproj", "{8B61D39E-8719-4287-9055-34C55560562B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D124AB4F-A192-4F19-B4C8-CFBBF70F28ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D124AB4F-A192-4F19-B4C8-CFBBF70F28ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D124AB4F-A192-4F19-B4C8-CFBBF70F28ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D124AB4F-A192-4F19-B4C8-CFBBF70F28ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CB219DB-E7EF-42F0-9C8A-F9D2D6646B3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CB219DB-E7EF-42F0-9C8A-F9D2D6646B3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CB219DB-E7EF-42F0-9C8A-F9D2D6646B3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CB219DB-E7EF-42F0-9C8A-F9D2D6646B3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D829BC2F-7A79-4A35-AB07-50C98EBB0BB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D829BC2F-7A79-4A35-AB07-50C98EBB0BB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D829BC2F-7A79-4A35-AB07-50C98EBB0BB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D829BC2F-7A79-4A35-AB07-50C98EBB0BB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A7974A4-6614-4EC2-A1A2-2156F00BE734}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A7974A4-6614-4EC2-A1A2-2156F00BE734}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A7974A4-6614-4EC2-A1A2-2156F00BE734}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A7974A4-6614-4EC2-A1A2-2156F00BE734}.Release|Any CPU.Build.0 = Release|Any CPU
+		{228FD1FE-9ECC-4BDA-B6B9-502F76970D54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{228FD1FE-9ECC-4BDA-B6B9-502F76970D54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{228FD1FE-9ECC-4BDA-B6B9-502F76970D54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{228FD1FE-9ECC-4BDA-B6B9-502F76970D54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B61D39E-8719-4287-9055-34C55560562B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B61D39E-8719-4287-9055-34C55560562B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B61D39E-8719-4287-9055-34C55560562B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B61D39E-8719-4287-9055-34C55560562B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {562825C5-44EB-49EA-803D-8FA35CFC98CF}
+	EndGlobalSection
+EndGlobal
