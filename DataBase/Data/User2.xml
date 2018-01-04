@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<User xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="10000" UserName="Ajven">
+  <Country>Australia</Country>
+  <Project>AQUA@Home</Project>
+  <RegDate>2005-06-20T00:00:00</RegDate>
+  <AvgScore>97</AvgScore>
+  <AllScore>3456735</AllScore>
+</User>

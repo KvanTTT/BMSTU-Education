@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <script type="text/javascript">
+    <!--
+      function doTransform()
+      {
+      var oStyleSheet = new ActiveXObject("MSXML2.FreeThreadedDOMDocument");
+
+      oStyleSheet.async = false;
+      oStyleSheet.load("transform.xsl");
+
+      // Create the XSLTemplate object
+      var oXSLT = new ActiveXObject("MSXML2.XSLTemplate");
+
+      // Link the XSLT style sheet to the XSLTemplate object
+      oXSLT.stylesheet = oStyleSheet.documentElement;
+
+      // Create the XSLProcessor object
+      var oXSLTProc = oXSLT.createProcessor();
+
+      // Load XML source in DOMDocument
+      var oXMLSource = new ActiveXObject("MSXML2.DOMDocument");
+      oXMLSource.async = false;
+      oXMLSource.load("Russian users.xml");
+
+      // Add a global parameter
+      oXSLTProc.addParameter("TableOnly", "Yes", "");
+
+      // Assign XML source to XSLProcessor object
+      oXSLTProc.input = oXMLSource;
+
+      // Invoke the transformation
+      oXSLTProc.transform();
+
+      // Use output of transformation
+      results.innerHTML = oXSLTProc.output;
+      }
+     -->
+    </script>
+  </head>
+
+  <body onload="doTransform()">
+    <div id="results" />
+  </body>
+
+</html>

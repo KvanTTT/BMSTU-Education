@@ -1,0 +1,59 @@
+﻿<?xml version="1.0"?>
+<Users>
+  <User ID="1" UserName="delitePS3">
+    <Team>NCSU Wolfpack</Team>
+    <Country>GERMANY</Country>
+    <Project>Climate Prediction</Project>
+    <RegDate>2006/7/29</RegDate>
+    <AvgScore>760.745</AvgScore>
+    <AllScore>5980949</AllScore>
+  </User>
+  <User ID="2" UserName="beredon">
+    <Team>CHIP Indonesia Folding Fellow</Team>
+    <Country>UNITED KINGDOM</Country>
+    <Project>Reversi</Project>
+    <RegDate>2003/12/26</RegDate>
+    <AvgScore>326.174</AvgScore>
+    <AllScore>6602121</AllScore>
+  </User>
+  <User ID="3" UserName="DIPthong!">
+    <Team>[H]ardOCP</Team>
+    <Country>CANADA</Country>
+    <Project>Sudoku project</Project>
+    <RegDate>2005/11/17</RegDate>
+    <AvgScore>459.812</AvgScore>
+    <AllScore>5405140</AllScore>
+  </User>
+  <User ID="4" UserName="T1212I">
+    <Team>folding@evga</Team>
+    <Country>FRANCE</Country>
+    <Project>World Community Grid</Project>
+    <RegDate>1999/2/16</RegDate>
+    <AvgScore>794.867</AvgScore>
+    <AllScore>3900425</AllScore>
+  </User>
+  <User ID="5" UserName="nkh33">
+    <Team>NCIX.com Forum Folding Team</Team>
+    <Country>FRANCE</Country>
+    <Project>QMC@Home</Project>
+    <RegDate>2007/9/20</RegDate>
+    <AvgScore>290.230</AvgScore>
+    <AllScore>9211405</AllScore>
+  </User>
+  <User ID="6" UserName="google133770995893900">
+    <Team>Alliance Francophone</Team>
+    <Country>FRANCE</Country>
+    <Project>RSA Lattice Siever (2.0)</Project>
+    <RegDate>2003/4/2</RegDate>
+    <AvgScore>878.949</AvgScore>
+    <AllScore>6381233</AllScore>
+  </User>
+  <User ID="7" UserName="Denzil_(XPS)">
+    <Team>p2p-community</Team>
+    <Country>UNITED STATES</Country>
+    <Project>World Community Grid</Project>
+    <RegDate>2006/6/19</RegDate>
+    <AvgScore>253.063</AvgScore>
+    <AllScore>1807714</AllScore>
+  </User>
+</Users>

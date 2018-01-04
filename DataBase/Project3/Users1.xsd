@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--Created with Liquid XML Studio Developer Edition (Trial) 8.0.11.2171 (http://www.liquid-technologies.com)-->
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="Users" type="tblUsers" />
+	<xs:complexType name="tblUsers">
+		<xs:sequence>
+			<xs:element name="Team" type="xs:string" />
+			<xs:element name="Country" type="CountryList" />
+			<xs:element name="Project" type="xs:string" />
+			<xs:element name="RegisterDate" type="xs:date" />
+			<xs:element name="AvgScorePerDay" type="xs:float" />
+			<xs:element name="AllScore" type="xs:int" />
+		</xs:sequence>
+		<xs:attribute name="UserID" type="xs:int" use="required" />
+		<xs:attribute name="UserName" type="xs:string" use="required" />
+	</xs:complexType>
+	<xs:simpleType name="CountryList">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="UNITED STATES" />
+			<xs:enumeration value="FRANCE" />
+			<xs:enumeration value="GERMANY" />
+			<xs:enumeration value="JAPAN" />
+			<xs:enumeration value="UNITED KINGDOM" />
+			<xs:enumeration value="CANADA" />
+			<xs:enumeration value="BRAZIL" />
+			<xs:enumeration value="ITALY" />
+			<xs:enumeration value="AUSTRALIA" />
+			<xs:enumeration value="SPAIN" />
+			<xs:enumeration value="NETHERLANDS" />
+			<xs:enumeration value="CHINA" />
+			<xs:enumeration value="CZECH REPUBLIC" />
+			<xs:enumeration value="POLAND" />
+			<xs:enumeration value="BELGIUM" />
+			<xs:enumeration value="RUSSIAN FEDERATION" />
+			<xs:enumeration value="INDIA" />
+			<xs:enumeration value="FINLAND" />
+			<xs:enumeration value="TAIWAN" />
+			<xs:enumeration value="DENMARK" />
+			<xs:enumeration value="SWEDEN" />
+			<xs:enumeration value="SWITZERLAND" />
+			<xs:enumeration value="HUNGARY" />
+			<xs:enumeration value="AUSTRIA" />
+			<xs:enumeration value="NORWAY" />
+			<xs:enumeration value="PORTUGAL" />
+			<xs:enumeration value="ARGENTINA" />
+			<xs:enumeration value="TURKEY" />
+			<xs:enumeration value="MEXICO" />
+			<xs:enumeration value="ISRAEL" />
+			<xs:enumeration value="HONG KONG" />
+			<xs:enumeration value="ROMANIA" />
+			<xs:enumeration value="IRELAND" />
+			<xs:enumeration value="NEW ZEALAND" />
+			<xs:enumeration value="SLOVAKIA" />
+			<xs:enumeration value="SOUTH AFRICA" />
+			<xs:enumeration value="THAILAND" />
+			<xs:enumeration value="GREECE" />
+			<xs:enumeration value="UKRAINE" />
+			<xs:enumeration value="MALAYSIA" />
+			<xs:enumeration value="BULGARIA" />
+			<xs:enumeration value="SINGAPORE" />
+			<xs:enumeration value="CROATIA" />
+			<xs:enumeration value="KOREA, REPUBLIC OF" />
+			<xs:enumeration value="VENEZUELA" />
+			<xs:enumeration value="CHILE" />
+			<xs:enumeration value="COLOMBIA" />
+			<xs:enumeration value="PHILIPPINES" />
+			<xs:enumeration value="SLOVENIA" />
+			<xs:enumeration value="INDONESIA" />
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

@@ -1,0 +1,13 @@
+<!ELEMENT Users (tblUsers+)>
+
+<!ELEMENT tblUsers(Team, Country, Project, RegisterDate, AvgScorePerDay, AllScore)>
+<!ATTLIST tblUsers
+	UserID CDATA #REQUIRED
+	UserName CDATA #REQUIRED>
+
+<!ELEMENT Team (#PCDATA)>
+<!ELEMENT Country (#PCDATA)>
+<!ELEMENT Project (#PCDATA)>
+<!ELEMENT RegisterDate (#PCDATA)>
+<!ELEMENT AvgScorePerDay (#PCDATA)>
+<!ELEMENT AllScore (#PCDATA)>

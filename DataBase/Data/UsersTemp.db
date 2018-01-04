@@ -1,0 +1,3 @@
+new User(1, "google186021521017519", "Gentoo Linux Users Everywhere", CountryName.BELGIUM, "Proteins@home", new DateTime(2005, 5, 6), 327.911f, 2239903),
+new User(2, "ThiagoRocha", "Maximum PC Magazine", CountryName.SWEDEN, "Einstein@Home", new DateTime(2005, 5, 27), 824.190f, 4615576),
+new User(3, "huff13", "[H]ardOCP", CountryName.UNITED STATES, "SZTAKI Desktop Grid", new DateTime(2004, 5, 8), 971.288f, 5751070),

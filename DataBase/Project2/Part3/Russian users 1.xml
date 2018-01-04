@@ -1,0 +1,208 @@
+﻿<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="transform1.xslt"?>
+<Users>
+	<User UserName="[Inpact]_Frostmourn">
+	  <Project>MilkyWay@home</Project>
+	  <AllScore>3676397</AllScore>
+	</User>
+	<User UserName="Ben_Philippi">
+	  <Project>SETI@Home</Project>
+	  <AllScore>7774626</AllScore>
+	</User>
+	<User UserName="Beremat">
+	  <Project>LHC@Home</Project>
+	  <AllScore>350264</AllScore>
+	</User>
+	<User UserName="CvJ">
+	  <Project>Spinhenge@home</Project>
+	  <AllScore>9746209</AllScore>
+	</User>
+	<User UserName="DavidV">
+	  <Project>Docking@Home </Project>
+	  <AllScore>2048374</AllScore>
+	</User>
+	<User UserName="excieve">
+	  <Project>AlmereGrid Boinc Grid</Project>
+	  <AllScore>1496647</AllScore>
+	</User>
+	<User UserName="GAMEVOLUTION-ita">
+	  <Project>Leiden Classical</Project>
+	  <AllScore>6083359</AllScore>
+	</User>
+	<User UserName="google126810681870478">
+	  <Project>ABC@home</Project>
+	  <AllScore>2616975</AllScore>
+	</User>
+	<User UserName="google144616471904802">
+	  <Project>Climate Prediction</Project>
+	  <AllScore>1552163</AllScore>
+	</User>
+	<User UserName="google67959983182977">
+	  <Project>WEP-M+2 Project</Project>
+	  <AllScore>5836879</AllScore>
+	</User>
+	<User UserName="hoodietv">
+	  <Project>SIMAP</Project>
+	  <AllScore>5857993</AllScore>
+	</User>
+	<User UserName="Iniquity_work">
+	  <Project>NFS@Home</Project>
+	  <AllScore>7468586</AllScore>
+	</User>
+	<User UserName="Invader_Zim">
+	  <Project>Einstein@Home</Project>
+	  <AllScore>8823170</AllScore>
+	</User>
+	<User UserName="Jim_Marschall">
+	  <Project>Rosetta@Home</Project>
+	  <AllScore>2011310</AllScore>
+	</User>
+	<User UserName="Jobian">
+	  <Project>Spinhenge@home</Project>
+	  <AllScore>7126099</AllScore>
+	</User>
+	<User UserName="John_Herbert">
+	  <Project>Cosmology@Home</Project>
+	  <AllScore>3911168</AllScore>
+	</User>
+	<User UserName="Joseph3489">
+	  <Project>Climate Prediction</Project>
+	  <AllScore>9066379</AllScore>
+	</User>
+	<User UserName="julius">
+	  <Project>DrugDiscovery@Home</Project>
+	  <AllScore>1185216</AllScore>
+	</User>
+	<User UserName="kevinvr6">
+	  <Project>yoyo@home</Project>
+	  <AllScore>7716987</AllScore>
+	</User>
+	<User UserName="LevValit">
+	  <Project>World Community Grid</Project>
+	  <AllScore>8817777</AllScore>
+	</User>
+	<User UserName="malcolmst">
+	  <Project>NQueens Project</Project>
+	  <AllScore>6267036</AllScore>
+	</User>
+	<User UserName="markom1">
+	  <Project>SHA-1 Collision Search Graz</Project>
+	  <AllScore>609843</AllScore>
+	</User>
+	<User UserName="MHZ_PS3_2">
+	  <Project>Superlink@Technion</Project>
+	  <AllScore>1662038</AllScore>
+	</User>
+	<User UserName="netwizard">
+	  <Project>Einstein@Home</Project>
+	  <AllScore>6846324</AllScore>
+	</User>
+	<User UserName="nick__who">
+	  <Project>Hydrogen@Home</Project>
+	  <AllScore>9292163</AllScore>
+	</User>
+	<User UserName="Nomak">
+	  <Project>Anansi</Project>
+	  <AllScore>7646811</AllScore>
+	</User>
+	<User UserName="omikron">
+	  <Project>Climate Prediction</Project>
+	  <AllScore>9593800</AllScore>
+	</User>
+	<User UserName="Peter_Bartholow">
+	  <Project>Climate Prediction</Project>
+	  <AllScore>530175</AllScore>
+	</User>
+	<User UserName="PMIMedicalJonPC_DualCore3.4Ghz">
+	  <Project>LHC@Home</Project>
+	  <AllScore>8180386</AllScore>
+	</User>
+	<User UserName="Pteromys">
+	  <Project>LHC@Home</Project>
+	  <AllScore>9751503</AllScore>
+	</User>
+	<User UserName="Rdv1123">
+	  <Project>World Community Grid</Project>
+	  <AllScore>7523654</AllScore>
+	</User>
+	<User UserName="remis">
+	  <Project>World Community Grid</Project>
+	  <AllScore>2456057</AllScore>
+	</User>
+	<User UserName="RMORMOND">
+	  <Project>Hydrogen@Home</Project>
+	  <AllScore>6107163</AllScore>
+	</User>
+	<User UserName="Sabinou">
+	  <Project>SETI@Home</Project>
+	  <AllScore>6120269</AllScore>
+	</User>
+	<User UserName="samarin_6">
+	  <Project>LHC@Home</Project>
+	  <AllScore>4864625</AllScore>
+	</User>
+	<User UserName="sesshona">
+	  <Project>MindModeling@Home</Project>
+	  <AllScore>198667</AllScore>
+	</User>
+	<User UserName="Silencer2869">
+	  <Project>Climate Prediction</Project>
+	  <AllScore>4984909</AllScore>
+	</User>
+	<User UserName="Silly_Me3">
+	  <Project>Rectilinear Crossing No.</Project>
+	  <AllScore>1373367</AllScore>
+	</User>
+	<User UserName="Silversmurfer">
+	  <Project>BOINC combined</Project>
+	  <AllScore>1581943</AllScore>
+	</User>
+	<User UserName="smega84[Atomic]">
+	  <Project>Chess960@Home</Project>
+	  <AllScore>8020359</AllScore>
+	</User>
+	<User UserName="Star1man">
+	  <Project>Quake Catcher Network</Project>
+	  <AllScore>3292648</AllScore>
+	</User>
+	<User UserName="SuperEbse">
+	  <Project>Magnetism@home</Project>
+	  <AllScore>8033593</AllScore>
+	</User>
+	<User UserName="supergenius">
+	  <Project>BOINC combined</Project>
+	  <AllScore>873921</AllScore>
+	</User>
+	<User UserName="teku0215">
+	  <Project>ABC@home</Project>
+	  <AllScore>9738194</AllScore>
+	</User>
+	<User UserName="Travis_Priest">
+	  <Project>World Community Grid</Project>
+	  <AllScore>1090232</AllScore>
+	</User>
+	<User UserName="Ub3r_n00b">
+	  <Project>World Community Grid</Project>
+	  <AllScore>9199961</AllScore>
+	</User>
+	<User UserName="URaShiMaN">
+	  <Project>Climate Prediction</Project>
+	  <AllScore>4148791</AllScore>
+	</User>
+	<User UserName="vince`">
+	  <Project>QMC@Home</Project>
+	  <AllScore>5198888</AllScore>
+	</User>
+	<User UserName="xwitti">
+	  <Project>Climate Prediction</Project>
+	  <AllScore>1738803</AllScore>
+	</User>
+	<User UserName="zemilon">
+	  <Project>Einstein@Home</Project>
+	  <AllScore>5195265</AllScore>
+	</User>
+	<User UserName="ziffira">
+	  <Project>Rosetta@Home</Project>
+	  <AllScore>8154335</AllScore>
+	</User>
+</Users>

@@ -1,0 +1,40 @@
+UserName
+{
+	display:block;
+	font-family: Impact;
+	/*font-weight: bold;*/
+	font-size: 20pt;
+	color: #faeedd;
+	text-align: center;
+	text-decoration: underline;
+	/*background: fffddf;*/
+}
+
+Project
+{
+	display:block;
+	font-family: Arial, Helvetica;
+	font-weight: bold;
+	font-size: 12pt;
+	color: #c0e4ef;
+	text-align: left;
+}
+
+AllScore
+{
+	display:inline;
+	font-family: Arial, Helvetica;
+	font-style: bold;
+	font-size: 12pt;
+	color: #d0f0c0;
+	text-align: left;
+}
+
+User
+{
+	background: 442d70;
+	display: block;
+	margin: 10px;
+	cursor: crosshair;
+}
+

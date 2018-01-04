@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<Quotes>
+  <Quote>
+    <Text>Give me chastity and continence, but not yet.</Text>
+    <Author>Saint Augustine</Author>
+  </Quote>
+  <Quote>
+    <Text>The use of COBOL cripples the mind; its teaching should therefore be regarded as a criminal offense.</Text>
+    <Author>Edsger Dijkstra</Author>
+  </Quote>
+  <Quote>
+    <Text>C makes it easy to shoot yourself in the foot; C++ makes it harder, but when you do, it blows away your whole leg.</Text>
+    <Author>Bjarne Stroustrup</Author>
+  </Quote>
+  <Quote>
+    <Text>A programmer is a device for turning coffee into code.</Text>
+    <Author>Jeff Prosise (with an assist from Paul Erdos)</Author>
+  </Quote>
+  <Quote>
+    <Text>I have not failed. I&apos;ve just found 10,000 ways that won&apos;t work.</Text>
+    <Author>Thomas Edison</Author>
+  </Quote>
+  <Quote>
+    <Text>Blessed is the man who, having nothing to say, abstains from giving wordy evidence of the fact.</Text>
+    <Author>George Eliot</Author>
+  </Quote>
+  <Quote>
+    <Text>I think there is a world market for maybe five computers.</Text>
+    <Author>Thomas Watson</Author>
+  </Quote>
+  <Quote>
+    <Text>Computers in the future may weigh no more than 1.5 tons.</Text>
+    <Author>Popular Mechanics</Author>
+  </Quote>
+  <Quote>
+    <Text>I have traveled the length and breadth of this country and talked with the best people, and I can assure you that data processing is a fad that won&apos;t last out the year.</Text>
+    <Author>Prentice-Hall business books editor</Author>
+  </Quote>
+  <Quote>
+    <Text>640K ought to be enough for anybody.</Text>
+    <Author>Bill Gates</Author>
+  </Quote>
+</Quotes>

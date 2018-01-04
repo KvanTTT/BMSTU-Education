@@ -1,0 +1,8 @@
+CREATE TRIGGER dbo.InsteadTrigger
+ON dbo.tblUsers
+INSTEAD OF INSERT
+AS
+BEGIN
+	SELECT *
+	FROM inserted
+END

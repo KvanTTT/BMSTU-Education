@@ -1,0 +1,31 @@
+UserName
+{
+     display:block;
+     font-family: Times New Roman, Helvetica;
+     font-wieght: bold;
+     font-size: 17pt;
+     color: #911e42;
+     text-align: left;
+     margin-top: 50px;
+}
+
+Project
+{
+     display:block;
+     font-family: Arial, Helvetica;
+     font-weight: bold;
+     font-size: 12pt;
+     color: #08457e;
+     text-align: left;
+}
+
+AllScore
+{
+     display:inline;
+     font-family: Tahoma, Helvetica;
+     font-style: bold
+     font-size: 13pt;
+     color: #0067CE;
+     text-align: left;
+}
+

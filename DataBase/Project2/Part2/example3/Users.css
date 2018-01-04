@@ -1,0 +1,49 @@
+UserName
+{
+	display:block;
+	font-family: Calibri;
+	font-weight: bold;
+	font-size: 20pt;
+	color: #572857;
+	text-align: center;
+	margin: 4px;
+	padding:10px;
+	border:solid; border-width:4px; border-color:#CCCCCC;
+}
+
+Project
+{
+	display:block;
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 12pt;
+	color: #324E33;
+	text-align: center;
+	margin: 2px;
+	padding:10px;
+	border:solid; border-width:2px; border-color:#CCCCCC;
+}
+
+AllScore
+{
+	display:block;
+	font-family: Arial;
+	font-style: bold
+	font-size: 10pt;
+	color: #9370db;
+	text-align: center;
+	margin: 2px;
+	padding:10px;
+	border:solid; border-width:2px; border-color:#CCCCCC;
+}
+
+User
+{
+	display: block;
+	padding:5px;
+	margin:10px;
+	border-width:2px; 
+	border: dashed; 
+	border-color: acb78e;
+}
+

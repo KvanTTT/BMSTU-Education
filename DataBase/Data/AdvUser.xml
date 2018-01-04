@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AdvUser xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="153467" UserName="Q_W_E_R_T_Y">
+  <Type>AdvUser</Type>
+  <Computers>
+    <string>Processor: Intel Core 2 Duo, 2Ghz; Ram: 2Gb; Hard: 500 Gb</string>
+    <string>Processor: Intel Celeron, 2Ghz; Ram: 512Gb; Hard: 50 Gb</string>
+    <string>Processor: AMD Duron, 800Mhz; Ram: 1Gb; Hard: 100 Gb</string>
+  </Computers>
+  <Country>NETHERLANDS</Country>
+  <Project>world community grid</Project>
+  <RegDate>1999-11-02T00:00:00</RegDate>
+  <AvgScore>5</AvgScore>
+  <AllScore>12345324</AllScore>
+  <Info>
+    <FirstName>Daniel</FirstName>
+    <SecondName>Coen</SecondName>
+    <BirthDate>1970-04-02T00:00:00</BirthDate>
+  </Info>
+</AdvUser>

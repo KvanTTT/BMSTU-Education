@@ -1,0 +1,1 @@
+CALL sqlexec bulk_insert

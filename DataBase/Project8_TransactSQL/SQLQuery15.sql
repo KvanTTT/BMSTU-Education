@@ -1,0 +1,2 @@
+DELETE tblUsers
+WHERE UserID = '1002'
