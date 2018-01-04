@@ -43,6 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\PerfCounter.cs">
+      <Link>PerfCounter.cs</Link>
+    </Compile>
     <Compile Include="ColorSelectorPanel.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -58,7 +61,6 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="PerfCounter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="ColorSelectorPanel.resx">
