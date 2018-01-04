@@ -82,9 +82,6 @@
 			this.pictureBox1.Size = new System.Drawing.Size(758, 660);
 			this.pictureBox1.TabIndex = 1;
 			this.pictureBox1.TabStop = false;
-			this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
-			this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-			this.pictureBox1.Move += new System.EventHandler(this.pictureBox1_Move);
 			this.pictureBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseUp);
 			// 
 			// groupBox1
@@ -104,7 +101,6 @@
 			this.groupBox1.Size = new System.Drawing.Size(264, 660);
 			this.groupBox1.TabIndex = 2;
 			this.groupBox1.TabStop = false;
-			this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
 			// 
 			// button4
 			// 
@@ -275,7 +271,6 @@
 			this.groupBox3.TabStop = false;
 			this.groupBox3.Text = "Конструирование";
 			this.groupBox3.Visible = false;
-			this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
 			// 
 			// udY
 			// 
@@ -457,7 +452,6 @@
 			this.rbClipper.TabIndex = 1;
 			this.rbClipper.Text = "Отсекатель (выпуклый)";
 			this.rbClipper.UseVisualStyleBackColor = true;
-			this.rbClipper.CheckedChanged += new System.EventHandler(this.rbClipper_CheckedChanged);
 			// 
 			// rbIntercept
 			// 

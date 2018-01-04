@@ -1,9 +1,6 @@
-using System;
-using System.Collections;
-
 namespace Geometry2d
 {
-    public struct PointD
+	public struct PointD
     {
         public double X, Y;
     }

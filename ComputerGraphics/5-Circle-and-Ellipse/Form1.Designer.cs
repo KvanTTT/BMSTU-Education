@@ -327,7 +327,6 @@
 			this.rbEllipse.TabIndex = 22;
 			this.rbEllipse.Text = "Эллипс";
 			this.rbEllipse.UseVisualStyleBackColor = true;
-			this.rbEllipse.CheckedChanged += new System.EventHandler(this.rbEllipse_CheckedChanged);
 			// 
 			// rbCircle
 			// 
@@ -352,7 +351,6 @@
 			this.pnlLineColor.Size = new System.Drawing.Size(15, 15);
 			this.pnlLineColor.TabIndex = 19;
 			this.toolTip1.SetToolTip(this.pnlLineColor, "Цвет линий");
-			this.pnlLineColor.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlLineColor_Paint);
 			this.pnlLineColor.Click += new System.EventHandler(this.pnlLineColor_Click);
 			this.pnlLineColor.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
 			// 
@@ -385,10 +383,6 @@
 			this.cmbMethod.TabIndex = 16;
 			this.cmbMethod.SelectionChangeCommitted += new System.EventHandler(this.cmbMethod_SelectionChangeCommitted);
 			this.cmbMethod.SelectedIndexChanged += new System.EventHandler(this.cmbMethod_SelectedIndexChanged);
-			this.cmbMethod.MouseDown += new System.Windows.Forms.MouseEventHandler(this.cmbMethod_MouseDown);
-			this.cmbMethod.MouseLeave += new System.EventHandler(this.cmbMethod_MouseLeave);
-			this.cmbMethod.DropDownClosed += new System.EventHandler(this.cmbMethod_DropDownClosed);
-			this.cmbMethod.MouseCaptureChanged += new System.EventHandler(this.cmbMethod_MouseCaptureChanged);
 			// 
 			// gorupBox3
 			// 
@@ -434,7 +428,6 @@
 			0});
 			this.tbRy.Visible = false;
 			this.tbRy.ValueChanged += new System.EventHandler(this.tbRy_ValueChanged);
-			this.tbRy.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbMaxRadius_KeyPress);
 			// 
 			// tbRx
 			// 
@@ -460,7 +453,6 @@
 			0,
 			0});
 			this.tbRx.ValueChanged += new System.EventHandler(this.tbRx_ValueChanged);
-			this.tbRx.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbMaxRadius_KeyPress);
 			// 
 			// tbY0
 			// 
@@ -476,7 +468,6 @@
 			this.tbY0.Size = new System.Drawing.Size(57, 20);
 			this.tbY0.TabIndex = 22;
 			this.tbY0.ValueChanged += new System.EventHandler(this.tbY0_ValueChanged);
-			this.tbY0.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbMaxRadius_KeyPress);
 			// 
 			// tbX0
 			// 
@@ -492,7 +483,6 @@
 			this.tbX0.Size = new System.Drawing.Size(57, 20);
 			this.tbX0.TabIndex = 21;
 			this.tbX0.ValueChanged += new System.EventHandler(this.tbX0_ValueChanged);
-			this.tbX0.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbMaxRadius_KeyPress);
 			// 
 			// label4
 			// 
@@ -588,8 +578,6 @@
 			0,
 			0,
 			0});
-			this.tbMaxRadius.ValueChanged += new System.EventHandler(this.tbMinRadius_ValueChanged);
-			this.tbMaxRadius.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbMaxRadius_KeyPress);
 			// 
 			// tbMinRadius
 			// 
@@ -614,8 +602,6 @@
 			0,
 			0,
 			0});
-			this.tbMinRadius.ValueChanged += new System.EventHandler(this.tbMinRadius_ValueChanged);
-			this.tbMinRadius.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbMaxRadius_KeyPress);
 			// 
 			// tbCircNumber
 			// 
@@ -635,8 +621,6 @@
 			0,
 			0,
 			0});
-			this.tbCircNumber.ValueChanged += new System.EventHandler(this.tbMinRadius_ValueChanged);
-			this.tbCircNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbMaxRadius_KeyPress);
 			// 
 			// label1
 			// 
@@ -689,7 +673,6 @@
 			this.pictBox.Size = new System.Drawing.Size(602, 612);
 			this.pictBox.TabIndex = 9;
 			this.pictBox.TabStop = false;
-			this.pictBox.Click += new System.EventHandler(this.pictBox_Click);
 			this.pictBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictBox_MouseDown);
 			// 
 			// button4
@@ -700,7 +683,6 @@
 			this.button4.TabIndex = 10;
 			this.button4.Text = "button4";
 			this.button4.UseVisualStyleBackColor = true;
-			this.button4.Click += new System.EventHandler(this.button4_Click);
 			// 
 			// groupBox1
 			// 
@@ -872,7 +854,6 @@
 		private System.Windows.Forms.NumericUpDown tbCircNumber;
 		private System.Windows.Forms.Button button1;
 		private System.Windows.Forms.Label label7;
-		private MGLab5.ColorSelectorPanel ColorSelector;
 		private System.Windows.Forms.Panel panel5;
 		private System.Windows.Forms.Panel panel1;
 		private System.Windows.Forms.Panel panel2;

@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
-using System.Windows;
 using Utils;
 
 namespace CircleEllipse
@@ -357,7 +352,6 @@ namespace CircleEllipse
 			}
 		}
 
-
 		public void EllipseMidPoint(Point Center, int Rx, int Ry, Color C)
 		{
 			/* int X, Y;
@@ -483,7 +477,6 @@ namespace CircleEllipse
 			}
 		}
 
-
 		private void CircleLibraryFunc(Point Center, int Radius, Color C)
 		{
 			if (Radius == 0) return;
@@ -497,7 +490,6 @@ namespace CircleEllipse
 			Pen p = new Pen(C);
 			G.DrawEllipse(p, Center.X - Rx, Center.Y - Ry, Rx << 1, Ry << 1);
 		}
-
 
 		private void Form1_Load(object sender, EventArgs e)
 		{
@@ -534,8 +526,6 @@ namespace CircleEllipse
 			pnlBGColor.Size = new Size(21, 21);
 			BGColor = pnlBGColor.BackColor;
 			groupBox1.Visible = false;
-
-
 		}
 
 		private void button1_Click(object sender, EventArgs e)
@@ -566,7 +556,6 @@ namespace CircleEllipse
 				DrawShape();
 			}
 		}
-
 
 		private void button3_Click(object sender, EventArgs e)
 		{
@@ -634,7 +623,6 @@ namespace CircleEllipse
 			}
 			pictBox.Refresh();
 		}
-
 
 		private void button2_Click(object sender, EventArgs e)
 		{
@@ -778,7 +766,6 @@ namespace CircleEllipse
 			else
 			{
 				int RMin = 0;
-				int RMax = 200;
 				int N = 200;
 				int Step = 10;
 				N = N / Step;
@@ -1018,21 +1005,6 @@ namespace CircleEllipse
 			Ry = Convert.ToInt32(tbRy.Text);
 		}
 
-		private void tbMinRadius_ValueChanged(object sender, EventArgs e)
-		{
-
-		}
-
-		private void pnlLineColor_Paint(object sender, PaintEventArgs e)
-		{
-
-		}
-
-		private void rbEllipse_CheckedChanged(object sender, EventArgs e)
-		{
-
-		}
-
 		private void button1_Click_2(object sender, EventArgs e)
 		{
 			br = new SolidBrush(BGColor);
@@ -1076,45 +1048,9 @@ namespace CircleEllipse
 				}
 		}
 
-		private void tbMaxRadius_KeyPress(object sender, KeyPressEventArgs e)
-		{
-			/*if ((e.KeyChar < '0') || (e.KeyChar > '9'))
-                e.KeyChar = (char)0;*/
-		}
-
-		private void cmbMethod_MouseLeave(object sender, EventArgs e)
-		{
-
-		}
-
-		private void cmbMethod_MouseDown(object sender, MouseEventArgs e)
-		{
-
-		}
-
-		private void cmbMethod_MouseCaptureChanged(object sender, EventArgs e)
-		{
-
-		}
-
-		private void cmbMethod_DropDownClosed(object sender, EventArgs e)
-		{
-
-		}
-
-		private void button4_Click(object sender, EventArgs e)
-		{
-
-		}
-
 		private void cmbMethod_SelectionChangeCommitted(object sender, EventArgs e)
 		{
 			btnBuild.Select();
-		}
-
-		private void pictBox_Click(object sender, EventArgs e)
-		{
-
 		}
 
 		private void radioButton4_CheckedChanged(object sender, EventArgs e)

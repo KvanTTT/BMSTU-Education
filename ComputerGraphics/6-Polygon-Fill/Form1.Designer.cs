@@ -202,7 +202,6 @@
 			this.udY.Name = "udY";
 			this.udY.Size = new System.Drawing.Size(51, 22);
 			this.udY.TabIndex = 33;
-			this.udY.ValueChanged += new System.EventHandler(this.numericUpDown3_ValueChanged);
 			// 
 			// udX
 			// 

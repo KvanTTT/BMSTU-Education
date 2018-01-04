@@ -173,7 +173,6 @@
 			this.panel1.TabIndex = 1;
 			this.toolTip1.SetToolTip(this.panel1, "Цвет линий");
 			this.panel1.Click += new System.EventHandler(this.panel1_Click);
-			this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
 			// 
 			// label6
 			// 
@@ -202,7 +201,6 @@
 			this.cmbMethod.Name = "cmbMethod";
 			this.cmbMethod.Size = new System.Drawing.Size(178, 23);
 			this.cmbMethod.TabIndex = 0;
-			this.cmbMethod.SelectedIndexChanged += new System.EventHandler(this.cmbMethod_SelectedIndexChanged_1);
 			this.cmbMethod.SelectionChangeCommitted += new System.EventHandler(this.cmbMethod_SelectionChangeCommitted);
 			// 
 			// gorupBox3
@@ -252,7 +250,6 @@
 			this.tbYe.Size = new System.Drawing.Size(45, 21);
 			this.tbYe.TabIndex = 3;
 			this.tbYe.Text = "100";
-			this.tbYe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbYb_KeyPress);
 			// 
 			// label5
 			// 
@@ -271,7 +268,6 @@
 			this.tbXe.Size = new System.Drawing.Size(45, 21);
 			this.tbXe.TabIndex = 2;
 			this.tbXe.Text = "450";
-			this.tbXe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbYb_KeyPress);
 			// 
 			// label3
 			// 
@@ -290,7 +286,6 @@
 			this.tbYb.Size = new System.Drawing.Size(45, 21);
 			this.tbYb.TabIndex = 1;
 			this.tbYb.Text = "256";
-			this.tbYb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbYb_KeyPress);
 			// 
 			// label2
 			// 
@@ -309,7 +304,6 @@
 			this.tbXb.Size = new System.Drawing.Size(45, 21);
 			this.tbXb.TabIndex = 0;
 			this.tbXb.Text = "301";
-			this.tbXb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbYb_KeyPress);
 			// 
 			// button1
 			// 
@@ -361,7 +355,6 @@
 			this.tbSegLength.Size = new System.Drawing.Size(49, 21);
 			this.tbSegLength.TabIndex = 1;
 			this.tbSegLength.Text = "150";
-			this.tbSegLength.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbYb_KeyPress);
 			// 
 			// label9
 			// 
@@ -392,7 +385,6 @@
 			this.tbSegNumber.Size = new System.Drawing.Size(49, 21);
 			this.tbSegNumber.TabIndex = 0;
 			this.tbSegNumber.Text = "10";
-			this.tbSegNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbYb_KeyPress);
 			// 
 			// pictBox
 			// 
@@ -402,7 +394,6 @@
 			this.pictBox.Size = new System.Drawing.Size(602, 582);
 			this.pictBox.TabIndex = 9;
 			this.pictBox.TabStop = false;
-			this.pictBox.Click += new System.EventHandler(this.pictBox_Click);
 			this.pictBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictBox_MouseUp_1);
 			// 
 			// groupBox4

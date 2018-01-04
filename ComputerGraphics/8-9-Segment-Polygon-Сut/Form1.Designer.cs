@@ -121,7 +121,6 @@
             this.groupBox4.TabIndex = 32;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Конструирование";
-            this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
             // 
             // cbConvex
             // 
@@ -170,7 +169,6 @@
             0,
             0,
             0});
-            this.edtEdgesCount.ValueChanged += new System.EventHandler(this.numericUpDown2_ValueChanged);
             // 
             // label10
             // 
@@ -298,7 +296,6 @@
             this.groupBox5.TabIndex = 21;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Статистика";
-            this.groupBox5.Enter += new System.EventHandler(this.groupBox5_Enter);
             // 
             // lblSelfintersect
             // 
