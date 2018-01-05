@@ -1,0 +1,3 @@
+grand(X, Y) : parent(X, Z) & parent(Z, Y).
+grandgrand(X, Y) : grand(X, Z) & grand(Z, Y).
+parent(X, Y) : father(X, Y) | mother(X, Y).

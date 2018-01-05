@@ -1,0 +1,11 @@
+mother(julia, ivan).
+mother(alice, igor).
+father(igor, ivan).
+father(ivan, serge).
+father(serge, john).
+father(john, andrew).
+father(igor, ramil).
+mother(anna, boris).
+father(ramil, alex).
+father(alex, boris).
+father(boris, dima).

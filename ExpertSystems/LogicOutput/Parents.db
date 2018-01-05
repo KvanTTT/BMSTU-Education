@@ -1,0 +1,16 @@
+11
+dad(tom, max).
+dad(max, serge).
+dad(serge, john).
+dad(john, andrew).
+dad(tom, kir).
+dad(kir, alex).
+dad(alex, boris).
+dad(boris, sam).
+mama(jane, max).
+mama(alice, tom).
+mama(anna, boris).
+3
+grand(X, Y) : parent(X, Z) & parent(Z, Y).
+grgr(X, Y) : grand(X, Z) & grand(Z, Y).
+parent(X, Y) : dad(X, Y) | mama(X, Y).
