@@ -1,0 +1,228 @@
+﻿<UserControl 
+	x:Class="MetronomeSilver.Metronome"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:local="clr-namespace:System;assembly=System"
+	xmlns:sys="clr-namespace:System;assembly=mscorlib"
+	xmlns:my="clr-namespace:MetronomeSilver">
+	
+	<UserControl.Resources>
+		<ResourceDictionary Source="Resources.xaml" />
+	</UserControl.Resources>
+
+	<Viewbox>
+		<Grid x:Name="MetronomeContainer" Height="330">
+		<Grid.Resources>
+			<Style x:Key="ScaleValueStyle" TargetType="Line">
+				<Setter Property="Stroke" Value="{StaticResource StrokeBrush}" />
+				<Setter Property="StrokeThickness" Value="{StaticResource StrokeThickness}" />
+			</Style>
+
+			<Style x:Key="MediaPlayerStyle" TargetType="MediaElement">
+				<Setter Property="Volume" Value="0.5" />
+					<Setter Property="Source" Value="/MetronomeSilver;component/Tick.wma" />
+				<Setter Property="AutoPlay" Value="False" />
+			</Style>
+
+			<Style x:Key="WoodPolyLine" TargetType="Polyline">
+				<Setter Property="Stroke" Value="{StaticResource WoodStrokeBrush}" />
+				<Setter Property="StrokeThickness" Value="{StaticResource MetronomeStrokeThickness}" />
+			</Style>
+
+			<Style x:Key="PolyLine" TargetType="Polyline">
+				<Setter Property="Stroke" Value="{StaticResource StrokeBrush}" />
+				<Setter Property="StrokeThickness" Value="{StaticResource MetronomeStrokeThickness}" />
+			</Style>
+
+			<Style x:Key="LogoText" TargetType="my:LogoTextControl">
+				<Setter Property="HorizontalAlignment" Value="Center" />
+				<Setter Property="Margin" Value="0,185,0,0" />
+			</Style>
+
+			<Color x:Key="ShadowColor">#FF090909</Color>
+		</Grid.Resources>
+
+			<MediaElement x:Name="TickPlayer" 
+			MediaFailed="TickPlayer_MediaFailed" 
+			MediaOpened="TickPlayer_MediaOpened" 
+			Style="{StaticResource MediaPlayerStyle}" />
+			<Polyline x:Name="Top1" 
+			Points="62,5 75,0 88,5" 
+			Style="{StaticResource WoodPolyLine}"
+			Fill="{StaticResource DarkWoodBrush}" />
+			<Polyline x:Name="Top2" 
+			Points="90,10 88,5 62,5 60,10 90,10" 
+			Style="{StaticResource WoodPolyLine}">
+				<Polyline.Fill>
+					<LinearGradientBrush EndPoint="1,0" StartPoint="0,1">
+						<GradientStop Color="{StaticResource DarkWoodColor}" Offset="0.8"/>
+						<GradientStop Color="{StaticResource LightWoodColor}" Offset="1"/>
+						<GradientStop Color="{StaticResource LightWoodColor}" Offset="0.7"/>
+						<GradientStop Color="{StaticResource DarkWoodColor}" Offset="0.6"/>
+						<GradientStop Color="{StaticResource LightWoodColor}" Offset="0.5"/>
+						<GradientStop Color="{StaticResource DarkWoodColor}" Offset="0"/>
+					</LinearGradientBrush>
+				</Polyline.Fill>
+			</Polyline>
+			<Polyline x:Name="MiddleTop" 
+			Points="65,10 85,10 87,15 63,15" 
+			Style="{StaticResource PolyLine}" >
+				<Polyline.Fill>
+					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+						<GradientStop Color="{StaticResource ShadowColor}"/>
+						<GradientStop Color="{StaticResource DarkerWoodColor}" Offset="0.75"/>
+					</LinearGradientBrush>
+				</Polyline.Fill>
+			</Polyline>
+			<Polyline x:Name="Middle" 
+			Points="25,160 125,160 87,15 63,15 25,160" 
+			Fill="{StaticResource ForegroundBrush}" />
+			<Polyline x:Name="Left" 
+			Points="20,160 60,10 65,10 25,160" Style="{StaticResource PolyLine}" >
+				<Polyline.Fill>
+					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+						<GradientStop Color="{StaticResource ShadowColor}"/>
+						<GradientStop Color="{StaticResource DarkerWoodColor}" Offset="0.05"/>
+						<GradientStop Color="{StaticResource DarkerWoodColor}" Offset="0.95"/>
+						<GradientStop Color="{StaticResource ShadowColor}" Offset="1"/>
+					</LinearGradientBrush>
+				</Polyline.Fill>
+			</Polyline>
+			<Polyline x:Name="Right" 
+			Points="130,160 90,10 85,10 125,160" 
+			Style="{StaticResource PolyLine}" >
+				<Polyline.Fill>
+					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+						<GradientStop Color="{StaticResource ShadowColor}"/>
+						<GradientStop Color="{StaticResource DarkerWoodColor}" Offset="0.05"/>
+						<GradientStop Color="{StaticResource DarkerWoodColor}" Offset="0.95"/>
+						<GradientStop Color="{StaticResource ShadowColor}" Offset="1"/>
+					</LinearGradientBrush>
+				</Polyline.Fill>
+			</Polyline>
+			<Polyline x:Name="Scale" Points="67,160 82,160 82,15 67,15 67,160" >
+				<Polyline.Fill>
+					<LinearGradientBrush EndPoint="0,1" StartPoint="1,0">
+						<GradientStop Color="{StaticResource PaperColor}" Offset="0.96"/>
+						<GradientStop Color="{StaticResource LightPaperColor}" Offset="0.5"/>
+						<GradientStop Color="{StaticResource DarkPaperColor}" Offset="1"/>
+					</LinearGradientBrush>
+				</Polyline.Fill>
+			</Polyline>
+			<Line x:Name="MainLine" X1="75" Y1="18" X2="75" Y2="158" Style="{StaticResource ScaleValueStyle}" />
+			<!--<Line x:Name="ScaleValue1" X1="69" Y1="155" X2="81" Y2="155" Style="{StaticResource ScaleValueStyle}" />-->
+			<Line x:Name="ScaleValue2" X1="72" Y1="150" X2="78" Y2="150" Style="{StaticResource ScaleValueStyle}" />
+			<Line x:Name="ScaleValue3" X1="69" Y1="145" X2="81" Y2="145" Style="{StaticResource ScaleValueStyle}" />
+			<Line x:Name="ScaleValue4" X1="72" Y1="140" X2="78" Y2="140" Style="{StaticResource ScaleValueStyle}" />
+			<Line x:Name="ScaleValue5" X1="69" Y1="135" X2="81" Y2="135" Style="{StaticResource ScaleValueStyle}" />
+			<Line x:Name="ScaleValue6" X1="72" Y1="130" X2="78" Y2="130" Style="{StaticResource ScaleValueStyle}" />
+			<Line x:Name="ScaleValue7" X1="69" Y1="125" X2="81" Y2="125" Style="{StaticResource ScaleValueStyle}" />
+			<Line x:Name="ScaleValue8" X1="72" Y1="120" X2="78" Y2="120" Style="{StaticResource ScaleValueStyle}" />
+			<Line x:Name="ScaleValue9" X1="69" Y1="115" X2="81" Y2="115" Style="{StaticResource ScaleValueStyle}" />
+			<Line x:Name="ScaleValue10" X1="72" Y1="110" X2="78" Y2="110" Style="{StaticResource ScaleValueStyle}" />
+			<Line x:Name="ScaleValue11" X1="69" Y1="105" X2="81" Y2="105" Style="{StaticResource ScaleValueStyle}" />
+			<Line x:Name="ScaleValue12" X1="72" Y1="100" X2="78" Y2="100" Style="{StaticResource ScaleValueStyle}" />
+			<Line x:Name="ScaleValue13" X1="69" Y1="95" X2="81" Y2="95" Style="{StaticResource ScaleValueStyle}" />
+			<Line x:Name="ScaleValue14" X1="72" Y1="90" X2="78" Y2="90" Style="{StaticResource ScaleValueStyle}" />
+			<Line x:Name="ScaleValue15" X1="69" Y1="85" X2="81" Y2="85" Style="{StaticResource ScaleValueStyle}" />
+			<Line x:Name="ScaleValue16" X1="72" Y1="80" X2="78" Y2="80" Style="{StaticResource ScaleValueStyle}" />
+			<Line x:Name="ScaleValue17" X1="69" Y1="75" X2="81" Y2="75" Style="{StaticResource ScaleValueStyle}" />
+			<Line x:Name="ScaleValue18" X1="72" Y1="70" X2="78" Y2="70" Style="{StaticResource ScaleValueStyle}" />
+			<Line x:Name="ScaleValue19" X1="69" Y1="65" X2="81" Y2="65" Style="{StaticResource ScaleValueStyle}" />
+			<Line x:Name="ScaleValue20" X1="72" Y1="60" X2="78" Y2="60" Style="{StaticResource ScaleValueStyle}" />
+			<Line x:Name="ScaleValue21" X1="69" Y1="55" X2="81" Y2="55" Style="{StaticResource ScaleValueStyle}" />
+			<Line x:Name="ScaleValue22" X1="72" Y1="50" X2="78" Y2="50" Style="{StaticResource ScaleValueStyle}" />
+			<Line x:Name="ScaleValue23" X1="69" Y1="45" X2="81" Y2="45" Style="{StaticResource ScaleValueStyle}" />
+			<Line x:Name="ScaleValue24" X1="72" Y1="40" X2="78" Y2="40" Style="{StaticResource ScaleValueStyle}" />
+			<Line x:Name="ScaleValue25" X1="69" Y1="35" X2="81" Y2="35" Style="{StaticResource ScaleValueStyle}" />
+			<Line x:Name="ScaleValue26" X1="72" Y1="30" X2="78" Y2="30" Style="{StaticResource ScaleValueStyle}" />
+			<Line x:Name="ScaleValue27" X1="69" Y1="25" X2="81" Y2="25" Style="{StaticResource ScaleValueStyle}" />
+			<Line x:Name="ScaleValue28" X1="72" Y1="20" X2="78" Y2="20" Style="{StaticResource ScaleValueStyle}" />
+			<my:Pendulum x:Name="Pendulum" PropertyChanged="Pendulum_PropertyChanged" Height="150" Width="20" Margin="63.5,14.5,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+			<Polyline x:Name="Leg1" 
+			Points="10,233 40,233 37,240 13,240 10,233"
+			Style="{StaticResource PolyLine}">
+				<Polyline.Fill>
+					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+						<GradientStop Color="{StaticResource ShadowColor}"/>
+						<GradientStop Color="{StaticResource DarkerWoodColor}" Offset="0.85"/>
+					</LinearGradientBrush>
+				</Polyline.Fill>
+			</Polyline>
+			<Polyline x:Name="Leg2"
+			Points="140,233 110,233 113,240 137,240 140,233"
+			Style="{StaticResource PolyLine}">
+				<Polyline.Fill>
+					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+						<GradientStop Color="{StaticResource ShadowColor}"/>
+						<GradientStop Color="{StaticResource DarkerWoodColor}" Offset="0.85"/>
+					</LinearGradientBrush>
+				</Polyline.Fill>
+			</Polyline>
+			<Polyline x:Name="Bottom" 
+			Points="0,235 150,235 130,160 20,160 0,235"
+			Style="{StaticResource WoodPolyLine}">
+				<Polyline.Fill>
+					<LinearGradientBrush EndPoint="1,0" StartPoint="0,1">
+						<GradientStop Color="{StaticResource LighterWoodColor}" Offset="0"/>
+						<GradientStop Color="{StaticResource LightWoodColor}" Offset="0.911"/>
+						<GradientStop Color="{StaticResource DarkWoodColor}" Offset="0.768"/>
+						<GradientStop Color="{StaticResource LightWoodColor}" Offset="0.647"/>
+						<GradientStop Color="{StaticResource DarkWoodColor}" Offset="0.411"/>
+						<GradientStop Color="{StaticResource LightWoodColor}" Offset="0.304"/>
+					</LinearGradientBrush>
+				</Polyline.Fill>
+			</Polyline>
+			<my:LogoTextControl x:Name="SilverlightShowLogo"
+			Text="Metronome"
+			Style="{StaticResource LogoText}" Margin="0,185,0,0" />
+			<Grid x:Name="MetronomeReflection" RenderTransformOrigin="0.5,1" VerticalAlignment="Top" Opacity="0.6">
+				<Grid.RenderTransform>
+					<TransformGroup>
+						<ScaleTransform ScaleY="{StaticResource ScaleCoefficientY}" />
+					</TransformGroup>
+				</Grid.RenderTransform>
+				<Grid.OpacityMask>
+					<LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1" >
+						<GradientStop Color="{StaticResource OpacityMaskSolidColor}" Offset="1"/>
+						<GradientStop Color="{StaticResource OpacityMaskTransparentColor}" Offset="0.8"/>
+					</LinearGradientBrush>
+				</Grid.OpacityMask>
+				<Polyline x:Name="Leg1Reflection" 
+				Points="10,233 40,233 37,240 13,240 10,233"
+				Style="{StaticResource PolyLine}">
+					<Polyline.Fill>
+						<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+							<GradientStop Color="{StaticResource ShadowColor}"/>
+							<GradientStop Color="{StaticResource DarkerWoodColor}" Offset="0.85"/>
+						</LinearGradientBrush>
+					</Polyline.Fill>
+				</Polyline>
+				<Polyline x:Name="Leg2Reflection"
+				Points="140,233 110,233 113,240 137,240 140,233"
+				Style="{StaticResource PolyLine}">
+					<Polyline.Fill>
+						<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+							<GradientStop Color="{StaticResource ShadowColor}"/>
+							<GradientStop Color="{StaticResource DarkerWoodColor}" Offset="0.85"/>
+						</LinearGradientBrush>
+					</Polyline.Fill>
+				</Polyline>
+				<Polyline x:Name="BottomReflection" 
+				Points="0,235 150,235 130,160 20,160 0,235"
+				Style="{StaticResource WoodPolyLine}">
+					<Polyline.Fill>
+						<LinearGradientBrush EndPoint="1,0" StartPoint="0,1">
+							<GradientStop Color="{StaticResource LighterWoodColor}" Offset="0"/>
+							<GradientStop Color="{StaticResource LightWoodColor}" Offset="0.911"/>
+							<GradientStop Color="{StaticResource DarkWoodColor}" Offset="0.768"/>
+							<GradientStop Color="{StaticResource LightWoodColor}" Offset="0.647"/>
+							<GradientStop Color="{StaticResource DarkWoodColor}" Offset="0.411"/>
+							<GradientStop Color="{StaticResource LightWoodColor}" Offset="0.304"/>
+						</LinearGradientBrush>
+					</Polyline.Fill>
+				</Polyline>
+			</Grid>
+		</Grid>
+	</Viewbox>
+</UserControl>

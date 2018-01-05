@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="MetronomeSilver.LogoTextControl"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+	xmlns:sys="clr-namespace:System;assembly=mscorlib">
+	<UserControl.Resources>
+	<ResourceDictionary>
+		<ResourceDictionary.MergedDictionaries>
+			<ResourceDictionary Source="Resources.xaml" />
+			<ResourceDictionary>
+			<Style x:Key="TextStyle" TargetType="TextBlock">
+			<Setter Property="FontFamily" Value="{StaticResource DefaultFont}" />
+			<Setter Property="FontSize" Value="{StaticResource SmallFontSize}" />
+			<Setter Property="Foreground" Value="#FF888888" />
+			<Setter Property="TextWrapping" Value="Wrap" />
+			<Setter Property="HorizontalAlignment" Value="Center" />
+			<Setter Property="VerticalAlignment" Value="Top" />
+			<Setter Property="Height" Value="28" />
+			<Setter Property="Margin" Value="2,-2,0,0" />
+		</Style>
+			<Style x:Key="BorderTextStyle" TargetType="TextBlock">
+			<Setter Property="FontFamily" Value="{StaticResource DefaultFont}" />
+			<Setter Property="FontSize" Value="{StaticResource SmallFontSize}" />
+			<Setter Property="Foreground" Value="#FF000000" />
+			<Setter Property="TextWrapping" Value="Wrap" />
+		</Style>
+			</ResourceDictionary>
+		</ResourceDictionary.MergedDictionaries>
+	</ResourceDictionary>
+	</UserControl.Resources>
+	<Grid x:Name="LayoutRoot" Height="Auto">
+		<TextBlock x:Name="BorderText" 
+			Grid.Row="0" 
+			Style="{StaticResource BorderTextStyle}" />
+		<TextBlock x:Name="NormalText" 
+			Grid.Row="0" Style="{StaticResource TextStyle}" 
+			MouseEnter="NormalText_MouseEnter" 
+			MouseLeave="NormalText_MouseLeave"
+			MouseLeftButtonUp="NormalText_MouseLeftButtonUp" />
+	</Grid>
+</UserControl>

@@ -1,0 +1,37 @@
+﻿<ResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+	xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+	<!-- Strings -->
+	<sys:String x:Key="DefaultFont">CHOPS.ttf#ChopinScript</sys:String>
+
+	<!-- Ints -->
+	<sys:Double x:Key="SmallFontSize">22.0</sys:Double>
+	<sys:Int32 x:Key="BigFontSize">36</sys:Int32>
+	<sys:Int32 x:Key="StrokeThickness">2</sys:Int32>
+	<sys:Int32 x:Key="MetronomeStrokeThickness">1</sys:Int32>
+	<sys:Double x:Key="ScaleCoefficientY">-1</sys:Double>
+
+	<!-- Colors -->
+	<Color x:Key="PrimaryForeground">#FF090909</Color>
+	<Color x:Key="PrimaryControlsColor">#FFFFFFFF</Color>
+	<Color x:Key="SecondaryControlsColor">#FFE8E8E8</Color>
+	<Color x:Key="OpacityMaskSolidColor">#FF000000</Color>
+	<Color x:Key="OpacityMaskTransparentColor">#00000000</Color>
+	<Color x:Key="LightWoodColor">#FF9F4E1F</Color>
+	<Color x:Key="LighterWoodColor">#FFE5B394</Color>
+	<Color x:Key="DarkWoodColor">#FF623011</Color>
+	<Color x:Key="DarkerWoodColor">#FF473B38</Color>
+	<Color x:Key="ShadowColor">#FF090909</Color>
+	<Color x:Key="PaperColor">#FFF7F7F7</Color>
+	<Color x:Key="LightPaperColor">#FFFAEBD7</Color>
+	<Color x:Key="DarkPaperColor">#FFEAC18C</Color>
+
+	<!-- Brushes -->
+	<SolidColorBrush x:Key="StrokeBrush" Color="#FF090909" />
+	<SolidColorBrush x:Key="WoodStrokeBrush" Color="#FF623011" />
+	<SolidColorBrush x:Key="ForegroundBrush" Color="{StaticResource PrimaryForeground}" />
+	<SolidColorBrush x:Key="DarkWoodBrush" Color="{StaticResource DarkWoodColor}" />
+
+</ResourceDictionary>

@@ -1,0 +1,109 @@
+﻿<UserControl x:Class="SilverClient.FluteSoundBoard"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" DataContext="{Binding}" d:DesignHeight="145" d:DesignWidth="1035">
+
+	<UserControl.Resources>
+		<Style x:Key="NoteOn" TargetType="Border">
+			<Setter Property="Background" Value="#E3FFFF00" />
+			<Setter Property="BorderBrush" Value="#AEFF510F" />
+			<Setter Property="BorderThickness" Value="2" />
+			<Setter Property="CornerRadius" Value="9" />  
+			<!-- <Setter Property="DataContext" Value="LayoutRoot" /> -->
+		</Style>
+		<Style x:Key="NoteOff" TargetType="Border">
+			<Setter Property="Background" Value="#E3222222" />
+			<Setter Property="BorderBrush" Value="#AEFF510F" />
+			<Setter Property="BorderThickness" Value="2" />
+			<Setter Property="CornerRadius" Value="9" />
+			<!-- <Setter Property="DataContext" Value="LayoutRoot" /> -->
+		</Style>
+	</UserControl.Resources>
+	
+	<Viewbox Name="viewbox1">
+		<Grid Name="LayoutRoot" Width="1050">
+			<Grid.Background>
+				<ImageBrush ImageSource="/SilverClient;component/Instruments/Data/%D0%A4%D0%BB%D0%B5%D0%B9%D1%82%D0%B0.png" Stretch="Uniform" />
+			</Grid.Background>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="517*" />
+				<ColumnDefinition Width="19*" />
+				<ColumnDefinition Width="13*" />
+				<ColumnDefinition Width="19*" />
+				<ColumnDefinition Width="13*" />
+				<ColumnDefinition Width="19*" />
+				<ColumnDefinition Width="17*" />
+				<ColumnDefinition Width="19*" />
+				<ColumnDefinition Width="19*" />
+				<ColumnDefinition Width="0*" />
+				<ColumnDefinition Width="36*" />
+				<ColumnDefinition Width="0*" />
+				<ColumnDefinition Width="41*" />
+				<ColumnDefinition Width="19*" />
+				<ColumnDefinition Width="7*" />
+				<ColumnDefinition Width="9*" />
+				<ColumnDefinition Width="9*" />
+				<ColumnDefinition Width="19" />
+				<ColumnDefinition Width="9*" />
+				<ColumnDefinition Width="9*" />
+				<ColumnDefinition Width="9*" />
+				<ColumnDefinition Width="19*" />
+				<ColumnDefinition Width="8*" />
+				<ColumnDefinition Width="19*" />
+				<ColumnDefinition Width="19*" />
+				<ColumnDefinition Width="163*" />
+			</Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="35" />
+				<RowDefinition Height="18" />
+				<RowDefinition Height="12" />
+				<RowDefinition Height="6" />
+				<RowDefinition Height="13" />
+				<RowDefinition Height="5" />
+				<RowDefinition Height="19" />
+				<RowDefinition Height="5" />
+				<RowDefinition Height="19" />
+				<RowDefinition Height="12" />
+			</Grid.RowDefinitions>
+			<Border Style="{StaticResource NoteOn}" Visibility="{Binding Path=GSharpKey}" Grid.Column="7" Grid.Row="1" Name="brdrGSharpKey">
+				<TextBlock HorizontalAlignment="Center" Text="5" />
+			</Border>
+			<Border Style="{StaticResource NoteOn}" Visibility="{Binding Path=EbKey}" Grid.Column="23" Grid.Row="6" Name="brdrEbKey">
+				<TextBlock HorizontalAlignment="Center" Text="5" />
+			</Border>
+			<Border Style="{StaticResource NoteOn}" Visibility="{Binding Path=BbKey}" Grid.Column="1" Grid.Row="8" Name="brdrBbKey">
+				<TextBlock HorizontalAlignment="Center" Text="1" />
+			</Border>
+			<Border Style="{StaticResource NoteOn}" Visibility="{Binding Path=CKey}" Grid.Column="1" Grid.Row="3" Grid.RowSpan="2" Name="brdrCKey">
+				<TextBlock HorizontalAlignment="Center" Text="2" />
+			</Border>
+			<Border Style="{StaticResource NoteOn}" Visibility="{Binding Path=AKey}" Grid.Column="5" Grid.Row="3" Grid.RowSpan="2" Name="brdrAKey">
+				<TextBlock HorizontalAlignment="Center" Text="3" />
+			</Border>
+			<Border Style="{StaticResource NoteOn}" Visibility="{Binding Path=DKey}" Grid.Column="21" Grid.Row="3" Grid.RowSpan="2" Name="brdrDKey">
+				<TextBlock HorizontalAlignment="Center" Text="4" />
+			</Border>
+			<Border Style="{StaticResource NoteOn}" Visibility="{Binding Path=EKey}" Grid.Column="17" Grid.Row="3" Grid.RowSpan="2" Name="brdrEKey">
+				<TextBlock HorizontalAlignment="Center" Text="3" />
+			</Border>
+			<Border Style="{StaticResource NoteOn}" Visibility="{Binding Path=FKey}" Grid.Column="13" Grid.Row="3" Grid.RowSpan="2" Name="brdrFKey">
+				<TextBlock HorizontalAlignment="Center" Text="2" />
+			</Border>
+			<Border Style="{StaticResource NoteOn}" Visibility="{Binding Path=GKey}" Grid.Column="7" Grid.Row="3" Grid.RowSpan="2" Name="brdrGKey">
+				<TextBlock HorizontalAlignment="Center" Text="4" />
+			</Border>
+			<Border Style="{StaticResource NoteOn}" Visibility="{Binding Path=BLeverKey}" Grid.Column="3" Grid.Row="8" Name="brdrBLeverKey">
+				<TextBlock HorizontalAlignment="Center" Text="1" />
+			</Border>
+			<Border Style="{StaticResource NoteOn}" Visibility="{Binding Path=LowCKey}" Grid.Column="24" Grid.Row="4" Grid.RowSpan="2" Name="brdrLowCKey">
+				<TextBlock HorizontalAlignment="Center" Text="5" />
+			</Border>
+			<Border Style="{StaticResource NoteOn}" Visibility="{Binding Path=CSharpKey}" Grid.Column="24" Grid.Row="6" Name="brdrCSharp">
+				<TextBlock HorizontalAlignment="Center" Text="5" />
+			</Border>
+			<TextBlock Grid.RowSpan="2" Height="23" HorizontalAlignment="Left" Margin="295,30,0,0" Name="textBlock1" Text="{Binding Path=S}" VerticalAlignment="Top" />
+		</Grid>
+	</Viewbox>
+</UserControl>

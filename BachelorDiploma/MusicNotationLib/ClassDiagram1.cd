@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MusicNotationLib.Barline" Collapsed="true">
+    <Position X="1.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Barline.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MusicNotationLib.Clef" Collapsed="true">
+    <Position X="5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAUACAAQAAAAAAAAAAAAAAAQAAAgAAAAIAAAAAAFAAg=</HashCode>
+      <FileName>Clef.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MusicNotationLib.Direction" Collapsed="true">
+    <Position X="9.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAEAAAAAAAgAAAAIAAAIAAAACAAAAAA=</HashCode>
+      <FileName>Direction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MusicNotationLib.Key" Collapsed="true">
+    <Position X="11.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Key.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MusicNotationLib.MusicalCharacters" Collapsed="true">
+    <Position X="16.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAgBAAEYAAAUBIEAIECNQgECAEMAAgEQgwAQAcAAAI=</HashCode>
+      <FileName>MusicalCharacters.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MusicNotationLib.MusicalSymbol" Collapsed="true">
+    <Position X="7.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAAAMIAABAIAAAQAAAAAAAAA=</HashCode>
+      <FileName>MusicalSymbol.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MusicNotationLib.Note" Collapsed="true">
+    <Position X="14" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACZBDAIBAQgGhSEIhIYBAogCCBIosIoQYZCCAECEQgw=</HashCode>
+      <FileName>Note.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MusicNotationLib.Point" Collapsed="true">
+    <Position X="18.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYAA=</HashCode>
+      <FileName>Point.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MusicNotationLib.Rest" Collapsed="true">
+    <Position X="3" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAADAIAAAAGgAAABAAAAAAAAEAAkABAARAAAAAAAAw=</HashCode>
+      <FileName>Rest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MusicNotationLib.TimeSignature" Collapsed="true">
+    <Position X="7.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABACAAAAAAAAAAEAIAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>TimeSignature.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="MusicNotationLib.ClefType" Collapsed="true">
+    <Position X="20" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Enums\ClefType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MusicNotationLib.MusicSymbolDuration" Collapsed="true">
+    <Position X="18.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIKAAAAIAAAAJAAAAYEBgAAAAAAAAAAAABA=</HashCode>
+      <FileName>Enums\MusicSymbolDuration.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MusicNotationLib.MusicSymbolType" Collapsed="true">
+    <Position X="20" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAACAAAAAAACAABAAAAAACAAEACBA=</HashCode>
+      <FileName>Enums\MusicSymbolType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MusicNotationLib.NoteBeamType" Collapsed="true">
+    <Position X="21.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIACAAAACAAAAAAAAAAAACAAAIAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Enums\NoteBeamType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MusicNotationLib.NoteStemDirection" Collapsed="true">
+    <Position X="18.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Enums\NoteStemDirection.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MusicNotationLib.NoteTieType" Collapsed="true">
+    <Position X="20" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAIAAAAAAAAAAAAAAAAAAIAAAAAEAAAA=</HashCode>
+      <FileName>Enums\NoteTieType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MusicNotationLib.Octave" Collapsed="true">
+    <Position X="16.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgCAABAAAQAAAAgQAAABAAEAAAAgAAABAAAAAAAE=</HashCode>
+      <FileName>Enums\Octave.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MusicNotationLib.TupletType" Collapsed="true">
+    <Position X="21.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAIAAAAAEAAAA=</HashCode>
+      <FileName>MusicalSymbol.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MusicNotationLib.LyricsType" Collapsed="true">
+    <Position X="16.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAACAAAAAEAAAAAAQAAEAAAA=</HashCode>
+      <FileName>MusicalSymbol.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MusicNotationLib.ArticulationType" Collapsed="true">
+    <Position X="18.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACBAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>MusicalSymbol.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MusicNotationLib.ArticulationPlacementType" Collapsed="true">
+    <Position X="16.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MusicalSymbol.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MusicNotationLib.DirectionPlacementType" Collapsed="true">
+    <Position X="21.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAgAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MusicalSymbol.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MusicNotationLib.TimeSignatureType" Collapsed="true">
+    <Position X="20" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MusicalSymbol.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MusicNotationLib.NoteTrillMark" Collapsed="true">
+    <Position X="21.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>MusicalSymbol.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MusicNotationLib.NoteSlurType" Collapsed="true">
+    <Position X="16.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAIAAAAAEAAAA=</HashCode>
+      <FileName>MusicalSymbol.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MusicNotationLib.RepeatSignType" Collapsed="true">
+    <Position X="18.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAI=</HashCode>
+      <FileName>MusicalSymbol.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

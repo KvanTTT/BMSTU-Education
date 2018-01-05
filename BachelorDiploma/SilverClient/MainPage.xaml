@@ -1,0 +1,61 @@
+﻿<UserControl x:Class="SilverClient.MainPage"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	d:DesignHeight="781" d:DesignWidth="1093" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" 
+			 xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit" 
+			 xmlns:my="clr-namespace:Microsoft.Expression.Prototyping.Controls;assembly=Microsoft.Expression.Prototyping.Runtime" 
+			 xmlns:my1="clr-namespace:SilverClient" 
+			 xmlns:my2="clr-namespace:PSAMSilverlightControlLibrary;assembly=PSAMSilverlightControlLibrary" 
+			 xmlns:my3="clr-namespace:Microsoft.Expression.Framework.Data;assembly=Microsoft.Expression.Prototyping.Runtime" 
+			 xmlns:my4="clr-namespace:SilverClient.Instruments" xmlns:my5="clr-namespace:MetronomeSilver;assembly=MetronomeSilver">
+
+	<Grid x:Name="LayoutRoot" Loaded="LayoutRoot_Loaded" Background="LightGray">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="17*" />
+			<RowDefinition Height="212*" />
+			<RowDefinition Height="331*" />
+			<RowDefinition Height="10*" />
+			<RowDefinition Height="156*" />
+			<RowDefinition Height="39*" />
+			<RowDefinition Height="16*" />
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="15*" />
+			<ColumnDefinition Width="856*" />
+			<ColumnDefinition Width="222*" />
+		</Grid.ColumnDefinitions>
+		<!--<toolkit:Accordion Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch" Name="accordion1" VerticalAlignment="Stretch" SelectionMode="ZeroOrMore">
+			<toolkit:AccordionItem Header="Note Record" />
+			<toolkit:AccordionItem Header="Midi Record" />
+			<toolkit:AccordionItem Header="Keyboard" MaxWidth="Infinity" MaxHeight="300">
+				<toolkit:AccordionItem.Content>
+				</toolkit:AccordionItem.Content>
+			</toolkit:AccordionItem>
+			<toolkit:AccordionItem Header="Wave" />
+		</toolkit:Accordion> -->
+		<my2:IncipitViewerSilvelight Grid.Column="1" Name="NoteViewer" IsSelected="False" Grid.Row="1" />
+		<my1:InstrumentBoard Grid.Column="1" Grid.Row="4" x:Name="instrumentBoard1" Grid.RowSpan="2" />
+		<my4:WaveVisualizerManager Grid.Column="1" Grid.Row="2" x:Name="waveVisualizerManager1" MouseLeftButtonDown="waveVisualizerManager1_MouseLeftButtonDown" Grid.ColumnSpan="2" Margin="5,50,217,116" Grid.RowSpan="3" />
+		<StackPanel Grid.Column="2" Grid.Row="1" Name="stackPanel1" Margin="0,0,0,138" Grid.RowSpan="4">
+			<RadioButton Content="Распознавание" Height="16" Name="rbRecognition" Margin="6" IsChecked="True" Checked="rbRecognition_Checked" />
+			<RadioButton Content="Следование" Height="16" Name="rbFolow" Margin="6" IsChecked="False" Checked="rbRecognition_Checked" />
+			<Button Content="Начать" Name="btnRecord" Margin="6" Height="32" Click="btnRecord_Click" />
+			<Button Content="Сохранить" Name="btnSaveLoad" Margin="6" Height="32" Click="btnSaveLoad_Click" />
+			<Button Content="Настройки" Name="btnSettings" Margin="6" Height="32" Click="btnSettings_Click" />
+			<my5:MetronomeControl Name="metronomeControl1" Height="358" Width="190" Margin="6,24,6,6" Background="Black" Foreground="Black" OpacityMask="Black" Visibility="Collapsed"></my5:MetronomeControl>
+			<Button Height="34" Name="btnActivateMicrophone" Width="210" Margin="6" Content="Активировать микрофон" Click="btnActivateMicrophone_Click" />
+		</StackPanel>
+		<HyperlinkButton Content="GolosIzProshlogo.ru" Grid.Column="2" Grid.Row="5" Name="hyperlinkButton1" NavigateUri="http://golosizproshlogo.ru/" TargetName="_blank" FontSize="18" HorizontalContentAlignment="Center" BorderBrush="Black" Foreground="#FF304B70" VerticalContentAlignment="Center" FontWeight="Bold">
+			<HyperlinkButton.Background>
+				<LinearGradientBrush EndPoint="0,1">
+					<GradientStop Color="LightGray" Offset="0" />
+					<GradientStop Color="Linen" Offset="0.5" />
+					<GradientStop Color="LightGray" Offset="1" />
+				</LinearGradientBrush>
+			</HyperlinkButton.Background>
+		</HyperlinkButton>
+	</Grid>
+</UserControl>

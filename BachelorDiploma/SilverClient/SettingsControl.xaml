@@ -1,0 +1,107 @@
+﻿<UserControl x:Class="SilverClient.SettingsControl"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	d:DesignHeight="445" d:DesignWidth="378" xmlns:my="clr-namespace:SilverClient" xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+			 xmlns:inputToolkit="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Input.Toolkit">
+	
+	<UserControl.Resources>
+		<Style x:Key="LabelStyle" TargetType="TextBlock">
+			<Setter Property="Width" Value="140" />
+			<Setter Property="Margin" Value="15,15,0,0" />
+			<Setter Property="TextWrapping" Value="Wrap" />
+		</Style>
+		<Style x:Key="TextBoxItemStyle" TargetType="TextBox">
+			<Setter Property="Width" Value="140" />
+			<Setter Property="Margin" Value="15,15,0,0" />
+			<Setter Property="Height" Value="22" />
+		</Style>
+		<Style x:Key="ComboBoxItemStyle" TargetType="ComboBox">
+			<Setter Property="Width" Value="140" />
+			<Setter Property="Margin" Value="15,15,0,0" />
+			<Setter Property="Height" Value="22" />
+		</Style>
+		<Style x:Key="CheckBoxItemStyle" TargetType="CheckBox">
+			<Setter Property="Width" Value="140" />
+			<Setter Property="Margin" Value="15,15,0,0" />
+			<Setter Property="Height" Value="22" />
+		</Style>
+	</UserControl.Resources>
+	
+	<Grid x:Name="LayoutRoot" Background="White">
+		<sdk:TabControl Name="tiDevices">
+			<sdk:TabItem Header="Сигнал" Name="tiPitch">
+				<ScrollViewer VerticalScrollBarVisibility="Auto">
+				<Grid Name="grid1">					
+					<toolkit:WrapPanel Name="wpSignalSettings">
+						<TextBlock Style="{StaticResource LabelStyle}" Name="tbInThreshold" Text="Порог входа" />
+						<TextBox Style="{StaticResource TextBoxItemStyle}" Name="txtInThresholde" Text="{Binding Path=InThreshold, Mode=TwoWay}" />
+							
+						<TextBlock Style="{StaticResource LabelStyle}" Name="tbOutThreshold" Text="Порог выхода" />
+						<TextBox Style="{StaticResource TextBoxItemStyle}" Name="txtOutThreshold" Text="{Binding Path=OutThreshold, Mode=TwoWay}" />
+						
+						<TextBlock Style="{StaticResource LabelStyle}" Name="tbMaxVolume" Text="Параметр компрессии" />
+						<TextBox Style="{StaticResource TextBoxItemStyle}" Name="txtMaxVolume" Text="{Binding Path=CompressParameter, Mode=TwoWay}" />
+						
+						<TextBlock Style="{StaticResource LabelStyle}" Name="tbMinDuration" Text="Минимальная длительность" />
+						<TextBox Style="{StaticResource TextBoxItemStyle}" Name="txtMinDuration" Text="{Binding Path=MinDuration, Mode=TwoWay}" />
+						
+						<TextBlock Style="{StaticResource LabelStyle}" Name="tbWindowSize" Text="Размер окна" />
+						<TextBox Style="{StaticResource TextBoxItemStyle}" Name="txtWindowSize" Text="{Binding Path=WindowSize, Mode=TwoWay}" />
+
+						<TextBlock Style="{StaticResource LabelStyle}" Name="tbWindowFunc" Text="Оконная функция" />
+							<ComboBox Style="{StaticResource ComboBoxItemStyle}" Name="cmbWindowFunc" ItemsSource="{Binding Path=WindowTypeCaptions}"
+								DisplayMemberPath="Caption" SelectedValuePath="Type" SelectedValue="{Binding Path=WindowType, Mode=TwoWay}"/>
+						
+						<TextBlock Style="{StaticResource LabelStyle}" Name="tbOverlappedWindowRatio" Text="Коэффициент перекрытия" />
+						<TextBox Style="{StaticResource TextBoxItemStyle}" Name="txtOverlappedWindowRatio" Text="{Binding Path=OverlappedWindowRatio, Mode=TwoWay}" />
+						
+						<TextBlock Style="{StaticResource LabelStyle}" Name="tbMinFreq" Text="Минимальная частота" />
+						<TextBox Style="{StaticResource TextBoxItemStyle}" Name="txtMinFreq" Text="{Binding Path=MinFreq, Mode=TwoWay}" />
+						
+						<TextBlock Style="{StaticResource LabelStyle}" Name="tbMaxFreq" Text="Максимальная частота" />
+						<TextBox Style="{StaticResource TextBoxItemStyle}" Name="txtMaxFreq" Text="{Binding Path=MaxFreq, Mode=TwoWay}" />
+						
+						<TextBlock Name="tbPeaksCount" Style="{StaticResource LabelStyle}" Text="Количество пиков" />
+						<TextBox Name="txtPeaksCount" Style="{StaticResource TextBoxItemStyle}" Text="{Binding Path=PeaksCount, Mode=TwoWay}" />
+						
+					</toolkit:WrapPanel>					
+				</Grid>
+				</ScrollViewer>
+			</sdk:TabItem>
+			<sdk:TabItem Header="Ноты" Name="tiMidi">
+				<Grid Name="grid2">
+					<toolkit:WrapPanel Name="wrapPanel2">
+						<TextBlock Style="{StaticResource LabelStyle}" Name="tbDefaultTemp" Text="Темп" />
+						<TextBox Style="{StaticResource TextBoxItemStyle}" Name="txtDefaultTemp" Text="{Binding Path=Tempo}"/>
+
+						<TextBlock Style="{StaticResource LabelStyle}" Name="tbTimeSignature" Text="Размер" />
+						<TextBox Style="{StaticResource TextBoxItemStyle}" Name="txtTimeSignature" Text="{Binding Path=TimeSignature}" />
+
+						<TextBlock Name="tbMinSymbolDuration" Style="{StaticResource LabelStyle}" Text="Минимальная длительность ноты" />
+						<ComboBox Style="{StaticResource ComboBoxItemStyle}" Name="cmbMinSymbolDuration" ItemsSource="{Binding Path=MusicSymbolDurationCaptions}"
+							DisplayMemberPath="Caption" SelectedValuePath="Duration" SelectedValue="{Binding Path=MinSymbolDuration, Mode=TwoWay}"/>
+
+						<TextBlock Name="tbMaxSymbolDuration" Style="{StaticResource LabelStyle}" Text="Максимальная длительность ноты" />
+						<ComboBox Style="{StaticResource ComboBoxItemStyle}" Name="cmbMaxSymbolDuration" ItemsSource="{Binding Path=MusicSymbolDurationCaptions}"
+							DisplayMemberPath="Caption" SelectedValuePath="Duration" SelectedValue="{Binding Path=MaxSymbolDuration, Mode=TwoWay}"/>
+						
+						<TextBlock Name="tbDottedNotes" Style="{StaticResource LabelStyle}" Text="Ноты с точкой" />
+						<CheckBox Name="cbDottedNotes" Style="{StaticResource CheckBoxItemStyle}" Content="Есть" IsChecked="{Binding Path=DottedNotes, Mode=TwoWay}"/>
+					</toolkit:WrapPanel>
+				</Grid>
+			</sdk:TabItem>
+			<sdk:TabItem Header="Устройства">
+				<Grid Name="grid3">
+					<toolkit:WrapPanel Name="wpDevices">
+						<TextBlock Style="{StaticResource LabelStyle}" Name="tbSelectedDevice" Text="Записывающее устройство" />
+						<ComboBox Style="{StaticResource ComboBoxItemStyle}" Name="cmbDevice" ItemsSource="{Binding Path=Devices}"
+								SelectedItem="{Binding Path=SelectedDevice}"/>
+					</toolkit:WrapPanel>
+				</Grid>
+			</sdk:TabItem>
+		</sdk:TabControl>
+	</Grid>
+</UserControl>

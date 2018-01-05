@@ -1,0 +1,99 @@
+﻿<UserControl x:Class="MetronomeSilver.MediaButton"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+	xmlns:vsm="clr-namespace:System.Windows;assembly=System.Windows">
+	
+	<UserControl.Resources>
+		<ResourceDictionary Source="Resources.xaml" />
+	</UserControl.Resources>
+	
+	<Grid x:Name="LayoutRoot" 
+		HorizontalAlignment="Left" 
+		VerticalAlignment="Top">
+		<Grid.Resources>
+			<LinearGradientBrush x:Key="FigureGradientBrush" EndPoint="0.5,1" StartPoint="0.5,0">
+				<GradientStop Color="{StaticResource PrimaryControlsColor}"/>
+				<GradientStop Color="{StaticResource PrimaryControlsColor}" Offset="0.6"/>
+				<GradientStop Color="{StaticResource PrimaryControlsColor}" Offset="1"/>
+			</LinearGradientBrush>
+			
+			<Style x:Key="FigureStyle" TargetType="Polygon">
+				<Setter Property="Stroke" Value="{StaticResource StrokeBrush}" />
+				<Setter Property="StrokeThickness" Value="{StaticResource StrokeThickness}" />
+				<Setter Property="Fill" Value="{StaticResource FigureGradientBrush}" />
+			</Style>
+		</Grid.Resources>
+		<vsm:VisualStateManager.VisualStateGroups>
+			<vsm:VisualStateGroup x:Name="Mouse">
+				<vsm:VisualState x:Name="Normal"/>
+				<vsm:VisualState x:Name="MouseOver">
+					<Storyboard>
+						<ColorAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="ButtonFigure" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)">
+							<SplineColorKeyFrame KeyTime="00:00:00" Value="{StaticResource PrimaryControlsColor}"/>
+						</ColorAnimationUsingKeyFrames>
+						<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="ButtonFigure" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Offset)">
+							<SplineDoubleKeyFrame KeyTime="00:00:00" Value="0.491"/>
+						</DoubleAnimationUsingKeyFrames>
+						<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="ButtonFigure" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Offset)">
+							<SplineDoubleKeyFrame KeyTime="00:00:00" Value="0.509"/>
+						</DoubleAnimationUsingKeyFrames>
+						<ColorAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="ButtonFigure" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)">
+							<SplineColorKeyFrame KeyTime="00:00:00" Value="{StaticResource SecondaryControlsColor}"/>
+						</ColorAnimationUsingKeyFrames>
+						<ColorAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="ButtonFigureReflection" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)">
+							<SplineColorKeyFrame KeyTime="00:00:00" Value="{StaticResource PrimaryControlsColor}"/>
+						</ColorAnimationUsingKeyFrames>
+						<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="ButtonFigureReflection" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Offset)">
+							<SplineDoubleKeyFrame KeyTime="00:00:00" Value="0.491"/>
+						</DoubleAnimationUsingKeyFrames>
+						<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="ButtonFigureReflection" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Offset)">
+							<SplineDoubleKeyFrame KeyTime="00:00:00" Value="0.509"/>
+						</DoubleAnimationUsingKeyFrames>
+						<ColorAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="ButtonFigureReflection" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)">
+							<SplineColorKeyFrame KeyTime="00:00:00" Value="{StaticResource SecondaryControlsColor}"/>
+						</ColorAnimationUsingKeyFrames>
+					</Storyboard>
+				</vsm:VisualState>
+				<vsm:VisualState x:Name="Pressed">
+					<Storyboard>
+						<ColorAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="ButtonFigure" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)">
+							<SplineColorKeyFrame KeyTime="00:00:00" Value="{StaticResource SecondaryControlsColor}"/>
+						</ColorAnimationUsingKeyFrames>
+						<ColorAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="ButtonFigure" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)">
+							<SplineColorKeyFrame KeyTime="00:00:00" Value="{StaticResource SecondaryControlsColor}"/>
+						</ColorAnimationUsingKeyFrames>
+						<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="ButtonFigure" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Offset)">
+							<SplineDoubleKeyFrame KeyTime="00:00:00" Value="0.518"/>
+						</DoubleAnimationUsingKeyFrames>
+						<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="ButtonFigure" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Offset)">
+							<SplineDoubleKeyFrame KeyTime="00:00:00" Value="0.522"/>
+						</DoubleAnimationUsingKeyFrames>
+					</Storyboard>
+				</vsm:VisualState>
+			</vsm:VisualStateGroup>
+		</vsm:VisualStateManager.VisualStateGroups>
+		<Polygon x:Name="ButtonFigure" 
+			MouseLeftButtonUp="ButtonFigure_MouseLeftButtonUp" 
+			MouseLeftButtonDown="ButtonFigure_MouseLeftButtonDown" 
+			MouseEnter="ButtonFigure_MouseEnter" 
+			MouseLeave="ButtonFigure_MouseLeave" 
+			Style="{StaticResource FigureStyle}">
+		</Polygon>
+		<Polygon x:Name="ButtonFigureReflection" 
+			Style="{StaticResource FigureStyle}"
+			RenderTransformOrigin="0.5,1"
+			Opacity="0.6">
+			<Polygon.OpacityMask>
+				<LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1" >
+					<GradientStop Color="{StaticResource OpacityMaskTransparentColor}" Offset="0.4"/>
+					<GradientStop Color="{StaticResource OpacityMaskSolidColor}" Offset="1"/>
+				</LinearGradientBrush>
+			</Polygon.OpacityMask>
+			<Polygon.RenderTransform>
+				<TransformGroup>
+					<ScaleTransform ScaleY="{StaticResource ScaleCoefficientY}" />
+				</TransformGroup>
+			</Polygon.RenderTransform>
+		</Polygon>
+	</Grid>
+</UserControl>

@@ -1,0 +1,43 @@
+﻿<UserControl x:Class="SilverClient.InstrumentBoard"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d" d:DesignHeight="180" d:DesignWidth="692">
+	
+	<Grid x:Name="LayoutRoot" Loaded="LayoutRoot_Loaded">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="46*" MaxHeight="64" MinHeight="32" />
+			<RowDefinition Height="89*" />
+		</Grid.RowDefinitions>
+		<StackPanel Name="stackPanel1" Orientation="Horizontal">
+			<TextBlock Name="textBlock1" Text="Выбранный инструмент" Margin="5" VerticalAlignment="Center" />
+			<ComboBox Name="cmbSelectedInstrument" Margin="5" SelectionChanged="cmbSelectedInstrument_SelectionChanged">
+				<ComboBoxItem IsSelected="True" Name="cmbItemPiano">
+					<StackPanel Name="spPiano" Orientation="Horizontal" Margin="1,2,3,3">
+						<Image Name="imgPianoIcon" Stretch="Uniform" Source="/SilverClient;component/Instruments/Data/Icons/Piano.png" />
+						<TextBlock Name="tbPianoTitle" Text="Пианино" VerticalAlignment="Center" Margin="3" />
+					</StackPanel>
+				</ComboBoxItem>
+				<ComboBoxItem Name="cmbItemFlute">
+					<StackPanel Name="spFlute" Orientation="Horizontal" Margin="1,2,3,3">
+						<Image Name="imgFluteIcon" Stretch="Uniform" Source="/SilverClient;component/Instruments/Data/Icons/Flute.png" />
+						<TextBlock Name="tbFluteTitle" Text="Флейта" VerticalAlignment="Center" Margin="3" />
+					</StackPanel>
+				</ComboBoxItem>
+				<ComboBoxItem Name="cmbItemGuitar">
+					<StackPanel Name="spGuitar" Orientation="Horizontal" Margin="1,2,3,3">
+						<Image Name="imgGuitarIcon" Stretch="Uniform" Source="/SilverClient;component/Instruments/Data/Icons/Guitar.png" />
+						<TextBlock Name="tbGuitarHeader" Text="Электрогитара" VerticalAlignment="Center" Margin="3" />
+					</StackPanel>
+				</ComboBoxItem>
+				<ComboBoxItem Name="cmbItemBass">
+					<StackPanel Name="spBass" Orientation="Horizontal" Margin="1,2,3,3">
+						<Image Name="imgBassIcon" Stretch="Uniform" Source="/SilverClient;component/Instruments/Data/Icons/Bass.png" />
+						<TextBlock Name="tbBassHeader" Text="Бас гитара" VerticalAlignment="Center" Margin="3" />
+					</StackPanel>
+				</ComboBoxItem>				
+			</ComboBox>			
+		</StackPanel>
+	</Grid>
+</UserControl>

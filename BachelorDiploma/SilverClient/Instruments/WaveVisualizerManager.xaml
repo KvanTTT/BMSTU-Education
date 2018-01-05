@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="SilverClient.Instruments.WaveVisualizerManager"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	d:DesignHeight="428" d:DesignWidth="882" xmlns:my="clr-namespace:SilverClient" xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit" Loaded="UserControl_Loaded" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk">
+	
+	<Grid x:Name="LayoutRoot" Background="White">
+		<my:WaveVisualizer x:Name="waveVisualizer1" Margin="0,0,23,0" />
+		<toolkit:Expander ExpandDirection="Left" IsEnabled="True" IsExpanded="False" MaxWidth="150" Name="expander1" Background="#D7000000" HorizontalAlignment="Right" BorderBrush="#CD000000">
+			<Grid Height="Auto" HorizontalAlignment="Stretch" Name="grid1" VerticalAlignment="Stretch" Width="Auto">
+				<StackPanel>
+					<ComboBox DisplayMemberPath="Description" ItemsSource="{Binding VisualDescriptions}" Margin="10" Name="cmbVisualStyle" SelectedIndex="-1" SelectionChanged="cmbVisualStyle_SelectionChanged">
+						<ComboBoxItem Content="None" />
+						<ComboBoxItem Content="Peak Meter" />
+						<ComboBoxItem Content="Oscilloscope" IsSelected="True" />
+						<ComboBoxItem Content="Scope" />
+						<ComboBoxItem Content="Scan" />
+						<ComboBoxItem Content="Band Scan" />
+						<ComboBoxItem Content="Volume" />
+						<ComboBoxItem Content="FFT" />
+					</ComboBox>
+					<CheckBox Checked="cbBlur_Checked" Content="Размытие" Margin="10" Name="cbBlur" Unchecked="cbBlur_Unchecked" Background="#FF448DCA" Foreground="#FFF2F7FF" />
+				</StackPanel>
+			</Grid>
+		</toolkit:Expander>
+	</Grid>
+</UserControl>
