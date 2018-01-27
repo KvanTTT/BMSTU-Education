@@ -1,0 +1,9 @@
+TARGETNAME=ext2fs
+TARGETTYPE=DRIVER
+
+RCNOFONTMAP=TRUE
+
+SOURCES= fastio.c   memory.c     close.c      dirctl.c     except.c \
+	read.c       misc.c       devctl.c     volinfo.c    lock.c       \
+	cleanup.c    block.c      cmcb.c       fileinfo.c   dispatch.c   \
+	init.c       debug.c      create.c     ext2.c       fsctl.c      

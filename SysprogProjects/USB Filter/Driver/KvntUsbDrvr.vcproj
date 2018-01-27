@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="9,00"
+	Name="KvntUsbDrvr"
+	ProjectGUID="{9894C8DC-13B8-4ADF-B621-8A5ADD11709F}"
+	RootNamespace="KvntUsbDrvr"
+	Keyword="MakeFileProj"
+	TargetFrameworkVersion="196613"
+	>
+	<Platforms>
+		<Platform
+			Name="Win32"
+		/>
+	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="$(ProjectDir)\objchk_wxp_x86"
+			IntermediateDirectory="$(ProjectDir)\objchk_wxp_x86"
+			ConfigurationType="0"
+			>
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="call $(WDKPATH)\bin\setenv.bat $(WDKPATH) chk wxp&#x0D;&#x0A;cd /d $(ProjectDir)&#x0D;&#x0A;build"
+				ReBuildCommandLine="rmdir /s /q $(ProjectDir)\objchk_wxp_x86&#x0D;&#x0A;call $(WDKPATH)\bin\setenv.bat $(WDKPATH) chk wxp&#x0D;&#x0A;cd /d $(ProjectDir)&#x0D;&#x0A;build"
+				CleanCommandLine="rmdir /s /q $(ProjectDir)\objchk_wxp_x86"
+				Output="$(ProjectDir)\objchk_wxp_x86\i386\KvntUsbDrvr.sys"
+				PreprocessorDefinitions="WIN32;_CONSOLE;_X86_;_DDK_;_DEBUG;DBG=1"
+				IncludeSearchPath="$(WDKPATH)\inc\ddk;$(WDKPATH)\inc\api;$(WDKPATH)\inc\crt"
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged=""
+			/>
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="$(ProjectDir)\objfre_win7_x86"
+			IntermediateDirectory="$(ProjectDir)\objfre_win7_x86"
+			ConfigurationType="0"
+			>
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="call $(WDKPATH)\bin\setenv.bat $(WDKPATH) fre win7&#x0D;&#x0A;cd /d $(ProjectDir)&#x0D;&#x0A;build"
+				ReBuildCommandLine="rmdir /s /q $(ProjectDir)\objfre_win7_x86&#x0D;&#x0A;call $(WDKPATH)\bin\setenv.bat $(WDKPATH) fre win7&#x0D;&#x0A;cd /d $(ProjectDir)&#x0D;&#x0A;build"
+				CleanCommandLine="rmdir /s /q $(ProjectDir)\objfre_win7_x86"
+				Output="$(ProjectDir)\objfre_win7_x86\i386\KvntUsbDrvr.sys"
+				PreprocessorDefinitions="WIN32;_CONSOLE;_X86_;_DDK_;_NDEBUG;DBG=0"
+				IncludeSearchPath="$(WDKPATH)\inc\ddk;$(WDKPATH)\inc\api;$(WDKPATH)\inc\crt"
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged=""
+			/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter
+			Name="Source files"
+			Filter="cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx"
+			>
+			<File
+				RelativePath=".\KvntUsbDrvr.c"
+				>
+			</File>
+			<File
+				RelativePath=".\Logs.c"
+				>
+			</File>
+			<File
+				RelativePath=".\PnP.c"
+				>
+			</File>
+			<File
+				RelativePath=".\Registry.c"
+				>
+			</File>
+			<File
+				RelativePath=".\stdafx.c"
+				>
+			</File>
+			<File
+				RelativePath=".\Utils.c"
+				>
+			</File>
+		</Filter>
+		<Filter
+			Name="Resource files"
+			Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav"
+			>
+		</Filter>
+		<Filter
+			Name="Header files"
+			Filter="h;hpp;hxx;hm;inl;inc;xsd"
+			>
+			<File
+				RelativePath=".\KvntUsbDrvr.h"
+				>
+			</File>
+			<File
+				RelativePath=".\resource.h"
+				>
+			</File>
+			<File
+				RelativePath=".\stdafx.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Strings.h"
+				>
+			</File>
+			<File
+				RelativePath=".\VisualDDKHelpers.h"
+				>
+			</File>
+		</Filter>
+		<File
+			RelativePath=".\KvntUsbDrvr.inf"
+			>
+		</File>
+		<File
+			RelativePath=".\$(ProjectDir)\sources"
+			>
+		</File>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

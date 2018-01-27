@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source files">
+      <UniqueIdentifier>{dfdb6da6-e70c-4a36-a215-27d4a3a51c47}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Resource files">
+      <UniqueIdentifier>{16f3c993-ed9e-464b-8194-081100b467c0}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Header files">
+      <UniqueIdentifier>{c76326a7-f009-4f33-9b2f-10059c4b9cea}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="KvntUsbDrvr.c">
+      <Filter>Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="Logs.c">
+      <Filter>Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="PnP.c">
+      <Filter>Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="Registry.c">
+      <Filter>Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.c">
+      <Filter>Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils.c">
+      <Filter>Source files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="KvntUsbDrvr.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="Strings.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="VisualDDKHelpers.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="KvntUsbDrvr.inf" />
+    <None Include="$(ProjectDir)\sources" />
+  </ItemGroup>
+</Project>
