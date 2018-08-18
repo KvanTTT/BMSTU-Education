@@ -1,0 +1,19 @@
+#!/bin/bash
+
+PREF="small"
+POST=".job"
+DIR="jobs"
+BASE=$PREF$POST
+
+mkdir -p $DIR
+
+for n in {2..23}
+do
+  for m in {1..24}
+  do
+    NAME="$DIR/$PREF$n-$m$POST"
+    cp $BASE $NAME
+    sed -i "s/@ node = 8/@ node = $n/g" $NAME
+    sed -i "s/queens 10/queens $m/g" $NAME
+  done
+done

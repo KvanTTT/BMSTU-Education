@@ -1,0 +1,25 @@
+#!/bin/bash
+
+`rm test*`
+`rm trace*`
+
+make clean
+make $1
+
+for n in 2 4 8 14
+do
+	for m in {14..17}
+	do
+		echo $n-$m
+		./run $n $m > /dev/null
+	done
+done
+
+`rm log`
+
+for name in $( ls | grep "stdout" )
+do
+	cat $name >> log
+done
+
+`rm *stdout`

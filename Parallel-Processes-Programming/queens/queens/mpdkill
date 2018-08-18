@@ -1,0 +1,16 @@
+#!/bin/bash
+
+USR="stud009"
+
+for name in $( ls test* )
+do
+  CONTENT=`cat $name | grep -o '[0-9]*\.[0-9]*\.[0-9]*\.[0-9]*'`
+  for ADDR in $CONTENT
+  do
+    echo $ADDR
+    for ID in $( ssh $ADDR "ps aux | grep mpd | grep $USR | grep -o '\<[0-9][0-9][0-9][0-9]\>'" )
+    do
+      ssh $ADDR "kill -9 $ID" &> /dev/null
+    done
+  done
+done

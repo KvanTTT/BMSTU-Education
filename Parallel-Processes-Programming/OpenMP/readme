@@ -1,0 +1,1 @@
+mpicc -fopenmp 2.c -o 2o.exe

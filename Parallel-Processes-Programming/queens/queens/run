@@ -1,0 +1,22 @@
+#!/bin/bash
+
+PREF="small"
+POST=".job"
+DIR="jobs"
+PAUSE=1
+
+SUB=`llsubmit "$DIR/$PREF$1-$2$POST" | grep "has been submitted"`
+if [ -z "$SUB" ]
+then
+  echo "Submition failed"
+else
+  echo $SUB
+  ID=`echo $SUB | grep -o "mgmt\.nodes\.[0-9]\+" | grep -o "[0-9]\+"`
+  ID="mgmt."$ID
+  RES=`llq | grep $ID`
+  while [ -n "$RES" ]
+  do
+    sleep $PAUSE
+    RES=`llq | grep $ID`
+  done
+fi
