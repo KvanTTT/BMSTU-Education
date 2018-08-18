@@ -1,0 +1,14 @@
+﻿<Window x:Class="Cinema.Registration"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Регистрация" Height="172" Width="277" WindowStartupLocation="CenterOwner" WindowStyle="ToolWindow" ResizeMode="NoResize">
+    <Grid>
+        <Button Content="Зарегестрироваться" Height="23" HorizontalAlignment="Left" Margin="58,102,0,0" Name="btnLogin" Padding="0" VerticalAlignment="Top" Width="137" Click="btnLogin_Click" />
+        <Label Content="Логин" Height="28" HorizontalAlignment="Left" Margin="10,10,0,0" Name="label1" Padding="0" VerticalAlignment="Top" Width="62" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="126,10,0,0" Name="tbNickName" Padding="0" VerticalAlignment="Top" Width="108" HorizontalContentAlignment="Stretch" />
+        <Label Content="Пароль" Height="28" HorizontalAlignment="Left" Margin="10,39,0,0" Name="label2" Padding="0" VerticalAlignment="Top" Width="62" />
+        <PasswordBox Height="23" HorizontalAlignment="Left" Margin="126,39,21,0" Name="passwordBox1" Padding="0" VerticalAlignment="Top" Width="108" HorizontalContentAlignment="Stretch" />
+        <Label Content="Повторите пароль" Height="28" Margin="10,68,135,0" Name="label3" Padding="0" VerticalAlignment="Top" />
+        <PasswordBox Height="23" HorizontalAlignment="Left" Margin="126,68,0,0" Name="passwordBox2" Padding="0" VerticalAlignment="Top" Width="108" HorizontalContentAlignment="Stretch" />
+    </Grid>
+</Window>

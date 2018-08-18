@@ -1,0 +1,15 @@
+﻿<Page x:Class="Cinema.Pages.About"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" Title="About" d:DesignHeight="508" d:DesignWidth="754">
+
+    <Grid>
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="590,473,0,0" Name="textBlock1" Text="Кочуркин И.А., 2010" VerticalAlignment="Top" Width="152" FontSize="16" />
+        <Image Height="380" HorizontalAlignment="Left" Margin="12,12,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="730" Source="/Cinema;component/bin/Debug/p_f.jpg" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="12,423,0,0" Name="textBlock2" Text="Для возможности заказа билетов нужно авторизироваться" VerticalAlignment="Top" FontSize="14" />
+        <TextBlock FontSize="16" Height="23" HorizontalAlignment="Left" Margin="487,444,0,0" Name="textBlock3" Text="Курсовая работа по Базам Данных" VerticalAlignment="Top" />
+        <TextBlock FontSize="14" HorizontalAlignment="Left" Margin="12,452,0,0" Name="textBlock4" Text="Для возможности редактирования фильмов и сеансов нужно войти с логином и паролем администратора" VerticalAlignment="Top" TextWrapping="Wrap" Height="44" Width="381" />
+    </Grid>
+</Page>

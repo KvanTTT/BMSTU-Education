@@ -1,0 +1,25 @@
+﻿<Page x:Class="Cinema.Pages.Films"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+	Title="Films" Width="754" Height="508" xmlns:my="clr-namespace:Cinema">
+    <Page.Resources>
+        <my:CinemaDataSet x:Key="cinemaDataSet" />
+        <CollectionViewSource x:Key="tblMovieViewSource" Source="{Binding Path=tblMovie, Source={StaticResource cinemaDataSet}}" />
+    </Page.Resources>
+    <Grid DataContext="{StaticResource tblMovieViewSource}">
+        <Label Content="Жанр" Height="28" HorizontalAlignment="Left" Margin="12,12,0,0" Name="label2" VerticalAlignment="Top" />
+        <TextBox Height="50" HorizontalAlignment="Left" IsReadOnly="True" Margin="102,12,0,0" Name="tbGenres" TextWrapping="Wrap" VerticalAlignment="Top" Width="197" />
+        <Button Content="Выбрать..." Height="23" HorizontalAlignment="Left" Margin="305,11,0,0" Name="button1" VerticalAlignment="Top" Width="75" Click="button1_Click" />
+        <Label Content="Страна" Height="28" HorizontalAlignment="Left" Margin="12,68,0,0" Name="label3" VerticalAlignment="Top" />
+        <TextBox Height="50" HorizontalAlignment="Left" IsReadOnly="True" Margin="102,70,0,0" Name="tbCountries" TextWrapping="Wrap" VerticalAlignment="Top" Width="197" />
+        <Button Content="Выбрать..." Height="23" HorizontalAlignment="Left" Margin="306,68,0,0" Name="button2" VerticalAlignment="Top" Width="75" Click="button2_Click" />
+        <TextBox Height="26" HorizontalAlignment="Right" Margin="0,94,94,0" Name="textBox1" VerticalAlignment="Top" Width="239" TextChanged="textBox1_TextChanged" />
+        <Label Height="28" HorizontalAlignment="Left" Margin="421,60,0,0" Name="label1" VerticalAlignment="Top" />
+        <DataGrid AutoGenerateColumns="True" EnableRowVirtualization="True" HorizontalAlignment="Stretch" ItemsSource="{Binding}" Margin="12,126,12,12" Name="tblMovieDataGrid" RowDetailsVisibilityMode="VisibleWhenSelected" VerticalAlignment="Stretch" Width="730" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"></DataGrid>
+        <Button Content="Поиск" Height="26" HorizontalAlignment="Right" Margin="0,94,12,0" Name="button3" VerticalAlignment="Top" Width="75" Click="button3_Click" />
+    </Grid>
+</Page>

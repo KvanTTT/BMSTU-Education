@@ -1,0 +1,31 @@
+﻿<Page x:Class="Cinema.Pages.TicketOrder"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" Title="TicketOrder" d:DesignHeight="508" d:DesignWidth="754">
+
+    <Grid>
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="12,12,0,0" Name="textBlock1" Text="Выберите фильм" VerticalAlignment="Top" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="12,41,0,0" Name="cmbFilms" VerticalAlignment="Top" Width="208" SelectionChanged="cmbFilms_SelectionChanged" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="12,128,0,0" Name="textBlock2" Text="Выберите сеанс" VerticalAlignment="Top" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="12,157,0,0" Name="cmbShow" VerticalAlignment="Top" Width="208" SelectionChanged="cmbShow_SelectionChanged" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="12,70,0,0" Name="textBlock3" Text="Выберите дату" VerticalAlignment="Top" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="12,99,0,0" Name="cmbDate" VerticalAlignment="Top" Width="208" SelectionChanged="cmbDate_SelectionChanged" />
+        <Button Content="Обновить" Height="34" HorizontalAlignment="Left" Margin="12,207,0,0" Name="button2" VerticalAlignment="Top" Width="208" Click="button2_Click" />
+        <WrapPanel Name="wrapPanel1" Margin="226,41,12,12"></WrapPanel>
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="244,12,0,0" Name="textBlock4" Text="Зал №" VerticalAlignment="Top" Width="38" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="288,12,0,0" Name="tbRoomID" Text="" VerticalAlignment="Top" />
+        <Grid Height="229" HorizontalAlignment="Left" Margin="12,267,0,0" Name="gridBook" VerticalAlignment="Top" Width="208">
+            <Button Content="Заказать" Height="32" HorizontalAlignment="Left" IsEnabled="True" Margin="0,197,0,0" Name="btnOrder" VerticalAlignment="Top" Visibility="Visible" Width="208" Click="btnOrder_Click" />
+            <Label Content="- Эконом" Height="28" HorizontalAlignment="Left" Margin="60,11,0,0" Name="lblNotVip" VerticalAlignment="Top" Width="124" />
+            <Label Content="- Занято" Height="28" HorizontalAlignment="Left" Margin="60,79,0,0" Name="label2" VerticalAlignment="Top" Width="76" />
+            <Label Content="- VIP" Height="28" HorizontalAlignment="Left" Margin="60,45,0,0" Name="lblVip" VerticalAlignment="Top" Width="124" />
+            <Label Content="- Выбрано" Height="28" HorizontalAlignment="Left" Margin="60,113,0,0" Name="label4" VerticalAlignment="Top" Width="76" />
+            <Border Background="#FF804545" BorderBrush="Silver" BorderThickness="2" Height="29" HorizontalAlignment="Left" Margin="11,10,0,0" Name="borderFree" VerticalAlignment="Top" Width="42" />
+            <Border Background="#FF804545" BorderBrush="Silver" BorderThickness="2" Height="29" HorizontalAlignment="Left" Margin="11,45,0,0" Name="borderVIP" VerticalAlignment="Top" Width="42" />
+            <Border Background="#FF804545" BorderBrush="Silver" BorderThickness="2" Height="29" Margin="11,78,155,122" Name="borderBusy" Width="42" />
+            <Border Background="#FF804545" BorderBrush="Silver" BorderThickness="2" Height="29" Margin="11,113,155,87" Name="borderSelected" Width="42" />
+        </Grid>
+    </Grid>
+</Page>

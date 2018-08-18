@@ -1,0 +1,58 @@
+﻿<UserControl x:Class="Cinema.FilmShowEditing"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" d:DesignHeight="529" d:DesignWidth="768" xmlns:extToolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit/extended" Width="754" Height="508">
+    <Grid>
+        <Border BorderBrush="Silver" BorderThickness="2" Height="88" HorizontalAlignment="Left" Margin="12,408,0,0" Name="border1" VerticalAlignment="Top" Width="385">
+            <Grid Name="grid2">
+                <TextBlock Height="23" HorizontalAlignment="Left" Margin="17,17,0,0" Name="textBlock2" Text="Фильмы" VerticalAlignment="Top" />
+                <ComboBox Height="23" HorizontalAlignment="Left" Margin="17,46,0,0" Name="cmbFilm3" VerticalAlignment="Top" Width="214" />
+                <Button Content="Удалить" Height="23" HorizontalAlignment="Left" Margin="249,46,0,0" Name="button4" VerticalAlignment="Top" Width="114" Click="button4_Click" />
+                <Button Content="Редактировать" Height="23" HorizontalAlignment="Left" Margin="249,13,0,0" Name="button5" VerticalAlignment="Top" Width="114" Visibility="Collapsed" />
+            </Grid>
+        </Border>
+        <Border BorderBrush="Silver" BorderThickness="2" Height="390" HorizontalAlignment="Left" Margin="14,12,0,0" Name="border2" VerticalAlignment="Top" Width="383">
+            <Grid Name="grid1">
+                <Label Content="Название" Height="28" HorizontalAlignment="Left" Margin="6,36,0,0" Name="label1" VerticalAlignment="Top" />
+                <TextBox Height="23" HorizontalAlignment="Left" Margin="96,38,0,0" Name="tbFilmName" VerticalAlignment="Top" Width="197" />
+                <Label Content="Жанр" Height="28" HorizontalAlignment="Left" Margin="6,70,0,0" Name="label2" VerticalAlignment="Top" />
+                <TextBox Height="50" HorizontalAlignment="Left" IsReadOnly="True" Margin="96,70,0,0" Name="tbGenres" TextWrapping="Wrap" VerticalAlignment="Top" Width="197" />
+                <Button Click="button1_Click" Content="Выбрать..." Height="23" HorizontalAlignment="Left" Margin="299,69,0,0" Name="button1" VerticalAlignment="Top" Width="75" />
+                <Label Content="Страна" Height="28" HorizontalAlignment="Left" Margin="6,126,0,0" Name="label3" VerticalAlignment="Top" />
+                <TextBox Height="50" HorizontalAlignment="Left" IsReadOnly="True" Margin="96,128,0,0" Name="tbCountries" TextWrapping="Wrap" VerticalAlignment="Top" Width="197" />
+                <Button Click="button2_Click" Content="Выбрать..." Height="23" HorizontalAlignment="Left" Margin="300,126,0,0" Name="button2" VerticalAlignment="Top" Width="75" />
+                <Label Content="Режиссер" Height="28" HorizontalAlignment="Left" Margin="6,182,0,0" Name="label4" VerticalAlignment="Top" />
+                <TextBox Height="23" HorizontalAlignment="Left" Margin="96,184,0,0" Name="tbDirector" VerticalAlignment="Top" Width="197" />
+                <Label Content="Продолжительность" Height="28" HorizontalAlignment="Left" Margin="6,214,0,0" Name="label5" VerticalAlignment="Top" Width="131" />
+                <extToolkit:NumericUpDown FormatString="" HorizontalAlignment="Left" Margin="222,217,0,0" Maximum="300" Minimum="30" Name="udDuration" VerticalAlignment="Top" Width="71" />
+                <Label Content="Год" Height="28" HorizontalAlignment="Left" Margin="6,240,0,0" Name="label6" VerticalAlignment="Top" Width="131" />
+                <extToolkit:NumericUpDown FormatString="" HorizontalAlignment="Left" Margin="222,243,0,0" Maximum="2011" Minimum="1900" Name="udYear" VerticalAlignment="Top" Width="71" />
+                <Label Content="Минимальный возраст" Height="28" HorizontalAlignment="Left" Margin="6,266,0,0" Name="label7" VerticalAlignment="Top" Width="145" />
+                <extToolkit:NumericUpDown FormatString="" HorizontalAlignment="Left" Margin="222,269,0,0" Maximum="21" Minimum="0" Name="udMinAge" VerticalAlignment="Top" Width="71" />
+                <Label Content="Главный актер" Height="28" HorizontalAlignment="Left" Margin="6,298,0,0" Name="label8" VerticalAlignment="Top" />
+                <TextBox Height="23" HorizontalAlignment="Left" Margin="96,300,0,0" Name="tbMainHero" VerticalAlignment="Top" Width="197" />
+                <Button Click="button3_Click" Content="Добавить" Height="36" HorizontalAlignment="Left" Margin="96,329,0,0" Name="button3" VerticalAlignment="Top" Width="197" />
+                <TextBlock Height="23" HorizontalAlignment="Left" Margin="10,9,0,0" Name="textBlock1" Text="Добавление фильма" VerticalAlignment="Top" />
+            </Grid>
+        </Border>
+        <Border BorderBrush="Silver" BorderThickness="2" Height="389" HorizontalAlignment="Left" Margin="401,13,0,0" Name="border3" VerticalAlignment="Top" Width="341">
+            <Grid Name="grid3" Height="383">
+                <Label Content="Фильм" Height="28" HorizontalAlignment="Left" Margin="6,36,0,0" Name="label9" VerticalAlignment="Top" />
+                <Label Content="Время" Height="28" HorizontalAlignment="Left" Margin="6,128,0,0" Name="label13" VerticalAlignment="Top" Width="46" />
+                <extToolkit:NumericUpDown FormatString="" HorizontalAlignment="Left" Margin="58,131,0,0" Maximum="23" Minimum="9" Name="udHour" VerticalAlignment="Top" Width="106" />
+                <extToolkit:NumericUpDown FormatString="" HorizontalAlignment="Left" Margin="170,131,0,0" Maximum="59" Minimum="0" Name="udMinute" VerticalAlignment="Top" Width="102" />
+                <TextBlock Height="23" HorizontalAlignment="Left" Margin="10,9,0,0" Name="textBlock3" Text="Добавление сеанса" VerticalAlignment="Top" />
+                <ComboBox Height="23" HorizontalAlignment="Left" Margin="58,41,0,0" Name="cmbFilm2" VerticalAlignment="Top" Width="214" />
+                <ComboBox Height="23" HorizontalAlignment="Left" Margin="58,72,0,0" Name="cmbRoom" VerticalAlignment="Top" Width="106" />
+                <Label Content="Зал" Height="28" HorizontalAlignment="Left" Margin="6,67,0,0" Name="label10" VerticalAlignment="Top" />
+                <Label Content="Дата" Height="28" HorizontalAlignment="Left" Margin="10,101,0,0" Name="label11" VerticalAlignment="Top" />
+                <DatePicker Height="25" HorizontalAlignment="Left" Margin="58,101,0,0" Name="datePicker1" VerticalAlignment="Top" Width="106" />
+                <DatePicker Height="25" HorizontalAlignment="Left" Margin="170,101,0,0" Name="datePicker2" VerticalAlignment="Top" Width="102" />
+                <Button Click="button7_Click" Content="Добавить" Height="36" HorizontalAlignment="Left" Margin="58,191,0,0" Name="button7" VerticalAlignment="Top" Width="214" />
+            </Grid>
+        </Border>
+        <Button Content="Обновить списки фильмов" Height="29" HorizontalAlignment="Left" Margin="526,467,0,0" Name="btnUpdate" VerticalAlignment="Top" Width="214" Click="btnUpdate_Click" />
+    </Grid>
+</UserControl>

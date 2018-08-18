@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Cinema" Class="CinemaDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(local)\SQLEXPRESS;Initial Catalog=Cinema;Integrated Security=True" SettingsObjectName="Cinema.Properties.Settings" SettingsPropertyName="CinemaConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tblCountry" Member="tblCountries">
+    <Type Name="tblCountry">
+      <Column Name="CountryID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CountryName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="tblCountry_tblMovieCountry" Member="tblMovieCountries" ThisKey="CountryID" OtherKey="CountryID" Type="tblMovieCountry" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblUser" Member="tblUsers">
+    <Type Name="tblUser">
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Rights" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Association Name="tblUser_tblSoldTicket" Member="tblSoldTickets" ThisKey="UserID" OtherKey="UserID" Type="tblSoldTicket" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblGenre" Member="tblGenres">
+    <Type Name="tblGenre">
+      <Column Name="GenreID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GenreName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="tblGenre_tblMovieGenre" Member="tblMovieGenres" ThisKey="GenreID" OtherKey="GenreID" Type="tblMovieGenre" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblMovie" Member="tblMovies">
+    <Type Name="tblMovie">
+      <Column Name="MovieID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MovieName" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="MovieDirector" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="MovieDuration" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MovieYear" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MinAge" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MainActor" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Association Name="tblMovie_tblMovieCountry" Member="tblMovieCountries" ThisKey="MovieID" OtherKey="MovieID" Type="tblMovieCountry" />
+      <Association Name="tblMovie_tblMovieGenre" Member="tblMovieGenres" ThisKey="MovieID" OtherKey="MovieID" Type="tblMovieGenre" />
+      <Association Name="tblMovie_tblShow" Member="tblShows" ThisKey="MovieID" OtherKey="MovieID" Type="tblShow" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblMovieCountry" Member="tblMovieCountries">
+    <Type Name="tblMovieCountry">
+      <Column Name="MovieID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CountryID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="tblCountry_tblMovieCountry" Member="tblCountry" ThisKey="CountryID" OtherKey="CountryID" Type="tblCountry" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="tblMovie_tblMovieCountry" Member="tblMovie" ThisKey="MovieID" OtherKey="MovieID" Type="tblMovie" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblMovieGenre" Member="tblMovieGenres">
+    <Type Name="tblMovieGenre">
+      <Column Name="MovieID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="GenreID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="tblGenre_tblMovieGenre" Member="tblGenre" ThisKey="GenreID" OtherKey="GenreID" Type="tblGenre" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="tblMovie_tblMovieGenre" Member="tblMovie" ThisKey="MovieID" OtherKey="MovieID" Type="tblMovie" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblPrices" Member="tblPrices">
+    <Type Name="tblPrice">
+      <Column Name="WeekDay" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SessionStart" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Sessionend" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NotVipPrice" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="VipPrice" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblRoom" Member="tblRooms">
+    <Type Name="tblRoom">
+      <Column Name="RoomID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RowNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SeatsNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NumOfSeats" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="tblRoom_tblSeat" Member="tblSeats" ThisKey="RoomID" OtherKey="RoomID" Type="tblSeat" />
+      <Association Name="tblRoom_tblShow" Member="tblShows" ThisKey="RoomID" OtherKey="RoomID" Type="tblShow" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblSeat" Member="tblSeats">
+    <Type Name="tblSeat">
+      <Column Name="RoomID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Row" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Seat" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Vip" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="tblRoom_tblSeat" Member="tblRoom" ThisKey="RoomID" OtherKey="RoomID" Type="tblRoom" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblSoldTicket" Member="tblSoldTickets">
+    <Type Name="tblSoldTicket">
+      <Column Name="SoldTicketID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TicketID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="tblUser_tblSoldTicket" Member="tblUser" ThisKey="UserID" OtherKey="UserID" Type="tblUser" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="tblTicket_tblSoldTicket" Member="tblTicket" ThisKey="TicketID" OtherKey="TicketID" Type="tblTicket" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblTicket" Member="tblTickets">
+    <Type Name="tblTicket">
+      <Column Name="TicketID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ShowID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Row" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Seat" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="tblTicket_tblSoldTicket" Member="tblSoldTickets" ThisKey="TicketID" OtherKey="TicketID" Type="tblSoldTicket" />
+      <Association Name="tblShow_tblTicket" Member="tblShow" ThisKey="ShowID" OtherKey="ShowID" Type="tblShow" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ShowFilmsAfterCurrentTime" Member="ShowFilmsAfterCurrentTimes">
+    <Type Name="ShowFilmsAfterCurrentTime">
+      <Column Name="Name" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="MovieID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="showid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblShow" Member="tblShows">
+    <Type Name="tblShow">
+      <Column Name="ShowID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MovieID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RoomID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Session" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="NotVipPrice" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="VipPrice" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NumOfSoldTickets" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="tblShow_tblTicket" Member="tblTickets" ThisKey="ShowID" OtherKey="ShowID" Type="tblTicket" />
+      <Association Name="tblMovie_tblShow" Member="tblMovie" ThisKey="MovieID" OtherKey="MovieID" Type="tblMovie" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="tblRoom_tblShow" Member="tblRoom" ThisKey="RoomID" OtherKey="RoomID" Type="tblRoom" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.MintoTime" Method="MintoTime" IsComposable="true">
+    <Parameter Name="Min" Parameter="min" Type="System.Int32" DbType="Int" />
+    <Return Type="System.DateTime" />
+  </Function>
+  <Function Name="dbo.ConcatGenres" Method="ConcatGenres" IsComposable="true">
+    <Parameter Name="MovieID" Parameter="movieID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.String" />
+  </Function>
+  <Function Name="dbo.CountCashM" Method="CountCashM" IsComposable="true">
+    <Parameter Name="MovieID" Parameter="movieID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CountCashPeriod" Method="CountCashPeriod" IsComposable="true">
+    <Parameter Name="Datefrom" Parameter="datefrom" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="DateTo" Parameter="dateTo" Type="System.DateTime" DbType="DateTime" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CountTicketPrice" Method="CountTicketPrice" IsComposable="true">
+    <Parameter Name="ShowID" Parameter="showID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Row" Parameter="row" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Seat" Parameter="seat" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.FreePlaces" Method="FreePlaces" IsComposable="true">
+    <Parameter Name="ShowID" Parameter="showID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.HasShows" Method="HasShows" IsComposable="true">
+    <Parameter Name="MovieID" Parameter="movieID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.IsShowCorrect" Method="IsShowCorrect" IsComposable="true">
+    <Parameter Name="NewRoomID" Parameter="newRoomID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="NewMovieID" Parameter="newMovieID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="NewDate" Parameter="newDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="NewSession" Parameter="newSession" Type="System.DateTime" DbType="DateTime" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.IsVipF" Method="IsVipF" IsComposable="true">
+    <Parameter Name="ShowID" Parameter="showID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Row" Parameter="row" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Seat" Parameter="seat" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.CountPrice" Method="CountPrice">
+    <Parameter Name="ShowID" Parameter="showID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ConcatCountries" Method="ConcatCountries" IsComposable="true">
+    <Parameter Name="MovieID" Parameter="movieID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.String" />
+  </Function>
+</Database>

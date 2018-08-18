@@ -1,0 +1,9 @@
+﻿<Window x:Class="HospitalClient.AddingControls.CreateEditWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="CreateEditWindow" Height="350" Width="250" Name="windowMain" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="ToolWindow" xmlns:extToolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit/extended" mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:my="clr-namespace:HospitalClient" Loaded="windowMain_Loaded">
+    <Window.Resources>
+        <CollectionViewSource x:Key="drugsViewSource" Source="{Binding Path=Drugs, Source={StaticResource hospitalDataSet}}" />
+    </Window.Resources>
+    <WrapPanel Name="wrapPanelMain" />
+</Window>
