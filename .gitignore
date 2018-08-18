@@ -295,3 +295,6 @@ __pycache__/
 *.identcache
 
 **/out/*
+
+ComputerGraphicsProject/Data/generate*
+Thumbs.db

@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source">
+      <UniqueIdentifier>{e7ff179d-0adc-4147-8832-5f9cc743a9bc}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Header">
+      <UniqueIdentifier>{1e2cf481-a1bb-4ce6-9c51-bec3f4f3cb90}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Header\OpenGL">
+      <UniqueIdentifier>{a1f0d534-239c-4ae2-8bff-6de6884dbfc2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{c0b6184b-ddff-44d1-a949-993e09a3ec07}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="DynamicCamera.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Font.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Image.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="imgLoad.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="IOFile.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="MathUtils.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="matrix.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="PerlinNoise.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Render.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Terrain.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Win32.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Base.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="DynamicCamera.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Font.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Image.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="imgLoad.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="IOFile.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="MathUtils.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="matrix.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="PerlinNoise.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="PTypes.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Render.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Std.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Terrain.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Win32.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="gl.h">
+      <Filter>Header\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="GLEXT.h">
+      <Filter>Header\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="GLU.h">
+      <Filter>Header\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="glut.h">
+      <Filter>Header\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="OGLCMainHeader.h">
+      <Filter>Header\OpenGL</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
