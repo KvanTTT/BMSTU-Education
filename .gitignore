@@ -298,3 +298,5 @@ __pycache__/
 
 ComputerGraphicsProject/Data/generate*
 Thumbs.db
+*.vs10x
+**/.svn/*

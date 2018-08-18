@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfBook xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Book Name="Программирование шахмат и других логических игр" ISBN="5-94157-497-5">
+    <Author>Евгений Корнилов</Author>
+    <Genre>Техническая литература</Genre>
+    <Publisher>БХВ-Петербург</Publisher>
+    <Language>Rus</Language>
+    <Year>2005</Year>
+    <PageCount>272</PageCount>
+    <Description>Рассмотрено программирование логических игр методом перебора на примере шахмат. Описываются стандартные методики создания шахматной программы, а также приемы, позволяющие разрабатывать более эффективные компьютерные логические игры. Представлены примеры использования рассмотренных методов при программировании других логических игр ("крестики-нолики", "уголки", шашки).
+Приведено большое количество исходных кодов программ на языках C++ и Pascal и полезных практических советов. На компакт-диске содержатся наиболее известные открытые коды шахматных программ, а также исходные тексты программ, написанных автором.</Description>
+  </Book>
+  <Book Name="Introducing Silverlight 4" ISBN="978-1-4302-2992-6">
+    <Author>Ashish Ghoda</Author>
+    <Genre>Study</Genre>
+    <Publisher>Apress</Publisher>
+    <Language>Eng</Language>
+    <Year>2010</Year>
+    <PageCount>745</PageCount>
+    <Description>Introducing Silverlight 4 brings you up to speed with the latest version of Silverlight quickly and efficiently. The book builds off your understanding of the basics of .NET coding and WPF, allowing your journey to Silverlight 4 proficiency to be as quick and painless as possible. The text highlights where coding techniques are similar to other, more established areas of the .NET framework. Likewise, when your existing coding habits lead you to a syntax or conceptual ’gotcha,’ the text points that out, too.
+This book provides you with fast-track coverage of all the most important elements of the Silverlight 4 technology ranging from XAML to standard controls, from dealing with media to networking, from testing to deployment. It also reveals the new features introduced with Silverlight 4 and offers guidance on how to best utilize them. The book concludes with a pair of fully worked sample applications for you to follow through, because nothing reinforces your understanding of how concepts fit together as much as looking at finished code.
+
+It is assumed that readers are already be comfortable with the workings of the .NET Framework. Knowledge of Expression Blend is useful, but not mandatory: you’ll learn the Blend techniques that you need to know as you go through the book. By the end, you will have followed a sound, concise path to mastery of Silverlight 4.
+
+What you’ll learn
+
+- Migrate your existing .NET skills to Silverlight 4 as quickly as possible
+- Learn everything you need to know to start developing quality Silverlight 4 applications with confidence
+- Explore worked case studies showing techniques and best practices in a code-heavy style that you can relate to
+- Understand the latest developments in Silverlight 4, including H.264 protected content, right-click event handling, a new printing API, and support for the Managed Extensibility Framework</Description>
+  </Book>
+  <Book Name="Beginning DirectX 10 Game Programming" ISBN="1-59863-361-9">
+    <Author>Wendy Jones</Author>
+    <Genre>Game programming</Genre>
+    <Publisher>Thomson Course Technology</Publisher>
+    <Language>Eng</Language>
+    <Year>2008</Year>
+    <PageCount>385</PageCount>
+    <Description>Discover the exciting world of game programming and 3D graphics creation using DirectX 10! “Beginning DirectX® 10 Game Progmramming” is an introductory guide to creating fantastic graphics, amazing creatures, and realistic worlds for games. Written specifically for the beginner programmer, the book uses step-by-step instructions to teach the basics of DirectX 10, introducing skills that can be applied to creating games for both PC and game console platforms.
+
+You’ll start by learning how to install the DirectX SDK and how to get your first application up and running. From there you’ll be introduced to the 2D and 3D graphics components of DirectX allowing you to draw animated sprites and create 3D objects. Put your new skills to the test with a final, hands-on project that shows how to bring together everything you’ve learned. If you have a basic knowledge of C++ and 3D math concepts then you are ready to learn how to program amazing 3D game graphics with “Beginning DirectX 10!”</Description>
+  </Book>
+  <Book Name="CSS - каскадные таблицы стилей. Подробное руководство, 3-е издание" ISBN="978-5-93286-107-3">
+    <Author>Эрик А. Мейер</Author>
+    <Genre>веб-дизайн</Genre>
+    <Publisher>Символ-Плюс</Publisher>
+    <Language>Rus</Language>
+    <Year>2008</Year>
+    <PageCount>575</PageCount>
+    <Description>Хотите быстро и без усилий разрабатывать стилевое оформление веб-страниц, отвечающее современным требованиям? Третье издание книги «CSS – каскадные таблицы стилей. Подробное руководство» показывает, как реализовать на практике все возможности каскадных таблиц стилей для стандартов CSS2 и CSS2.1. Множество предоставленных примеров позволит научиться создавать или легко менять внешний вид веб-сайта и получать намного более богатые представления, чем это возможно средствами только HTML.
+
+Эрик Мейер, признанный эксперт по CSS, HTML и веб-стандартам, со свойственным ему остроумием, опираясь на свой богатейший опыт, рассматривает свойства, теги, атрибуты и реализации, а также практические вопросы, такие как поддержка различными броузерами и рекомендации разработчикам. Чтобы создавать четкие и простые в обслуживании сценарии для компоновки веб-сайтов и разбивку на страницы с той же легкостью и управляемостью, которые обеспечивают настольные издательские системы, вам потребуется только знание HTML 4.0. Вы узнаете о сложном стилевом оформлении документов, пользовательском интерфейсе, верстке таблиц, списках и генерируемом содержимом, о всех деталях свободного перемещения и позиционирования, о семействах шрифтов и механизмах резервирования, о новых селекторах CSS3, поддерживаемых IE7, Firefox и другими броузерами, а также о том, как работает модель блоков.</Description>
+  </Book>
+  <Book Name="Microsoft SQL Server 2005. Библия пользователя" ISBN="978-5-8459-1314-2">
+    <Author>Пол Нильсен</Author>
+    <Genre>Компьютерная литература</Genre>
+    <Publisher>Диалектика</Publisher>
+    <Language>Rus</Language>
+    <Year>2008</Year>
+    <PageCount>1228</PageCount>
+    <Description>В этой книге содержится полное описание СУБД SQL Server 2005. Вы узнаете о ключевых принципах информационной архитектуры, заложенных в основу СУБД, об установке, обслуживании и администрировании сервера. В книге описаны языки запросов T-SQL и MDX, позволяющие осуществлять доступ к оперативным и аналитическим данным, а также управлять ими. Вы ознакомитесь с расширенными средствами бизнес-аналитики, реализованными в SQL Server 2005, освоите стратегии и средства защиты данных и самого сервера.
+
+В книге изучаются вопросы измерения и настройки производительности SQL Server, даются практические советы по созданию планов обслуживания сервера и резервирования данных. Рассмотрены все службы, входящие в состав SQL Server 2005, а также средства интеграции с языками программирования среды .NET Framework, такими как С# и VB.NET, и другими СУБД.</Description>
+  </Book>
+</ArrayOfBook>

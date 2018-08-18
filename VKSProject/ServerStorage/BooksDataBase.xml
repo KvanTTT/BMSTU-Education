@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfBook xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Book Name="Программирование шахмат и других логических игр" ISBN="5-94157-497-5">
+    <Author>Евгений Корнилов</Author>
+    <Genre>Техническая литература</Genre>
+    <Publisher>БХВ-Петербург</Publisher>
+    <Language>Rus</Language>
+    <Year>2005</Year>
+    <PageCount>272</PageCount>
+    <Description />
+  </Book>
+  <Book Name="Introducing Silverlight 4" ISBN="978-1-4302-2992-6">
+    <Author>Ashish Ghoda</Author>
+    <Genre>Study</Genre>
+    <Publisher>Apress</Publisher>
+    <Language>Eng</Language>
+    <Year>2010</Year>
+    <PageCount>745</PageCount>
+    <Description />
+  </Book>
+  <Book Name="Beginning DirectX 10 Game Programming" ISBN="1-59863-361-9">
+    <Author>Wendy Jones</Author>
+    <Genre>Game programming</Genre>
+    <Publisher>Thomson Course Technology</Publisher>
+    <Language>Eng</Language>
+    <Year>2008</Year>
+    <PageCount>385</PageCount>
+    <Description />
+  </Book>
+  <Book Name="CSS - каскадные таблицы стилей. Подробное руководство, 3-е издание" ISBN="978-5-93286-107-3">
+    <Author>Эрик А. Мейер</Author>
+    <Genre>веб-дизайн</Genre>
+    <Publisher>Символ-Плюс</Publisher>
+    <Language>Rus</Language>
+    <Year>2008</Year>
+    <PageCount>575</PageCount>
+    <Description />
+  </Book>
+  <Book Name="Microsoft SQL Server 2005. Библия пользователя" ISBN="978-5-8459-1314-2">
+    <Author>Пол Нильсен</Author>
+    <Genre>Компьютерная литература</Genre>
+    <Publisher>Диалектика</Publisher>
+    <Language>Rus</Language>
+    <Year>2008</Year>
+    <PageCount>1228</PageCount>
+    <Description />
+  </Book>
+  <Book Name="Франк Яна" ISBN="5-98062-007-9">
+    <Author>Дневник дизайнера-маньяка</Author>
+    <Genre>Дизайн</Genre>
+    <Publisher>Студия Артемия Лебедева</Publisher>
+    <Language>RUS</Language>
+    <Year>2006</Year>
+    <PageCount>254</PageCount>
+    <Description />
+  </Book>
+  <Book Name="Искусство рисования" ISBN="985-438-559-0">
+    <Author>Уилли Погейни</Author>
+    <Genre>Изобразительное искусство</Genre>
+    <Publisher>Минск: Попурри</Publisher>
+    <Language>Русский</Language>
+    <Year>2006</Year>
+    <PageCount>120</PageCount>
+    <Description />
+  </Book>
+  <Book Name="&quot;Пантера&quot;. Стальная кошка Панцерваффе" ISBN="5-699-19624-2">
+    <Author>Михаил Барятинский</Author>
+    <Genre>Военное дело</Genre>
+    <Publisher>Эксмо</Publisher>
+    <Language>Русский</Language>
+    <Year>2007</Year>
+    <PageCount>121</PageCount>
+    <Description />
+  </Book>
+  <Book Name="yhjghj" ISBN="2">
+    <Author>34</Author>
+    <Genre>4</Genre>
+    <Publisher>5</Publisher>
+    <Language>67</Language>
+    <Year>50</Year>
+    <PageCount>5000</PageCount>
+    <Description>8</Description>
+  </Book>
+</ArrayOfBook>
