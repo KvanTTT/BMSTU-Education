@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using NAudio.Wave;
+﻿using NAudio.Wave;
 
 namespace MusicSyncLib.WinForms
 {
@@ -21,7 +17,7 @@ namespace MusicSyncLib.WinForms
 		public LoopStream(WaveStream sourceStream)
 		{
 			this.sourceStream = sourceStream;
-			this.EnableLooping = true;
+			EnableLooping = true;
 		}
 
 		/// <summary>

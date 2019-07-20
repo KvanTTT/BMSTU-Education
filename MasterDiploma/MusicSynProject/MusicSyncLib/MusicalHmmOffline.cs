@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace MusicSyncLib
@@ -352,7 +350,7 @@ namespace MusicSyncLib
 
 		private double[,] Forward(int[] observations, out double[] c)
 		{
-			int statesCount = this.Data.Transitions.GetLength(0);
+			int statesCount = Data.Transitions.GetLength(0);
 			int observsCount = observations.Length;
 
 			double[,] fwd = new double[observsCount, statesCount];
@@ -398,7 +396,7 @@ namespace MusicSyncLib
 
 		private double[,] Backward(int[] observations, double[] c)
 		{
-			int statesCount = this.Data.Transitions.GetLength(0);
+			int statesCount = Data.Transitions.GetLength(0);
 			int observsCount = observations.Length;
 
 			double[,] bwd = new double[observations.Length, statesCount];

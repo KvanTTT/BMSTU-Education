@@ -1,15 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using System.Threading;
 using System.Globalization;
 using System.IO;
-using System.Reflection;
 using System.Diagnostics;
 using MusicSyncLib.WinForms.Properties;
 using NAudio.Wave;
@@ -46,7 +42,7 @@ namespace MusicSyncLib.WinForms
 		double _missedRatio;
 		double _wrongRatio;
 		double _extraRatio;
-	
+
 		#endregion
 
 		#region Initialization
@@ -72,7 +68,7 @@ namespace MusicSyncLib.WinForms
 			GhostItemCellStyle.BackColor = Color.Beige;
 			GhostItemCellStyle.ForeColor = Color.DarkGray;
 			GhostItemCellStyle.Font = Font;
-			
+
 			WindowCellStyle = new DataGridViewCellStyle();
 			WindowCellStyle.BackColor = Color.PaleGreen;
 
@@ -271,7 +267,7 @@ namespace MusicSyncLib.WinForms
 		private void btnFollowSequence_Click(object sender, EventArgs e)
 		{
 			tbInputSequence.Enabled = false;
-			
+
 			if (!timerFollowSequence.Enabled)
 			{
 				if (!_musicHmmModelOnline.Started)
@@ -347,9 +343,9 @@ namespace MusicSyncLib.WinForms
 		private void timerMetronome_Tick(object sender, EventArgs e)
 		{
 			if (_currentBeat == 1)
-				tbMetronome.Font = new System.Drawing.Font(Font, FontStyle.Bold);
+				tbMetronome.Font = new Font(Font, FontStyle.Bold);
 			else
-				tbMetronome.Font = new System.Drawing.Font(Font, FontStyle.Regular);
+				tbMetronome.Font = new Font(Font, FontStyle.Regular);
 			tbMetronome.Text = _currentBeat + "/" + _musicXmlDecoder.BeatType;
 			_currentBeat = _currentBeat % _musicXmlDecoder.BeatType + 1;
 		}
@@ -412,9 +408,9 @@ namespace MusicSyncLib.WinForms
 
 		private void OnDataAvailable(object sender, WaveInEventArgs e)
 		{
-			if (this.InvokeRequired)
+			if (InvokeRequired)
 			{
-				this.BeginInvoke(new EventHandler<WaveInEventArgs>(OnDataAvailable), sender, e);
+				BeginInvoke(new EventHandler<WaveInEventArgs>(OnDataAvailable), sender, e);
 			}
 			else
 			{
@@ -469,7 +465,7 @@ namespace MusicSyncLib.WinForms
 
 			_inputSequence = tbInputSequence.Text.Split(',').Select(s => int.Parse(s)).ToArray();
 			var stopwatch = new Stopwatch();
-			stopwatch.Start(); 
+			stopwatch.Start();
 			int[] outputArray = _musicHmmModelOffline.Decode(_inputSequence, out logLikehood, cbParallel.Checked);
 			stopwatch.Stop();
 

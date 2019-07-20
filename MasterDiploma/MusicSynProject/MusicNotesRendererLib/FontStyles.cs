@@ -33,9 +33,6 @@ Copyright (C) 2009 Yusuke Kamiyamane. All rights reserved.
 The icons are licensed under a Creative Commons Attribution 3.0 license.
 */
 
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Drawing;
 
 namespace MusicNotesRendererLib

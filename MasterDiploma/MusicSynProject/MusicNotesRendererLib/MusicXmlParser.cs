@@ -36,7 +36,6 @@ The icons are licensed under a Creative Commons Attribution 3.0 license.
 
 using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Xml;
 using System.Globalization;
 

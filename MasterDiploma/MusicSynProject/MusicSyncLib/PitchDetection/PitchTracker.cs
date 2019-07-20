@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Collections;
-using System.Threading;
 
 namespace MusicSyncLib
 {
@@ -384,8 +382,8 @@ namespace MusicSyncLib
 				m_pitchRecords.Add(record);
 			}
 			
-			if (this.PitchDetected != null)
-				this.PitchDetected(this, record);
+			if (PitchDetected != null)
+				PitchDetected(this, record);
 		}
 	}
 }

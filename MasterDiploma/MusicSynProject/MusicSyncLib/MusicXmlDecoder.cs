@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Xml.Serialization;
 using System.IO;
-using MusicSyncLib;
 
 namespace MusicSyncLib
 {
@@ -47,7 +44,7 @@ namespace MusicSyncLib
 					var direction = item as direction;
 					if (direction != null)
 					{
-						var sound = direction.sound as sound;
+						var sound = direction.sound;
 						if (sound != null && sound.tempo != 0.0m)
 							Tempo = (int)sound.tempo;
 					}

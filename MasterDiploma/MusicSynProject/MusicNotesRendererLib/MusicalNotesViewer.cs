@@ -37,13 +37,11 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
-using System.Data;
 using System.Text;
 using System.Windows.Forms;
 using System.Xml;
 using System.IO;
 using System.Runtime.CompilerServices;
-using System.Globalization;
 using MusicSyncLib;
 
 namespace MusicNotesRendererLib
@@ -276,10 +274,10 @@ namespace MusicNotesRendererLib
 			}
 
 			if (drawOnlySelectionAndButtons) return;
-			if (drawOnParentControl && !print && (this.Parent != null))
+			if (drawOnParentControl && !print && (Parent != null))
 			{
-				g = this.Parent.CreateGraphics();
-				g.TranslateTransform(this.Location.X, this.Location.Y);
+				g = Parent.CreateGraphics();
+				g.TranslateTransform(Location.X, Location.Y);
 			}
 
 			//Draw staff lines / Rysuj pięciolinię
@@ -1040,13 +1038,13 @@ namespace MusicNotesRendererLib
 					if (lastNoteInBeam == null) continue;
 				}
 
-				if (AutoSize && currentXPosition != 0 && this.Width != currentXPosition)
-					this.Width = currentXPosition;
+				if (AutoSize && currentXPosition != 0 && Width != currentXPosition)
+					Width = currentXPosition;
 			}
 			catch
 			{
-				if (AutoSize && currentXPosition != 0 && this.Width != currentXPosition)
-					this.Width = currentXPosition;
+				if (AutoSize && currentXPosition != 0 && Width != currentXPosition)
+					Width = currentXPosition;
 				return;
 			}
 
@@ -1281,8 +1279,8 @@ namespace MusicNotesRendererLib
 			}
 
 
-			noteArray = notes.Split(new char[] { 'x' }, System.StringSplitOptions.RemoveEmptyEntries);
-			durationArray = durations.Split(new char[] { 'x' }, System.StringSplitOptions.RemoveEmptyEntries);
+			noteArray = notes.Split(new char[] { 'x' }, StringSplitOptions.RemoveEmptyEntries);
+			durationArray = durations.Split(new char[] { 'x' }, StringSplitOptions.RemoveEmptyEntries);
 
 			bool nextWillStartATuplet = false;
 			bool wasBeamStarted = false;

@@ -5,7 +5,7 @@ http://www.archiwistykamuzyczna.pl/index.php?article=download&lang=en#MusicNotes
 Copyright (c) 2010, Jacek Salamon
 All rights reserved.
 
-Redistribution and use in source and binary forms, with or without modification, 
+Redistribution and use in source and binary forms, with or without modification,
 are permitted provided that the following conditions are met:
 
 * Redistributions of source code must retain the above copyright notice, this list
@@ -16,7 +16,7 @@ are permitted provided that the following conditions are met:
 * Neither the name of Jacek Salamon nor the names of contributors may be used to
   endorse or promote products derived from this software without specific prior
   written permission.
- 
+
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY
 EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
 OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT
@@ -25,7 +25,7 @@ SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PRO
 OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
 HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR
 TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
-EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 
+EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ============================================================================================
 Fugue Icons
@@ -36,7 +36,6 @@ The icons are licensed under a Creative Commons Attribution 3.0 license.
 
 using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Drawing;
 
 namespace MusicNotesRendererLib
@@ -380,7 +379,7 @@ namespace MusicNotesRendererLib
 			stemDirection = noteStemDirection;
 			beamList = noteBeamList;
 			tieType = noteTieType;
-			midiPitch = MusicalSymbol.ToMidiPitch(step, alter, octave);
+			midiPitch = ToMidiPitch(step, alter, octave);
 			DetermineMusicalCharacter();
 		}
 
@@ -477,7 +476,7 @@ namespace MusicNotesRendererLib
 			else if (midiPitch < 108) octave = 7;
 			else if (midiPitch < 120) octave = 8;
 
-			return new Note(step, alter, octave, MusicalSymbolDuration.Unknown, NoteStemDirection.Up, 
+			return new Note(step, alter, octave, MusicalSymbolDuration.Unknown, NoteStemDirection.Up,
 				NoteTieType.None,
 				new List<NoteBeamType>());
 		}
@@ -610,7 +609,7 @@ namespace MusicNotesRendererLib
 				else if (step == "A") return alterTable[2] * -1;
 				else if (step == "B") return alterTable[0] * -1;
 			}
-			
+
 			return 0;
 		}
 
@@ -647,7 +646,7 @@ namespace MusicNotesRendererLib
 			type = MusicalSymbolType.Clef;
 			typeOfClef = clefType;
 			line = whichLine;
-			clefPitch = MusicalSymbol.ToClefMidiPitch(typeOfClef);
+			clefPitch = ToClefMidiPitch(typeOfClef);
 			if (typeOfClef == ClefType.GClef)
 			{
 				musicalCharacter = MusicalCharacters.GClef;

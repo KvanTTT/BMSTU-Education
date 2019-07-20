@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using System.Reflection;
 using System.Drawing;
@@ -114,7 +111,7 @@ namespace MusicSyncLib.WinForms
 					rowValues[j] = matrix[i, j].ToString(doubleFormat);
 				dataGridView.Rows.Add(rowValues);
 			}
-			GuiUtils.EnumerateRows(dataGridView);
+			EnumerateRows(dataGridView);
 			dataGridView.Visible = true;
 		}
 
@@ -129,7 +126,7 @@ namespace MusicSyncLib.WinForms
 				rowValues[j] = matrix[j].ToString("0.####");
 			}
 			dataGridView.Rows.Add(rowValues);
-			GuiUtils.EnumerateRows(dataGridView);
+			EnumerateRows(dataGridView);
 			dataGridView.Visible = true;
 		}
 
@@ -143,7 +140,7 @@ namespace MusicSyncLib.WinForms
 				rowValues[j] = matrix[j].ToString();
 			}
 			dataGridView.Rows.Add(rowValues);
-			GuiUtils.EnumerateRows(dataGridView);
+			EnumerateRows(dataGridView);
 		}
 
 		public static void AppendText(this RichTextBox box, string text, Color color)

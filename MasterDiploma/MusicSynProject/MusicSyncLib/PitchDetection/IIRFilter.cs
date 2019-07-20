@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace MusicSyncLib
 {
@@ -405,7 +402,7 @@ namespace MusicSyncLib
         /// </summary>
         public void Design()
         {
-            if (!this.FilterValid)
+            if (!FilterValid)
                 return;
 
             m_aCoeff = new double[m_order + 1];

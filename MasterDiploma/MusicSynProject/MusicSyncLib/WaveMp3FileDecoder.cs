@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using NAudio;
 using NAudio.Wave;
-using System.Collections;
 using System.IO;
-using System.Xml.Serialization;
 
 namespace MusicSyncLib
 {

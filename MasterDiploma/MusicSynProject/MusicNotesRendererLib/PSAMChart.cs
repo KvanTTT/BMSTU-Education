@@ -33,12 +33,9 @@ Copyright (C) 2009 Yusuke Kamiyamane. All rights reserved.
 The icons are licensed under a Creative Commons Attribution 3.0 license.
 */
 
-using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
-using System.Data;
-using System.Text;
 using System.Windows.Forms;
 
 namespace MusicNotesRendererLib
@@ -97,22 +94,22 @@ namespace MusicNotesRendererLib
 
         public void DrawSamples ()
         {
-            this.Refresh();
+            Refresh();
 
             if (samples == null) return;
             if (samples.Count < 1) return;
 
             isBeingDrawn = true;
 
-            Graphics g = this.CreateGraphics();
+            Graphics g = CreateGraphics();
 
             float OY;
             if (centerXAxis)
-                OY = this.Height / 2;
+                OY = Height / 2;
             else
-                OY = this.Height;
+                OY = Height;
             long countSamples = samples.Count;
-            int pointsPerPixel = (int)(countSamples / this.Width);
+            int pointsPerPixel = (int)(countSamples / Width);
             if (pointsPerPixel == 0) { isBeingDrawn = false;  return; }
 
             long j = -1;

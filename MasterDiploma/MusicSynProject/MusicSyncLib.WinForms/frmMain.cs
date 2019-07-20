@@ -1,15 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using System.Threading;
 using System.Globalization;
 using NAudio.Wave;
-using System.IO;
 using ZedGraph;
 
 namespace MusicSyncLib.WinForms
@@ -17,7 +12,6 @@ namespace MusicSyncLib.WinForms
 	public partial class frmMain : Form
 	{
 		string _inputAudioFile = @"..\..\..\Data\test.mp3";
-		string _inputScoreFile = @"..\..\..\Data\test.xml";
 
 		#region Fields
 
@@ -58,7 +52,7 @@ namespace MusicSyncLib.WinForms
 			foreach (var pitch in Decoder.Pitchs)
 			{
 				var noteName = pitch.MidiNote;
-				dgvRecognizedPitchs.Rows.Add(pitch.MidiNote, 
+				dgvRecognizedPitchs.Rows.Add(pitch.MidiNote,
 					MusicalTemperament.MidiNoteToNoteName(pitch.MidiNote),
 					MusicalHmmData.MidiNoteToHmmMidiNote(pitch.MidiNote));
 			}*/
@@ -84,7 +78,7 @@ namespace MusicSyncLib.WinForms
 
 		private void btnOpenAudio_Click(object sender, EventArgs e)
 		{
-			if (openAudioDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+			if (openAudioDialog.ShowDialog() == DialogResult.OK)
 			{
 				tbInputAudio.Text = openAudioDialog.FileName;
 			}
@@ -92,7 +86,7 @@ namespace MusicSyncLib.WinForms
 
 		private void btnOpenScore_Click(object sender, EventArgs e)
 		{
-			if (openScoreDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+			if (openScoreDialog.ShowDialog() == DialogResult.OK)
 			{
 				tbInputScore.Text = openScoreDialog.FileName;
 			}
@@ -109,7 +103,7 @@ namespace MusicSyncLib.WinForms
 			WaveOut waveOutDevice = new WaveOut();
 			var mainOutputStream = CreateInputStream(_inputAudioFile);
 			//mainOutputStream.Position
-			
+
 			waveOutDevice.Init(mainOutputStream);
 			waveOutDevice.Play();
 		}
@@ -125,7 +119,7 @@ namespace MusicSyncLib.WinForms
 			waveIn.DataAvailable += OnDataAvailable;
 			waveIn.RecordingStopped += OnRecordingStopped;
 
-			Decoder = new MusicSyncLib.WaveMp3FileDecoder();
+			Decoder = new WaveMp3FileDecoder();
 			Decoder.DetectLevelThreshold = 0;
 			Decoder.InitRealtimeMode(waveIn.WaveFormat.Channels, waveIn.WaveFormat.BitsPerSample, waveIn.WaveFormat.SampleRate, 200,
 				(PitchTracker tracker, PitchRecord record) =>
@@ -141,9 +135,9 @@ namespace MusicSyncLib.WinForms
 
 		void OnDataAvailable(object sender, WaveInEventArgs e)
 		{
-			if (this.InvokeRequired)
+			if (InvokeRequired)
 			{
-				this.BeginInvoke(new EventHandler<WaveInEventArgs>(OnDataAvailable), sender, e);
+				BeginInvoke(new EventHandler<WaveInEventArgs>(OnDataAvailable), sender, e);
 			}
 			else
 			{
@@ -206,6 +200,6 @@ namespace MusicSyncLib.WinForms
 
 		#endregion
 
-		
+
 	}
 }

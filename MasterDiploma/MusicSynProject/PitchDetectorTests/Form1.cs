@@ -1,10 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using MusicSyncLib;
 using System.Threading;
@@ -128,7 +122,7 @@ namespace PitchDetectorTests
 
 			graphPane.GraphObjList.Clear();
 			graphPane.AddCurve("Гармоническое перемножение спектров", maxLikehoodPairList, System.Drawing.Color.SkyBlue, SymbolType.None);
-			
+
 			graphPane.AxisChange();
 			zedGraphControl1.Refresh();
 		}

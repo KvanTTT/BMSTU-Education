@@ -34,11 +34,8 @@ The icons are licensed under a Creative Commons Attribution 3.0 license.
 */
 
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
-using System.Data;
-using System.Text;
 using System.Windows.Forms;
 
 namespace MusicNotesRendererLib
@@ -128,10 +125,10 @@ namespace MusicNotesRendererLib
                 if (orientationType == OrientationTypeEnum.LeftToRight)
                 {
                     if (smallLine)
-                        g.DrawLine(p, new PointF(dist, this.Height), new PointF(dist, this.Height * 0.75f + 1));
+                        g.DrawLine(p, new PointF(dist, Height), new PointF(dist, Height * 0.75f + 1));
                     else
                     {
-                        g.DrawLine(p, new PointF(dist, this.Height), new PointF(dist, this.Height * 0.5f + 1));
+                        g.DrawLine(p, new PointF(dist, Height), new PointF(dist, Height * 0.5f + 1));
                         if ((valueInUnits != 0) && Convert.ToString(valueInUnits).Length >= 2)
                             g.DrawString(Convert.ToString(valueInUnits), f, b,
                                 new PointF(dist - (pointsPerUnit / 4.0f) , 0));
@@ -143,10 +140,10 @@ namespace MusicNotesRendererLib
                 else if (orientationType == OrientationTypeEnum.TopToBottom)
                 {
                     if (smallLine)
-                        g.DrawLine(p, new PointF(this.Width, dist), new PointF(this.Width * 0.75f + 1, dist));
+                        g.DrawLine(p, new PointF(Width, dist), new PointF(Width * 0.75f + 1, dist));
                     else
                     {
-                        g.DrawLine(p, new PointF(this.Width, dist), new PointF(this.Width * 0.5f + 1, dist));
+                        g.DrawLine(p, new PointF(Width, dist), new PointF(Width * 0.5f + 1, dist));
                         if ((valueInUnits != 0) && Convert.ToString(valueInUnits).Length >= 2)
                             g.DrawString(Convert.ToString(valueInUnits), f, b, 
                                 new PointF(0, dist - (pointsPerUnit / 4.0f)));

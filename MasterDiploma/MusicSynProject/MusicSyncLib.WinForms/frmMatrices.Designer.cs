@@ -1618,7 +1618,6 @@
 		#endregion
 
 		private System.Windows.Forms.Timer timerFollowSequence;
-		private System.Windows.Forms.Button btnPlayNextNote;
 		private System.Windows.Forms.SplitContainer splitContainer1;
 		private System.Windows.Forms.DataGridView dgvEmissions;
 		private System.Windows.Forms.Label label2;
