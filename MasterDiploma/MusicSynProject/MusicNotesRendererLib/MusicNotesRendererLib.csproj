@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0053B0CC-A18A-4EB5-9C28-1C80A7747CCB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MusicNotesRendererLib</RootNamespace>
+    <AssemblyName>MusicNotesRendererLib</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FontStyles.cs" />
+    <Compile Include="IMusicalNotesViewer.cs" />
+    <Compile Include="MusicalNotesViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MusicalNotesViewer.Designer.cs">
+      <DependentUpon>MusicalNotesViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MusicalSymbol.cs" />
+    <Compile Include="MusicXmlParser.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PSAMChart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PSAMChart.designer.cs">
+      <DependentUpon>PSAMChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PSAMRuler.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PSAMRuler.designer.cs">
+      <DependentUpon>PSAMRuler.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MusicalNotesViewer.resx">
+      <DependentUpon>MusicalNotesViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PSAMChart.resx">
+      <DependentUpon>PSAMChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PSAMRuler.resx">
+      <DependentUpon>PSAMRuler.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MusicSyncLib\MusicSyncLib.csproj">
+      <Project>{B0997F63-B82B-4151-9880-D7EDBFD0D56D}</Project>
+      <Name>MusicSyncLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
