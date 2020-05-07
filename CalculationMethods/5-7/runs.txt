@@ -1,0 +1,11 @@
+addpath(genpath('c:/Users/Lil/10/mv/5-7/'))
+
+fmin(@func_1, [0;sqrt(10)], 1e-3)
+lab05(@func_1,[0;sqrt(10)], 1.3, 1e-3)
+lab06(@func_1,[0;sqrt(10)], 1.3, 1e-3, 4)
+lab07(@func_1,[0,sqrt(10)], 0.2, 1e-3)
+
+fmin(@func,[3;3], 1e-3)
+lab05(@func,[3;3], 1.0, 1e-3)
+lab06(@func_1,[0;sqrt(10)], 1.0, 1e-3, 4)
+lab07(@func,[3,3], 0.85, 1e-3)

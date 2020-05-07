@@ -1,0 +1,26 @@
+function DrawGr(f,n,zagolovok,x_vect,xR1,xR2,yR1,yR2,step)
+figure(n);
+set(gcf,'name',zagolovok);
+xp = [];
+yp = [];
+
+for i = 1:length(x_vect)
+    xp(end+1) = x_vect{i}(1);       
+    yp(end+1) = x_vect{i}(2);    
+end;   
+plot(xp, yp, 'r.');
+hold on;
+for i = 1:length(xp)
+    text(xp(i), yp(i), int2str(i))
+end
+x = xR1:step:xR2;
+y = yR1:step:yR2;
+
+%for i = 1:length(x)
+%    for j = 1:length(y)
+%        z(j, i) = f([x(i), y(j)]);        
+%    end
+%end
+
+contour(x, y, z);
+end

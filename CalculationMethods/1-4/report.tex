@@ -1,0 +1,101 @@
+\documentclass[a4paper,12pt]{article}
+
+\input{header.tex}
+\begin{document}
+
+\input{title.tex}
+
+\newpage
+\section{Описание задачи}
+ 
+Функция: $y = \arcsin \left(\dfrac{35x^2 - 30x + 9}{20}\right) + \cos \left( \dfrac{10x^3 + 185x^2 + 340x + 103}{50x^2 + 100x + 30}\right)+0.5$ \\
+Отрезок поиска: $x \in [0, 1]$
+
+\subsection{Лабораторная работа \textnumero 1}
+Метод поразрядного поиска.
+\begin{table}[!ht]
+  \begin{tabular}{|c|c|c|c|c|}
+  \hline
+  N & заданная точность & количество вычислений функции & $x^{\star}$ & $f(x^{\star})$ \\
+  \hline
+  1 & 1e-2 & 20 & 4.140625e-001 & -3.224396e-001 \\
+  \hline
+  2 & 1e-4 & 35 & 4.177246e-001 & -3.224625e-001 \\
+  \hline
+  3 & 1e-6 & 51 & 4.176331e-001 & -3.224625e-001 \\
+  \hline
+  \end{tabular}
+\end{table}
+
+\subsection{Лабораторная работа \textnumero 2}
+Метод золотого сечения.
+\begin{table}[!ht]
+  \begin{tabular}{|c|c|c|c|c|}
+  \hline
+  N & заданная точность & количество вычислений функции & $x^{\star}$ & $f(x^{\star})$ \\
+  \hline
+  1 & 1e-2 & 11 & 4.179607e-001 & -3.224624e-001 \\
+  \hline
+  2 & 1e-4 & 20 & 4.176145e-001 & -3.224625e-001 \\
+  \hline
+  3 & 1e-6 & 30 & 4.176343e-001 & -3.224625e-001 \\
+  \hline
+  \end{tabular}
+\end{table}
+
+\subsection{Лабораторная работа \textnumero 3}
+Метод квадратичной  интерполяции в сочетании с методом золотого сечения.
+\begin{table}[!ht]
+  \begin{tabular}{|c|c|c|c|c|}
+  \hline
+  N & заданная точность & количество вычислений функции & $x^{\star}$ & $f(x^{\star})$ \\
+  \hline
+  1 & 1e-2 & 14 & 4.108223e-001 & -3.223791e-001 \\
+  \hline
+  2 & 1e-4 & 18 & 4.176343e-001 & -3.224625e-001 \\
+  \hline
+  3 & 1e-6 & 18 & 4.176343e-001 & -3.224625e-001
+ \\
+  \hline
+  \end{tabular}
+\end{table}
+
+
+\subsection{Лабораторная работа \textnumero 4}
+Модифицированный метод Ньютона с конечно-разностной апроксимацией производных.
+\begin{table}[!ht]
+  \begin{tabular}{|c|c|c|c|c|}
+  \hline
+  N & заданная точность & количество вычислений функции & $x^{\star}$ & $f(x^{\star})$ \\
+  \hline
+  1 & 1e-2 & 12 & 4.126301e-001 & -3.224175e-001 \\
+  \hline
+  2 & 1e-4 & 12 & 4.126301e-001 & -3.224175e-001 \\
+  \hline
+  3 & 1e-6 & 15 & 4.126345e-001 & -3.224176e-001
+ \\
+  \hline
+  \end{tabular}
+\end{table}
+
+\newpage
+
+\subsection{Сводная таблица для решения задачи при точности 1e-6}
+\begin{table}[!ht]
+  \begin{tabular}{|c|c|c|c|c|}
+  \hline
+  Метод & количество вычислений функции & $x^{\star}$ & $f(x^{\star})$ \\
+  \hline
+  1 & 51 & 4.176331e-001 & -3.224625e-001 \\
+  \hline
+  2 & 30 & 4.176343e-001 & -3.224625e-001 \\
+  \hline
+  3 & 18 & 4.176343e-001 & -3.224625e-001 \\
+  \hline
+  4 & 15 & 4.126345e-001 & -3.224176e-001 \\
+  \hline
+  \end{tabular}
+\end{table} 
+ 
+
+\end{document}
